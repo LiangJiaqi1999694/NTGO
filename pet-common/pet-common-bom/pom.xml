@@ -147,11 +147,11 @@
                 <version>${project.version}</version>
             </dependency>
 
-<!--            <dependency>-->
-<!--                <groupId>com.pet</groupId>-->
-<!--                <artifactId>pet-common-sentinel</artifactId>-->
-<!--                <version>${project.version}</version>-->
-<!--            </dependency>-->
+            <dependency>
+                <groupId>com.pet</groupId>
+                <artifactId>pet-common-sentinel</artifactId>
+                <version>${project.version}</version>
+            </dependency>
 
 <!--            <dependency>-->
 <!--                <groupId>com.pet</groupId>-->

@@ -33,7 +33,8 @@
 		<module>pet-common-idempotent</module>
 		<module>pet-common-log</module>
 		<module>pet-common-seata</module>
-	</modules>
+        <module>pet-common-sentinel</module>
+    </modules>
 
 	<properties>
 		<maven.compiler.source>8</maven.compiler.source>
