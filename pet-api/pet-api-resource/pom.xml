@@ -20,6 +20,7 @@
         <dependency>
             <groupId>com.pet</groupId>
             <artifactId>pet-common-core</artifactId>
+            <version>1.6.0</version>
         </dependency>
 
     </dependencies>
