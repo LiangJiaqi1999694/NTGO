@@ -2,9 +2,6 @@ FROM anapsix/alpine-java:8_server-jre_unlimited
 
 MAINTAINER zy
 
-RUN mkdir -p /mnt/seata-server/logs \
-    /mnt/skywalking/agent
-
 WORKDIR /mnt/seata-server
 
 ENV TZ=PRC
