@@ -1,6 +1,6 @@
 # Tomcat
 server:
-  port: 8718
+  port: 18718
 
 # Spring
 spring:
@@ -25,7 +25,7 @@ spring:
             server-addr: @nacos.server@
             data-id: sentinel-pet-gateway.json
             namespace: ${spring.profiles.active}
-            group-id: DEFAULT_GROUP
+            group-id: @nacos.discovery.group@
             data-type: json
             rule-type: flow
     nacos:
