@@ -18,16 +18,6 @@ sentinel:
 --- # nacos 配置
 spring:
   cloud:
-    sentinel:
-      datasource: #支持redis、zk等中间件，用哪一个，下面的- key就跟上哪一个即可
-        ds1:
-          nacos:
-            server-addr: @nacos.server@
-            data-id: sentinel-pet-gateway.json
-            namespace: ${spring.profiles.active}
-            group-id: @nacos.discovery.group@
-            data-type: json
-            rule-type: flow
     nacos:
       # nacos 服务地址
       server-addr: @nacos.server@
