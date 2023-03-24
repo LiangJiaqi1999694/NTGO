@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-imagesname=pet-system
+imagesname=pet-gayeway
 #查找docker镜像id
 imagesid=`docker images|grep -i ${imagesname}|awk '{print $3}'`
 constainerid=`docker ps -a|grep -w ${imagesname}| awk '{print $1}'`
