@@ -62,7 +62,8 @@
 
         <dependency>
             <groupId>com.pet</groupId>
-            <artifactId>pet-common-sentinel</artifactId>
+            <artifactId>pet-sentinel-dashboard</artifactId>
+            <version>1.6.0</version>
         </dependency>
 
         <dependency>
