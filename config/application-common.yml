@@ -296,7 +296,7 @@ seata:
   registry:
     type: nacos
     nacos:
-      application: ruoyi-seata-server
+      application: pet-seata-serve
       server-addr: ${spring.cloud.nacos.server-addr}
       group: ${spring.cloud.nacos.discovery.group}
       namespace: ${spring.profiles.active}
