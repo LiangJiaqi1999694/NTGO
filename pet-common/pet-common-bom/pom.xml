@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.pet</groupId>
+    <artifactId>pet-common-bom</artifactId>
+    <version>1.6.0</version>
+    <packaging>pom</packaging>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <description>
+        pet-common-bom common依赖项
+    </description>
+    <dependencyManagement>
+        <dependencies>
+            <!-- 核心模块 -->
+            <dependency>
+                <groupId>com.pet</groupId>
+                <artifactId>pet-common-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- 接口模块 -->
+            <dependency>
+                <groupId>com.pet</groupId>
+                <artifactId>pet-common-doc</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- 安全模块 -->
+            <dependency>
+                <groupId>com.pet</groupId>
+                <artifactId>pet-common-security</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.pet</groupId>
+                <artifactId>pet-common-satoken</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- 日志记录 -->
+            <dependency>
+                <groupId>com.pet</groupId>
+                <artifactId>pet-common-log</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- 字典 -->
+            <dependency>
+                <groupId>com.pet</groupId>
+                <artifactId>pet-common-dict</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- excel -->
+            <dependency>
+                <groupId>com.pet</groupId>
+                <artifactId>pet-common-excel</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- 缓存服务 -->
+            <dependency>
+                <groupId>com.pet</groupId>
+                <artifactId>pet-common-redis</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- web服务 -->
+            <dependency>
+                <groupId>com.pet</groupId>
+                <artifactId>pet-common-web</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- 数据库服务 -->
+            <dependency>
+                <groupId>com.pet</groupId>
+                <artifactId>pet-common-mybatis</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+<!--            <dependency>-->
+<!--                <groupId>com.pet</groupId>-->
+<!--                <artifactId>pet-common-job</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
+
+            <dependency>
+                <groupId>com.pet</groupId>
+                <artifactId>pet-common-dubbo</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+<!--            <dependency>-->
+<!--                <groupId>com.pet</groupId>-->
+<!--                <artifactId>pet-common-seata</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>com.pet</groupId>-->
+<!--                <artifactId>pet-common-loadbalancer</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
+
+            <dependency>
+                <groupId>com.pet</groupId>
+                <artifactId>pet-common-oss</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.pet</groupId>
+                <artifactId>pet-common-idempotent</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.pet</groupId>
+                <artifactId>pet-common-email</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.pet</groupId>
+                <artifactId>pet-common-sms</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+<!--            <dependency>-->
+<!--                <groupId>com.pet</groupId>-->
+<!--                <artifactId>pet-common-logstash</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
+
+            <dependency>
+                <groupId>com.pet</groupId>
+                <artifactId>pet-common-elasticsearch</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+<!--            <dependency>-->
+<!--                <groupId>com.pet</groupId>-->
+<!--                <artifactId>pet-common-sentinel</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>com.pet</groupId>-->
+<!--                <artifactId>pet-common-skylog</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>com.pet</groupId>-->
+<!--                <artifactId>pet-common-prometheus</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
+
+<!--            <dependency>-->
+<!--                <groupId>com.pet</groupId>-->
+<!--                <artifactId>pet-common-translation</artifactId>-->
+<!--                <version>${project.version}</version>-->
+<!--            </dependency>-->
+
+            <dependency>
+                <groupId>com.pet</groupId>
+                <artifactId>pet-common-encrypt</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+</project>

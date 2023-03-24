@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>pet</artifactId>
+		<groupId>com.pet</groupId>
+		 <version>1.6.0</version>
+	</parent>
+    <groupId>com.pet</groupId>
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>pet-common</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+		<module>pet-common-alibaba</module>
+        <module>pet-common-bom</module>
+        <module>pet-common-dict</module>
+        <module>pet-common-excel</module>
+		<module>pet-common-email</module>
+        <module>pet-common-redis</module>
+		<module>pet-common-oss</module>
+		<module>pet-common-sms</module>
+		<module>pet-common-web</module>
+		<module>pet-common-security</module>
+        <module>pet-common-satoken</module>
+		<module>pet-common-doc</module>
+        <module>pet-common-dubbo</module>
+        <module>pet-common-elasticsearch</module>
+        <module>pet-common-encrypt</module>
+		<module>pet-common-mybatis</module>
+		<module>pet-common-idempotent</module>
+		<module>pet-common-log</module>
+		<module>pet-common-seata</module>
+	</modules>
+
+	<properties>
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
+	</properties>
+
+</project>

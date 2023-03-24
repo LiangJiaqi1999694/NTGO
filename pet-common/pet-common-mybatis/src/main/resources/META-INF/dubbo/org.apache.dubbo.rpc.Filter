@@ -1,0 +1,1 @@
+dubboDataPermissionFilter=com.pet.common.mybatis.filter.DubboDataPermissionFilter
