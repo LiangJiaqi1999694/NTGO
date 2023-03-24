@@ -39,6 +39,9 @@ public class NacosConfig {
     @Value("${spring.cloud.nacos.server-addr}")
     private String serverAddr;
 
+    @Value("${spring.profiles.active}")
+    private String namespace;
+
     @Bean
     public Converter<List<FlowRuleEntity>, String> flowRuleEntityEncoder() {
         return JSON::toJSONString;
@@ -51,9 +54,10 @@ public class NacosConfig {
 
     @Bean
     public ConfigService nacosConfigService() throws Exception {
-        System.out.println("nacos 地址：" + serverAddr);
+        System.out.println("nacos 地址：" + serverAddr + ",namespace" + namespace);
         Properties properties = new Properties();
         properties.put(PropertyKeyConst.SERVER_ADDR,serverAddr);
+        properties.put("namespace",namespace);
         properties.put(PropertyKeyConst.USERNAME,"nacos");
         properties.put(PropertyKeyConst.PASSWORD,"nacos");
 
