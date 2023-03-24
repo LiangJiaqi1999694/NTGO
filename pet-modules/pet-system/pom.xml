@@ -61,8 +61,8 @@
         </dependency>
 
         <dependency>
-            <groupId>com.ruoyi</groupId>
-            <artifactId>ruoyi-common-sentinel</artifactId>
+            <groupId>com.pet</groupId>
+            <artifactId>pet-common-sentinel</artifactId>
         </dependency>
 
         <dependency>
