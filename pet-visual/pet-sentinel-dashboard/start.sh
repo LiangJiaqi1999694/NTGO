@@ -23,6 +23,6 @@ fi
 docker build -t ${imagesname} .
 
 ## 启动镜像
-docker run -d -p 8718:8718 -p 18718:18718 -v /mnt/ruoyi:/mnt/logs/ --name ${imagesname} ${imagesname}
+docker run -d -p 8718:8718 -p 18718:18718 -v /mnt/ruoyi:/mnt/logs/ --name ${imagesname} ${imagesname} --restart=always
 
 
