@@ -51,6 +51,7 @@ public class NacosConfig {
 
     @Bean
     public ConfigService nacosConfigService() throws Exception {
+        System.out.println("nacos 地址：" + serverAddr);
         Properties properties = new Properties();
         properties.put(PropertyKeyConst.SERVER_ADDR,serverAddr);
         properties.put(PropertyKeyConst.USERNAME,"nacos");
