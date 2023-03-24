@@ -18,6 +18,15 @@ sentinel:
 --- # nacos 配置
 spring:
   cloud:
+    sentinel:
+      datasource: # 添加数据源配置
+        ds1:
+          nacos:
+            server-addr: @nacos.server@
+            dataId: sentinel-pet-gateway
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
     nacos:
       # nacos 服务地址
       server-addr: @nacos.server@
