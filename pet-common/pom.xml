@@ -15,6 +15,7 @@
 	<modules>
 		<module>pet-common-alibaba</module>
         <module>pet-common-bom</module>
+        <module>pet-common-core</module>
         <module>pet-common-dict</module>
         <module>pet-common-excel</module>
 		<module>pet-common-email</module>
