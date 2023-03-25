@@ -32,7 +32,7 @@ spring:
         ds1:
           nacos:
             server-addr: @nacos.server@
-            dataId: sentinel-pet-gateway
+            dataId: sentinel-pet-gateway.json
             groupId: DEFAULT_GROUP
             data-type: json
             rule-type: flow
