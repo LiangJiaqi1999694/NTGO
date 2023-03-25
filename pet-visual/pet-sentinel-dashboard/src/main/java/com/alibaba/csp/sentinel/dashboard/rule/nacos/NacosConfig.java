@@ -15,36 +15,36 @@
  */
 package com.alibaba.csp.sentinel.dashboard.rule.nacos;
 
-import java.util.List;
-import java.util.Properties;
-
+import com.alibaba.csp.sentinel.dashboard.datasource.entity.gateway.ApiDefinitionEntity;
+import com.alibaba.csp.sentinel.dashboard.datasource.entity.gateway.GatewayFlowRuleEntity;
+import com.alibaba.csp.sentinel.dashboard.datasource.entity.rule.AuthorityRuleEntity;
+import com.alibaba.csp.sentinel.dashboard.datasource.entity.rule.DegradeRuleEntity;
 import com.alibaba.csp.sentinel.dashboard.datasource.entity.rule.FlowRuleEntity;
+import com.alibaba.csp.sentinel.dashboard.datasource.entity.rule.ParamFlowRuleEntity;
+import com.alibaba.csp.sentinel.dashboard.datasource.entity.rule.SystemRuleEntity;
 import com.alibaba.csp.sentinel.datasource.Converter;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.nacos.api.PropertyKeyConst;
 import com.alibaba.nacos.api.config.ConfigFactory;
 import com.alibaba.nacos.api.config.ConfigService;
-
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.util.List;
+import java.util.Properties;
 
 /**
  * @author Eric Zhao
  * @since 1.4.0
  */
+@EnableConfigurationProperties(NacosPropertiesConfiguration.class)
 @Configuration
 public class NacosConfig {
 
-    @Value("${spring.cloud.nacos.server-addr}")
-    private String serverAddr;
-
-    @Value("${spring.profiles.active}")
-    private String namespace;
-
     @Bean
     public Converter<List<FlowRuleEntity>, String> flowRuleEntityEncoder() {
-        return JSON::toJSONString;
+        return rule -> JSON.toJSONString(rule, true);
     }
 
     @Bean
@@ -53,14 +53,72 @@ public class NacosConfig {
     }
 
     @Bean
-    public ConfigService nacosConfigService() throws Exception {
-        System.out.println("nacos 地址：" + serverAddr + ",namespace" + namespace);
-        Properties properties = new Properties();
-        properties.put(PropertyKeyConst.SERVER_ADDR,serverAddr);
-        properties.put("namespace",namespace);
-        properties.put(PropertyKeyConst.USERNAME,"nacos");
-        properties.put(PropertyKeyConst.PASSWORD,"nacos");
+    public Converter<List<AuthorityRuleEntity>, String> authRuleEntityEncoder() {
+        return rule -> JSON.toJSONString(rule, true);
+    }
 
+    @Bean
+    Converter<String, List<AuthorityRuleEntity>> authRuleEntityDecoder() {
+        return s -> JSON.parseArray(s, AuthorityRuleEntity.class);
+    }
+
+    @Bean
+    public Converter<List<DegradeRuleEntity>, String> degradeRuleEntityEncoder() {
+        return rule -> JSON.toJSONString(rule, true);
+    }
+
+    @Bean
+    public Converter<String, List<DegradeRuleEntity>> degradeRuleEntityDecoder() {
+        return s -> JSON.parseArray(s, DegradeRuleEntity.class);
+    }
+
+    @Bean
+    public Converter<List<ParamFlowRuleEntity>, String> paramsRuleEntityEncoder() {
+        return rule -> JSON.toJSONString(rule, true);
+    }
+
+    @Bean
+    public Converter<String, List<ParamFlowRuleEntity>> paramsRuleEntityDecoder() {
+        return s -> JSON.parseArray(s, ParamFlowRuleEntity.class);
+    }
+
+    @Bean
+    public Converter<List<SystemRuleEntity>, String> systemRuleEntityEncoder() {
+        return rule -> JSON.toJSONString(rule, true);
+    }
+
+    @Bean
+    public Converter<String, List<SystemRuleEntity>> systemRuleEntityDecoder() {
+        return s -> JSON.parseArray(s, SystemRuleEntity.class);
+    }
+
+    @Bean
+    public Converter<List<GatewayFlowRuleEntity>, String> gatewayFlowRuleEntityEncoder() {
+        return rule -> JSON.toJSONString(rule, true);
+    }
+
+
+    @Bean
+    Converter<String, List<GatewayFlowRuleEntity>> gatewayFlowRuleEntityDecoder() {
+        return s -> JSON.parseArray(s, GatewayFlowRuleEntity.class);
+    }
+
+    @Bean
+    public Converter<List<ApiDefinitionEntity>, String> gatewayApiRuleEntityEncoder() {
+        return rule -> JSON.toJSONString(rule, true);
+    }
+
+
+    @Bean
+    Converter<String, List<ApiDefinitionEntity>> gatewayApiRuleEntityDecoder() {
+        return s -> JSON.parseArray(s, ApiDefinitionEntity.class);
+    }
+
+    @Bean
+    public ConfigService nacosConfigService(NacosPropertiesConfiguration nacosPropertiesConfiguration) throws Exception {
+        Properties properties = new Properties();
+        properties.put(PropertyKeyConst.SERVER_ADDR, nacosPropertiesConfiguration.getServerAddr());
+        properties.put(PropertyKeyConst.NAMESPACE, nacosPropertiesConfiguration.getNamespace());
         return ConfigFactory.createConfigService(properties);
     }
 }
