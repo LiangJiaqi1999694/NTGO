@@ -1,6 +1,6 @@
 # Tomcat
 server:
-  port: 8718
+  port: 18718
 
 # Spring
 spring:
@@ -10,11 +10,26 @@ spring:
   profiles:
     # 环境配置
     active: @profiles.active@
-
+  cloud:
+    sentinel:
+      datasource: #支持redis、zk等中间件，用哪一个，下面的- key就跟上哪一个即可
+        ds1:
+          nacos:
+            server-addr: @nacos.server@
+            data-id: sentinel-pet-gateway.json
+            namespace: ${spring.profiles.active}
+            group-id: @nacos.discovery.group@
+            data-type: json
+            rule-type: flow
+      transport:
+        port: 8718
 sentinel:
   dashboard:
     version: @sentinel.version@
-
+  nacos:
+    serverAddr: @nacos.server@
+    namespace: ${spring.profiles.active}
+    group-id: @nacos.config.group@
 --- # nacos 配置
 spring:
   cloud:
