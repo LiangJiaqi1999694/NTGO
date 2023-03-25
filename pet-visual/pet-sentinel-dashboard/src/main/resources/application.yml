@@ -18,6 +18,19 @@ sentinel:
 --- # nacos 配置
 spring:
   cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:18179 # 该微服务的仪表板地址，即【sentinel前台展示服务】
+        port: 8179 # sentinel后台监控服务，它监控8858【微服务】的同时，还与8080【sentinel前台展示服务】交互数据，将监控到的数据在dashboard上展现。
+      datasource: # 添加数据源配置
+        ds1:
+          nacos:
+            server-addr: @nacos.server@
+            dataId: sentinel-pet-gateway.json
+            namespace: ${spring.profiles.active}
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
     nacos:
       # nacos 服务地址
       server-addr: @nacos.server@
