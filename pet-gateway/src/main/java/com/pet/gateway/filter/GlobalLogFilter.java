@@ -43,14 +43,14 @@ public class GlobalLogFilter implements GlobalFilter, Ordered {
         // 打印请求参数
         if (WebFluxUtils.isJsonRequest(exchange)) {
             String jsonParam = WebFluxUtils.resolveBodyFromCacheRequest(exchange);
-            log.debug("[PLUS]开始请求 => URL[{}],参数类型[json],参数:[{}]", url, jsonParam);
+            log.info("[PLUS]开始请求 => URL[{}],参数类型[json],参数:[{}]", url, jsonParam);
         } else {
             MultiValueMap<String, String> parameterMap = request.getQueryParams();
             if (MapUtil.isNotEmpty(parameterMap)) {
                 String parameters = JsonUtils.toJsonString(parameterMap);
-                log.debug("[PLUS]开始请求 => URL[{}],参数类型[param],参数:[{}]", url, parameters);
+                log.info("[PLUS]开始请求 => URL[{}],参数类型[param],参数:[{}]", url, parameters);
             } else {
-                log.debug("[PLUS]开始请求 => URL[{}],无参数", url);
+                log.info("[PLUS]开始请求 => URL[{}],无参数", url);
             }
         }
 

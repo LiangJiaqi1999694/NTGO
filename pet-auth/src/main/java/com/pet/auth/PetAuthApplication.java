@@ -1,4 +1,4 @@
-package com.pet.auth.auth;
+package com.pet.auth;
 
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
