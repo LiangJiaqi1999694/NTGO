@@ -6,7 +6,9 @@ import com.pet.auth.form.SmsLoginBody;
 import com.pet.auth.service.SysLoginService;
 import com.pet.common.core.constant.Constants;
 import com.pet.common.core.domain.R;
+import com.pet.common.core.exception.user.UserException;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,6 +27,7 @@ import java.util.Map;
 @Validated
 @RequiredArgsConstructor
 @RestController
+@Slf4j
 public class TokenController {
 
     private final SysLoginService sysLoginService;
@@ -34,9 +37,14 @@ public class TokenController {
      */
     @PostMapping("login")
     public R<Map<String, Object>> login(@Validated @RequestBody LoginBody form) {
-        // 用户登录
-        String accessToken = sysLoginService.login(form.getUsername(), form.getPassword());
-
+        String accessToken = null;
+        try {
+            // 用户登录
+            accessToken = sysLoginService.login(form.getUsername(), form.getPassword());
+        }catch (UserException e){
+            log.error(e.getMessage());
+            throw e;
+        }
         // 接口返回信息
         Map<String, Object> rspMap = new HashMap<>();
         rspMap.put(Constants.ACCESS_TOKEN, accessToken);

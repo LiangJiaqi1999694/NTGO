@@ -9,6 +9,7 @@ import com.pet.common.core.constant.HttpStatus;
 import com.pet.common.core.domain.R;
 import com.pet.common.core.exception.DemoModeException;
 import com.pet.common.core.exception.ServiceException;
+import com.pet.common.core.exception.user.UserException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
@@ -126,6 +127,15 @@ public class GlobalExceptionHandler {
         log.error(e.getMessage(), e);
         String message = e.getBindingResult().getFieldError().getDefaultMessage();
         return R.fail(message);
+    }
+
+    /**
+     * 自定义验证异常
+     */
+    @ExceptionHandler(UserException.class)
+    public R<Void> userException(UserException e) {
+        log.error(e.getMessage(), e);
+        return R.fail(e.getMessage());
     }
 
     /**
