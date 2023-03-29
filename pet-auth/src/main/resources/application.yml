@@ -30,7 +30,6 @@ spring:
       - optional:nacos:application-common.yml
       - optional:nacos:${spring.application.name}.yml
 
-
 ---
 knife4j:
   # 开启增强配置
