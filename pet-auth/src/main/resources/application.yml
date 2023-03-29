@@ -29,3 +29,12 @@ spring:
     import:
       - optional:nacos:application-common.yml
       - optional:nacos:${spring.application.name}.yml
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+---
+knife4j:
+  # 开启增强配置
+  enable: true
+

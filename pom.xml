@@ -189,23 +189,23 @@
                 <version>${p6spy.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>io.swagger.core.v3</groupId>
-                <artifactId>swagger-annotations</artifactId>
-                <version>${swagger.core.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>io.swagger.core.v3</groupId>-->
+<!--                <artifactId>swagger-annotations</artifactId>-->
+<!--                <version>${swagger.core.version}</version>-->
+<!--            </dependency>-->
 
-            <dependency>
-                <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-webmvc-core</artifactId>
-                <version>${springdoc.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.springdoc</groupId>-->
+<!--                <artifactId>springdoc-openapi-webmvc-core</artifactId>-->
+<!--                <version>${springdoc.version}</version>-->
+<!--            </dependency>-->
 
-            <dependency>
-                <groupId>org.springdoc</groupId>
-                <artifactId>springdoc-openapi-javadoc</artifactId>
-                <version>${springdoc.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.springdoc</groupId>-->
+<!--                <artifactId>springdoc-openapi-javadoc</artifactId>-->
+<!--                <version>${springdoc.version}</version>-->
+<!--            </dependency>-->
 
             <dependency>
                 <groupId>org.projectlombok</groupId>

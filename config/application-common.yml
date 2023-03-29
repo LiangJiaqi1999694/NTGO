@@ -257,7 +257,7 @@ mybatis-encryptor:
 swagger:
   info:
     # 标题
-    title: '标题：RuoYi-Cloud-Plus微服务权限管理系统_接口文档'
+    title: '标题：微服务权限管理系统_接口文档'
     # 描述
     description: '描述：微服务权限管理系统, 具体包括XXX,XXX模块...'
     # 版本

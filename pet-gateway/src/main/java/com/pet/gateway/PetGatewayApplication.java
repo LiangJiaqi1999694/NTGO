@@ -1,15 +1,19 @@
 package com.pet.gateway;
 
+import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.context.metrics.buffering.BufferingApplicationStartup;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * 网关启动程序
  *
  * @author pet
  */
+@EnableKnife4j
+@EnableSwagger2
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class PetGatewayApplication {
     public static void main(String[] args) {

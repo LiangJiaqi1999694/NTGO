@@ -1,1 +1,2 @@
 com.pet.common.doc.config.SwaggerAutoConfiguration
+com.pet.common.doc.config.BeanPostProcessorConfig
