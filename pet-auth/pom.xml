@@ -67,6 +67,12 @@
             <version>1.6.0</version>
         </dependency>
 
+        <!-- prometheus 监控 -->
+        <dependency>
+            <groupId>com.pet</groupId>
+            <artifactId>pet-common-prometheus</artifactId>
+            <version>1.6.0</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -34,7 +34,8 @@
 		<module>pet-common-log</module>
 		<module>pet-common-seata</module>
         <module>pet-common-sentinel</module>
-    </modules>
+		<module>pet-common-prometheus</module>
+	</modules>
 
 	<properties>
 		<maven.compiler.source>8</maven.compiler.source>

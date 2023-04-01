@@ -58,7 +58,7 @@ import static com.alibaba.csp.sentinel.config.SentinelConfig.setConfig;
 /**
  * 改造sentinel自动配置 支持服务名注册
  *
- * @author Lion Li
+ * @author zy
  *
  * @author xiaojing
  * @author jiashuai.xie

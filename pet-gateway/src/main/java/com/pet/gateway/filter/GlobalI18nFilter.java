@@ -15,7 +15,7 @@ import java.util.Locale;
 /**
  * 全局国际化处理
  *
- * @author Lion Li
+ * @author zy
  */
 @Slf4j
 @Component
