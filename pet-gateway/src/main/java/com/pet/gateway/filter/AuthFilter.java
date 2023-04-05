@@ -6,6 +6,7 @@ import cn.dev33.satoken.stp.StpUtil;
 import cn.dev33.satoken.util.SaResult;
 import com.pet.common.core.constant.HttpStatus;
 import com.pet.gateway.config.properties.IgnoreWhiteProperties;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,6 +15,7 @@ import org.springframework.context.annotation.Configuration;
  *
  * @author zy
  */
+@Slf4j
 @Configuration
 public class AuthFilter {
 
@@ -37,10 +39,10 @@ public class AuthFilter {
                         StpUtil.checkLogin();
 
                         // 有效率影响 用于临时测试
-                        // if (log.isDebugEnabled()) {
-                        //     log.debug("剩余有效时间: {}", StpUtil.getTokenTimeout());
-                        //     log.debug("临时有效时间: {}", StpUtil.getTokenActivityTimeout());
-                        // }
+                        if (log.isDebugEnabled()) {
+                            log.debug("剩余有效时间: {}", StpUtil.getTokenTimeout());
+                            log.debug("临时有效时间: {}", StpUtil.getTokenActivityTimeout());
+                        }
                     });
             }).setError(e -> SaResult.error("认证失败，无法访问系统资源").setCode(HttpStatus.UNAUTHORIZED));
     }
