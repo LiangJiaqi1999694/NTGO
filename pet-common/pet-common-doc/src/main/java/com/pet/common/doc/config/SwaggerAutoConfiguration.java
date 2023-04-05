@@ -4,6 +4,7 @@ import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
 import com.pet.common.doc.config.properties.SwaggerProperties;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -34,10 +35,13 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebFlux;
 public class SwaggerAutoConfiguration {
 
     private final SwaggerProperties swaggerProperties;
+    @Value("${spring.application.name}")
+    private String application;
     @Bean
     public Docket productApi() {
         log.info("===================================productApi==================");
         return new Docket(DocumentationType.OAS_30)
+
             .apiInfo(apiInfo())
             .select()
 //            .paths()
@@ -45,6 +49,7 @@ public class SwaggerAutoConfiguration {
 //            .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
             .paths(PathSelectors.any())
             .build()
+            .pathMapping(application)
 //            .securityContexts(securityContexts())
 //            .securitySchemes(securitySchemes())
             ;
