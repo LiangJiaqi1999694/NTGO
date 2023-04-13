@@ -5,15 +5,12 @@ import com.xxl.job.core.biz.model.MenuCategory;
 import com.xxl.job.core.biz.model.ReturnT;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 /**
- * 
+ *
  * @describe 编目管理
  *
  * @author zy
@@ -27,7 +24,7 @@ public class CategoryMgController {
 
 	@Autowired
 	private CategoryMgService categoryMgService;
-	
+
 	/**
 	 * @catalog 业务支撑平台/字典管理
 	 * @title 新建字典分组
@@ -35,7 +32,7 @@ public class CategoryMgController {
 	 * @method POST|GET
 	 * @remark
 	 */
-	@GetMapping("/createcategory")
+	@PostMapping("/createcategory")
 	@ResponseBody
 	public ReturnT<String> createCategory(@RequestParam(value = "name") String name,
                                           @RequestParam(value = "type", defaultValue = "1") Integer type,
