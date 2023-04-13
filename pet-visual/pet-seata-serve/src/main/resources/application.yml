@@ -11,7 +11,7 @@ spring:
 logging:
   config: classpath:logback-spring.xml
   file:
-    path: /mnt/logs/seata
+    path: /logsseata
 #  extend:
 #    logstash-appender:
 #      destination: 127.0.0.1:4560

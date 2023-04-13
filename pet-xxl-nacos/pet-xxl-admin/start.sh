@@ -23,6 +23,6 @@ fi
 docker build -t ${imagesname} .
 
 ## 启动镜像
-docker run -d -p 9208:9208 -v /mnt/ruoyi:/mnt/logs/ --name ${imagesname} ${imagesname}
+docker run -d -p 9208:9208 -v /mnt/ruoyi:/logs --name ${imagesname} ${imagesname}
 
 

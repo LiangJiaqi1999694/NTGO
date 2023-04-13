@@ -162,7 +162,7 @@ management:
     health:
       show-details: ALWAYS
     logfile:
-      external-file: /mnt/logs/${spring.application.name}/console.log
+      external-file: /logs${spring.application.name}/console.log
 
 # 日志配置
 logging:

@@ -23,6 +23,6 @@ fi
 docker build -t ${imagesname} .
 
 ## 启动镜像
-docker run -d -p 8099:8099 -v /mnt/pet:/mnt/logs/ --name ${imagesname} ${imagesname}
+docker run -d -p 8099:8099 -v /mnt/pet:/logs --name ${imagesname} ${imagesname}
 
 
