@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxl.job.admin.dao.algomg.AlgoParamDao">
+
+	<resultMap id="algoparam"
+		type="com.xxl.job.core.biz.model.AlgorithmParam">
+		<result column="id" property="id" />
+		<result column="param_name" property="paramName" />
+		<result column="param_description" property="paramDescription" />
+		<result column="param_type" property="paramType" />
+		<result column="dictionary_category_id" property="dictionaryCategoryId" />
+		<result column="algo_id" property="algoId" />
+		<result column="default_value" property="defaultValue" />
+		<result column="isshow" property="isShow" />
+		<result column="isredo" property="isRedo" />
+	</resultMap>
+	
+	<sql id="columns">
+		id,param_name,param_description,param_type,dictionary_category_id,algo_id,default_value,isshow,isredo
+	</sql>
+	
+	<select id="selectParamsByAlgoId" resultMap="algoparam">
+		select 
+			<include refid="columns"/>
+		 from atomic_algorithm_param where algo_id=#{algoId}
+	</select>
+	
+	<insert id="addParam" parameterType="com.xxl.job.core.biz.model.AlgorithmParam">
+		insert into atomic_algorithm_param(`id`,`param_name`,`param_description`,`param_type`,`dictionary_category_id`,`algo_id`,`default_value`,`isshow`,`isredo`) values
+		(#{id},#{paramName},#{paramDescription},#{paramType},#{dictionaryCategoryId},#{algoId},#{defaultValue},#{isShow},#{isRedo})
+	</insert>
+	
+	<insert id="batchaddParam">
+		insert into atomic_algorithm_param(`id`,`param_name`,`param_description`,`param_type`,`dictionary_category_id`,`algo_id`,`default_value`,`isshow`,`isredo`) values
+		<foreach collection="list" item="item" index="index" separator=",">
+       		 (#{item.id},#{item.paramName},#{item.paramDescription},#{item.paramType},#{item.dictionaryCategoryId},#{item.algoId},#{item.defaultValue},#{item.isShow},#{item.isRedo})
+    	</foreach>
+	</insert>
+	
+	
+	<update id="updateParam" parameterType="com.xxl.job.core.biz.model.AlgorithmParam">
+		update atomic_algorithm_param
+		<set>
+			<if test="paramName != null and paramName != ''">
+				param_name = #{paramName},
+			</if>
+			<if test="paramDescription != null and paramDescription !=''">
+				param_description = #{paramDescription},
+			</if>
+			<if test="paramType != null">
+				param_type = #{paramType},
+			</if>
+			<if test="dictionaryCategoryId != null">
+				dictionary_category_id = #{dictionaryCategoryId},
+			</if>
+			<if test="defaultValue != null and defaultValue !=''">
+				default_value = #{defaultValue},
+			</if>
+			<if test="isShow != null">
+				isshow = #{isShow},
+			</if>
+			<if test="isRedo != null">
+				isredo = #{isRedo}
+			</if>
+		</set>
+		 where id=#{id}
+	</update>
+	
+	<delete id="deleteParam">
+		delete from atomic_algorithm_param where id=#{id}
+	</delete>
+	
+	<delete id="deleteParamByAlgoId">
+		delete from atomic_algorithm_param where algo_id=#{algoId}
+	</delete>
+	
+	<delete id="batchDeleteParamByAlgoId">
+		delete from atomic_algorithm_param where algo_id in
+		<foreach collection="array" open="(" separator="," close=")" item="algoId">
+			#{algoId}
+		</foreach>
+	</delete>
+	
+	<delete id="batchDeleteParamByIds">
+		delete from atomic_algorithm_param where id in
+		<foreach collection="array" open="(" separator="," close=")" item="id">
+			#{id}
+		</foreach>
+	</delete>
+</mapper>

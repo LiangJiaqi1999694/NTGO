@@ -1,0 +1,80 @@
+# Tomcat
+server:
+  port: 9208
+
+# Spring
+spring:
+  application:
+    # 应用名称
+    name: pet-xxl
+  profiles:
+    # 环境配置
+    active: @profiles.active@
+# nacos 配置
+  cloud:
+    nacos:
+      # nacos 服务地址
+      server-addr: @nacos.server@
+      discovery:
+        # 注册组
+        group: @nacos.discovery.group@
+        namespace: ${spring.profiles.active}
+      config:
+        # 配置组
+        group: @nacos.config.group@
+        namespace: ${spring.profiles.active}
+  config:
+    import:
+      - optional:nacos:application-common.yml
+      - optional:nacos:datasource.yml
+      - optional:nacos:${spring.application.name}.yml
+  main:
+    allow-bean-definition-overriding: true
+  mvc:
+    servlet:
+      load-on-startup: 0
+    static-path-pattern: /static/**
+  web:
+    resources:
+      static-locations: classpath:/static/
+  freemarker:
+    template-loader-path: classpath:/templates/
+    suffix: .ftl
+    charset: UTF-8
+    request-context-attribute: request
+    settings:
+      number_format: 0.##########
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 503897166@qq.com
+    password: jgjgwbhfehkjbjgj
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+        socketFactory:
+          port: 465
+          class: javax.net.ssl.SSLSocketFactory
+---
+
+### xxl-job, i18n (default is zh_CN, and you can choose "zh_CN", "zh_TC" and "en")
+## xxl-job, triggerpool max size
+xxl:
+  job:
+    logretentiondays: 30
+    accessToken: ''
+    i18n: zh_CN
+    triggerpool:
+      fast:
+        max: 200
+      slow:
+        max: 200
+nacos:
+  service:
+    listener:
+      cron: 0/5 * * * * ?
+

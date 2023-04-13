@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxl.job.admin.dao.algomg.AlgoMgDao">
+	<resultMap id="algo"
+		type="com.xxl.job.core.biz.model.Algorithm">
+		<result column="id" property="id" />
+		<result column="create_time" property="createtime" />
+		<result column="update_time" property="updatetime" />
+		<result column="name" property="name" />
+		<result column="jobHandler" property="jobhandler" />
+		<result column="state" property="state" />
+		<result column="block_strategy" property="blockStrategy" />
+		<result column="category_id" property="categoryId" />
+		<result column="registry_id" property="registryId" />
+		<result column="description" property="description" />
+	</resultMap>
+	
+	<sql id="Base_Column_List">
+		id,create_time,update_time,name,jobhandler,state,block_strategy,category_id,registry_id,description
+	</sql>
+	
+	<insert id="createAlgo" useGeneratedKeys="true" keyProperty="id"
+		parameterType="com.xxl.job.core.biz.model.Algorithm">
+		insert into atomic_algorithm
+		(`create_time`,`update_time`,`name`,`jobhandler`,`state`,`block_strategy`,`category_id`,`registry_id`,`description`)
+		values
+		(#{createtime},#{updatetime},#{name},#{jobhandler},#{state},#{blockStrategy},#{categoryId},#{registryId},#{description});
+	</insert>
+	
+	<select id="selectAlgos" resultMap="algo">
+		select id,create_time,update_time,name,jobhandler,state,block_strategy,category_id,registry_id,description from atomic_algorithm where 1=1
+		<if test="categoryIds !=null and categoryIds.size()>0">
+			and category_id in
+			<foreach collection="categoryIds"  open="(" separator="," close=")" item="id">
+				 #{id}
+			</foreach>
+		</if>
+		<if test="fuzzySearchName != null and fuzzySearchName !=''">
+			 and name like CONCAT('%',#{fuzzySearchName},'%')
+		</if>
+		order by update_time desc
+	</select>
+	
+	<select id="selectAlgosById" resultMap="algo">
+		select 
+		<include refid="Base_Column_List"/>	
+		from atomic_algorithm where id=#{id}
+	</select>
+	
+	<select id="selectAlgosByIds" resultMap="algo">
+		select  
+		<include refid="Base_Column_List"/>		
+		from atomic_algorithm where id in
+		<foreach collection="ids" open="(" separator="," close=")" item="id">
+			#{id}
+		</foreach>
+	</select>
+	
+	<select id="selectAlgosIdByJobhandler" resultMap="algo">
+		select id from atomic_algorithm where jobhandler=#{jobhandler}
+	</select>
+	
+	<update id="updateAlgosById" parameterType="com.xxl.job.core.biz.model.Algorithm">
+		update atomic_algorithm
+		<set>
+			<if test="updatetime != null">
+				update_time = #{updatetime},
+			</if>
+			<if test="name != null and name != ''">
+				name = #{name},
+			</if>
+			<if test="jobhandler !=null and jobhandler != ''">
+				jobhandler = #{jobhandler},
+			</if>
+			<if test="state !=null and state != ''">
+				state = #{state},
+			</if>
+			<if test="blockStrategy != null">
+				block_strategy =  #{blockStrategy},
+			</if>
+			<if test="categoryId != null">
+				category_id = #{categoryId},
+			</if>
+			registry_id = #{registryId},
+			description = #{description},
+		</set>
+		 where id=#{id}
+	</update>
+	
+	<delete id="deleteAlgo">
+		delete from atomic_algorithm where id=#{id}
+	</delete>
+	
+	<delete id="batchDeleteAlgo">
+		delete from atomic_algorithm where id in
+		<foreach collection="array" open="(" separator="," close=")" item="id">
+			#{id}
+		</foreach>
+	</delete>
+	
+	<select id="selectAllAlgos" resultMap="algo">
+		select 
+		<include refid="Base_Column_List"/>
+		from atomic_algorithm
+	</select>
+	
+	<select id="selectIdsByCategoryId" resultType="java.lang.Long">
+		select id from atomic_algorithm where category_id=#{categoryId}
+	</select>
+</mapper>

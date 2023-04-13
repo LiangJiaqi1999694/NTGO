@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxl.job.admin.dao.CategoryMgDao">
+
+    <resultMap id="menuCategory"
+               type="com.xxl.job.core.biz.model.MenuCategory">
+        <result column="id" property="id"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="name" property="name"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="sort_id" property="sortId"/>
+        <result column="type" property="type"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+		t.id,
+		t.create_time,
+		t.update_time,
+		t.name,
+		t.parent_id,
+		t.sort_id,
+		t.type
+	</sql>
+
+    <select id="selectMenuCategoryById" resultMap="menuCategory">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM menu_category AS t where t.id=#{id}
+    </select>
+
+
+    <select id="selectMenuCategorysByParentId"
+            resultMap="menuCategory">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM menu_category AS t
+        <where>
+            <if test="parentId != null">
+                t.parent_id=#{parentId}
+            </if>
+            <if test="type != null">
+                and t.type=#{type}
+            </if>
+        </where>
+        ORDER BY t.sort_id
+        ASC
+    </select>
+
+    <select id="selectMaxSortIdByParentId" resultType="java.lang.Double">
+		SELECT max(sort_id) FROM menu_category where
+		parent_id=#{parentId}
+	</select>
+
+
+    <insert id="addMenuCategory"
+            parameterType="com.xxl.job.core.biz.model.MenuCategory"
+            useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO
+		menu_category (`create_time`, `update_time`, `name`,
+		`parent_id`,`sort_id`,`type`)
+		values ( #{createTime}, #{updateTime},
+		#{name}, #{parentId},#{sortId},#{type})
+	</insert>
+
+    <update id="updateCategory"
+            parameterType="com.xxl.job.core.biz.model.MenuCategory">
+		update menu_category set update_time=#{updateTime},name=#{name},parent_id=#{parentId},sort_id=#{sortId} where id = #{id}
+	</update>
+	
+	<delete id="deleteCategory">
+		delete from menu_category where id=#{id}
+	</delete>
+	
+	<delete id="deleteCategorys">
+		delete from menu_category where id in
+		<foreach collection="list" item="item" index="index" separator=",">
+       		 #{item}
+    	</foreach>
+	</delete>
+	
+</mapper>

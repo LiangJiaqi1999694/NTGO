@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxl.job.executor.dao.AlgoParamDao">
+	<resultMap id="algoparam"
+		type="com.xxl.job.core.biz.model.AlgorithmParam">
+		<result column="id" property="id" />
+		<result column="param_name" property="paramName" />
+		<result column="param_description" property="paramDescription" />
+		<result column="param_type" property="paramType" />
+		<result column="dictionary_category_id" property="dictionaryCategoryId" />
+		<result column="algo_id" property="algoId" />
+		<result column="default_value" property="defaultValue" />
+		<result column="isshow" property="isShow" />
+		<result column="isredo" property="isRedo" />
+	</resultMap>
+	
+	<select id="selectParamsByAlgoId" resultMap="algoparam">
+		select id,param_name,param_description,param_type,dictionary_category_id,algo_id,default_value,isshow,isredo from atomic_algorithm_param where algo_id=#{algoId}
+	</select>
+</mapper>

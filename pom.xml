@@ -16,6 +16,7 @@
 		<module>pet-example</module>
 		<module>pet-modules</module>
         <module>pet-visual</module>
+		<module>pet-xxl-nacos</module>
     </modules>
 
 	<properties>

@@ -1,0 +1,32 @@
+2023-04-13 15:23:43,167 ERROR [xxl-job, admin JobFailMonitorHelper] c.x.j.a.c.t.JobFailMonitorHelper [JobFailMonitorHelper.java : 76] >>>>>>>>>>> xxl-job, job fail monitor thread error:{}
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.xxl.job.admin.dao.XxlJobLogDao.findFailJobLogIds
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy162.findFailJobLogIds(Unknown Source)
+	at com.xxl.job.admin.core.thread.JobFailMonitorHelper$1.run(JobFailMonitorHelper.java:41)
+	at java.lang.Thread.run(Thread.java:748)
+2023-04-13 15:23:44,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 44 = [[]]
+2023-04-13 15:23:44,003 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 15:23:44,003 ERROR [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 146] >>>>>>>>>>> xxl-job, JobScheduleHelper#scheduleThread error:{}
+com.baomidou.dynamic.datasource.exception.CannotFindDataSourceException: dynamic-datasource can not find primary datasource
+	at com.baomidou.dynamic.datasource.DynamicRoutingDataSource.determinePrimaryDataSource(DynamicRoutingDataSource.java:97)
+	at com.baomidou.dynamic.datasource.DynamicRoutingDataSource.getDataSource(DynamicRoutingDataSource.java:126)
+	at com.baomidou.dynamic.datasource.DynamicRoutingDataSource.determineDataSource(DynamicRoutingDataSource.java:83)
+	at com.baomidou.dynamic.datasource.ds.AbstractRoutingDataSource.getConnection(AbstractRoutingDataSource.java:55)
+	at com.xxl.job.admin.core.thread.JobScheduleHelper$1.run(JobScheduleHelper.java:68)
+	at java.lang.Thread.run(Thread.java:748)
+2023-04-13 15:23:45,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 45 = [[]]
+2023-04-13 15:23:45,001 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 15:23:45,001 ERROR [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 146] >>>>>>>>>>> xxl-job, JobScheduleHelper#scheduleThread error:{}
+com.baomidou.dynamic.datasource.exception.CannotFindDataSourceException: dynamic-datasource can not find primary datasource
+	at com.baomidou.dynamic.datasource.DynamicRoutingDataSource.determinePrimaryDataSource(DynamicRoutingDataSource.java:97)
+	at com.baomidou.dynamic.datasource.DynamicRoutingDataSource.getDataSource(DynamicRoutingDataSource.java:126)
+	at com.baomidou.dynamic.datasource.DynamicRoutingDataSource.determineDataSource(DynamicRoutingDataSource.java:83)
+	at com.baomidou.dynamic.datasource.ds.AbstractRoutingDataSource.getConnection(AbstractRoutingDataSource.java:55)
+	at com.xxl.job.admin.core.thread.JobScheduleHelper$1.run(JobScheduleHelper.java:68)
+	at java.lang.Thread.run(Thread.java:748)

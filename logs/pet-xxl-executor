@@ -1,0 +1,1830 @@
+2023-04-13 16:05:50,243 DEBUG [background-preinit] org.jboss.logging [LoggerProviders.java : 152] Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2023-04-13 16:05:50,247 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 21] HV000001: Hibernate Validator 6.2.5.Final
+2023-04-13 16:05:50,267 DEBUG [background-preinit] o.h.v.i.x.config.ValidationXmlParser [ValidationXmlParser.java : 120] Trying to load META-INF/validation.xml for XML based Validator configuration.
+2023-04-13 16:05:50,270 DEBUG [background-preinit] o.h.v.i.x.c.ResourceLoaderHelper [ResourceLoaderHelper.java : 60] Trying to load META-INF/validation.xml via TCCL
+2023-04-13 16:05:50,272 DEBUG [background-preinit] o.h.v.i.x.c.ResourceLoaderHelper [ResourceLoaderHelper.java : 66] Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2023-04-13 16:05:50,274 DEBUG [background-preinit] o.h.v.i.x.config.ValidationXmlParser [ValidationXmlParser.java : 127] No META-INF/validation.xml found. Using annotation based configuration only.
+2023-04-13 16:05:50,283 DEBUG [background-preinit] o.h.v.i.e.r.TraversableResolvers [TraversableResolvers.java : 60] Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2023-04-13 16:05:50,344 DEBUG [background-preinit] o.h.v.m.ResourceBundleMessageInterpolator [ResourceBundleMessageInterpolator.java : 172] Loaded expression factory via original TCCL
+2023-04-13 16:05:50,772 DEBUG [background-preinit] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 345] HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2023-04-13 16:05:50,791 DEBUG [background-preinit] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 420] HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2023-04-13 16:05:50,791 DEBUG [background-preinit] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 421] HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2023-04-13 16:05:50,791 DEBUG [background-preinit] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 422] HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2023-04-13 16:05:50,791 DEBUG [background-preinit] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 423] HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2023-04-13 16:05:50,791 DEBUG [background-preinit] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 424] HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2023-04-13 16:05:51,064 INFO [main] c.x.j.e.XxlJobSpringCloudExecutorApp [StartupInfoLogger.java : 55] Starting XxlJobSpringCloudExecutorApp using Java 1.8.0_302 on zy9471-nb with PID 4508 (D:\pet\pet\pet-xxl-nacos\pet-xxl-executor\target\classes started by zhuangyong in D:\pet\pet)
+2023-04-13 16:05:51,065 DEBUG [main] c.x.j.e.XxlJobSpringCloudExecutorApp [StartupInfoLogger.java : 56] Running with Spring Boot v2.7.9, Spring v5.3.25
+2023-04-13 16:05:51,066 INFO [main] c.x.j.e.XxlJobSpringCloudExecutorApp [SpringApplication.java : 637] The following 1 profile is active: "dev"
+2023-04-13 16:05:51,437 WARN [main] c.a.c.n.c.NacosConfigDataLoader [DeferredLog.java : 258] [Nacos Config] config[dataId=pet-xxl-executor.yml, group=DEFAULT_GROUP] is empty
+2023-04-13 16:05:51,437 DEBUG [main] c.a.c.n.c.NacosConfigDataLoader [DeferredLog.java : 252] [Nacos Config] config[dataId=pet-xxl-executor.yml, group=DEFAULT_GROUP] content: 
+null
+2023-04-13 16:05:51,437 INFO [main] c.a.c.n.c.NacosConfigDataLoader [DeferredLog.java : 255] [Nacos Config] Load config[dataId=datasource.yml, group=DEFAULT_GROUP] success
+2023-04-13 16:05:51,437 DEBUG [main] c.a.c.n.c.NacosConfigDataLoader [DeferredLog.java : 252] [Nacos Config] config[dataId=datasource.yml, group=DEFAULT_GROUP] content: 
+datasource:
+  system-master:
+    # jdbc 所有参数配置参考 https://lionli.blog.csdn.net/article/details/122018562
+    # rewriteBatchedStatements=true 批处理优化 大幅提升批量插入更新删除性能
+    url: jdbc:mysql://47.122.40.114:3306/pet-cloud?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&rewriteBatchedStatements=true
+    username: root
+    password: hash@1234
+  gen:
+    url: jdbc:mysql://47.122.40.114:3306/pet-cloud?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&rewriteBatchedStatements=true
+    username: root
+    password: hash@1234
+  job:
+    url: jdbc:mysql://47.122.40.114:3306/pet-job?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&rewriteBatchedStatements=true
+    username: root
+    password: hash@1234
+#  system-oracle:
+#    url: jdbc:oracle:thin:@//localhost:1521/XE
+#    username: ROOT
+#    password: password
+#  system-postgres:
+#    url: jdbc:postgresql://localhost:5432/postgres?useUnicode=true&characterEncoding=utf8&useSSL=true&autoReconnect=true&reWriteBatchedInserts=true
+#    username: root
+#    password: password
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    # 动态数据源文档 https://www.kancloud.cn/tracy5546/dynamic-datasource/content
+    dynamic:
+      # 性能分析插件(有性能损耗 不建议生产环境使用)
+      p6spy: true
+      # 开启seata代理，开启后默认每个数据源都代理，如果某个不需要代理可单独关闭
+      seata: true
+      # 严格模式 匹配不到数据源则报错
+      strict: true
+      hikari:
+        # 最大连接池数量
+        maxPoolSize: 20
+        # 最小空闲线程数量
+        minIdle: 10
+        # 配置获取连接等待超时的时间
+        connectionTimeout: 30000
+        # 校验超时时间
+        validationTimeout: 5000
+        # 空闲连接存活最大时间，默认10分钟
+        idleTimeout: 600000
+        # 此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认30分钟
+        maxLifetime: 1800000
+        # 连接测试query（配置检测连接是否有效）
+        connectionTestQuery: SELECT 1
+        # 多久检查一次连接的活性
+        keepaliveTime: 30000
+
+# seata配置
+seata:
+  # 关闭自动代理
+  enable-auto-data-source-proxy: false
+
+2023-04-13 16:05:51,438 INFO [main] c.a.c.n.c.NacosConfigDataLoader [DeferredLog.java : 255] [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2023-04-13 16:05:51,438 DEBUG [main] c.a.c.n.c.NacosConfigDataLoader [DeferredLog.java : 252] [Nacos Config] config[dataId=application-common.yml, group=DEFAULT_GROUP] content: 
+server:
+  # undertow 配置
+  undertow:
+    # HTTP post内容的最大大小。当值为-1时，默认值为大小是无限的
+    max-http-post-size: -1
+    # 以下的配置会影响buffer,这些buffer会用于服务器连接的IO操作,有点类似netty的池化内存管理
+    # 每块buffer的空间大小,越小的空间被利用越充分
+    buffer-size: 512
+    # 是否分配的直接内存
+    direct-buffers: true
+    threads:
+      # 设置IO线程数, 它主要执行非阻塞的任务,它们会负责多个连接, 默认设置每个CPU核心一个线程
+      io: 8
+      # 阻塞任务线程池, 当执行类似servlet请求阻塞操作, undertow会从这个线程池中取得线程,它的值设置取决于系统的负载
+      worker: 256
+nacos:
+  server: 47.122.40.114:8848
+  discovery:
+    group: DEFAULT_GROUP
+  config:
+    group: DEFAULT_GROUP
+
+dubbo:
+  application:
+    logger: slf4j
+    # 元数据中心 local 本地 remote 远程 这里使用远程便于其他服务获取
+    metadataType: remote
+    # 可选值 interface、instance、all，默认是 all，即接口级地址、应用级地址都注册
+    register-mode: instance
+    service-discovery:
+      # FORCE_INTERFACE，只消费接口级地址，如无地址则报错，单订阅 2.x 地址
+      # APPLICATION_FIRST，智能决策接口级/应用级地址，双订阅
+      # FORCE_APPLICATION，只消费应用级地址，如无地址则报错，单订阅 3.x 地址
+      migration: FORCE_APPLICATION
+    qos-enable: false
+  protocol:
+    # 设置为 tri 即可使用 Triple 3.0 新协议
+    # 性能对比 dubbo 协议并没有提升 但基于 http2 用于多语言异构等 http 交互场景
+    # 使用 dubbo 协议通信
+    name: dubbo
+    # dubbo 协议端口(-1表示自增端口,从20880开始)
+    port: -1
+    # 指定dubbo协议注册ip
+    # host: 192.168.0.100
+  # 注册中心配置
+  registry:
+    address: nacos://${spring.cloud.nacos.server-addr}
+    group: DUBBO_GROUP
+    parameters:
+      namespace: ${spring.profiles.active}
+  # 消费者相关配置
+  consumer:
+    # 结果缓存(LRU算法)
+    # 会有数据不一致问题 建议在注解局部开启
+    cache: false
+    # 支持校验注解
+    validation: true
+    # 超时时间
+    timeout: 3000
+    # 初始化检查
+    check: false
+  scan:
+    # 接口实现类扫描
+    base-packages: com.pet.**.dubbo
+  # 自定义配置
+  custom:
+    # 全局请求log
+    request-log: true
+    # info 基础信息 param 参数信息 full 全部
+    log-level: info
+
+spring:
+  # 资源信息
+  messages:
+    # 国际化资源文件路径
+    basename: i18n/messages
+  servlet:
+    multipart:
+      # 整个请求大小限制
+      max-request-size: 20MB
+      # 上传单个文件大小限制
+      max-file-size: 10MB
+  mvc:
+    format:
+      date-time: yyyy-MM-dd HH:mm:ss
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  #jackson配置
+  jackson:
+    # 日期格式化
+    date-format: yyyy-MM-dd HH:mm:ss
+    serialization:
+      # 格式化输出
+      INDENT_OUTPUT: false
+      # 忽略无法转换的对象
+      fail_on_empty_beans: false
+    deserialization:
+      # 允许对象忽略json中不存在的属性
+      fail_on_unknown_properties: false
+  cloud:
+    # sentinel 配置
+    sentinel:
+      # sentinel 开关
+      enabled: true
+      # 取消控制台懒加载
+      eager: true
+      transport:
+        # dashboard控制台服务名 用于服务发现
+        # 如无此配置将默认使用下方 dashboard 配置直接注册
+        server-name: pet-sentinel-dashboard
+        # 客户端指定注册的ip 用于多网卡ip不稳点使用
+        # client-ip:
+        # 控制台地址 从1.3.0开始使用 server-name 注册
+        # dashboard: localhost:8718
+
+  # redis通用配置 子服务可以自行配置进行覆盖
+  redis:
+    host: 47.122.40.114
+    port: 16379
+    # 密码(如没有密码请注释掉)
+    # password:
+    database: 0
+    timeout: 10s
+    ssl: false
+
+# redisson 配置
+redisson:
+  # redis key前缀
+  keyPrefix:
+  # 线程池数量
+  threads: 4
+  # Netty线程池数量
+  nettyThreads: 8
+  # 单节点配置
+  singleServerConfig:
+    # 客户端名称
+    clientName: ${spring.application.name}
+    # 最小空闲连接数
+    connectionMinimumIdleSize: 8
+    # 连接池大小
+    connectionPoolSize: 32
+    # 连接空闲超时，单位：毫秒
+    idleConnectionTimeout: 10000
+    # 命令等待超时，单位：毫秒
+    timeout: 3000
+    # 发布和订阅连接池大小
+    subscriptionConnectionPoolSize: 50
+
+# 分布式锁 lock4j 全局配置
+lock4j:
+  # 获取分布式锁超时时间，默认为 3000 毫秒
+  acquire-timeout: 3000
+  # 分布式锁的超时时间，默认为 30 秒
+  expire: 30000
+
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+    logfile:
+      external-file: /mnt/logs/${spring.application.name}/console.log
+
+# 日志配置
+logging:
+  level:
+    org.springframework: warn
+    org.apache.dubbo: warn
+    com.alibaba.nacos: warn
+  config: classpath:logback.xml
+
+# Sa-Token配置
+sa-token:
+  # token名称 (同时也是cookie名称)
+  token-name: Authorization
+  # token有效期 设为一天 (必定过期) 单位: 秒
+  timeout: 86400
+  # token临时有效期 (指定时间无操作就过期) 单位: 秒
+  activity-timeout: 1800
+  # 开启内网服务调用鉴权
+  check-same-token: true
+  # Same-Token的有效期 (单位: 秒)
+  same-token-timeout: 600
+  # 是否允许同一账号并发登录 (为true时允许一起登录, 为false时新登录挤掉旧登录)
+  is-concurrent: true
+  # 在多人登录同一账号时，是否共用一个token (为true时所有登录共用一个token, 为false时每次登录新建一个token)
+  is-share: false
+  # 是否尝试从header里读取token
+  is-read-header: true
+  # 是否尝试从cookie里读取token
+  is-read-cookie: false
+  # token前缀
+  token-prefix: "Bearer"
+  # jwt秘钥
+  jwt-secret-key: abcdefghijklmnopqrstuvwxyz
+
+# MyBatisPlus配置
+# https://baomidou.com/config/
+mybatis-plus:
+  # 不支持多包, 如有需要可在注解配置 或 提升扫包等级
+  # 例如 com.**.**.mapper
+  mapperPackage: com.pet.**.mapper
+  # 对应的 XML 文件位置
+  mapperLocations: classpath*:mapper/**/*Mapper.xml,classpath:/mybatis-mapper/**Mapper.xml
+  # 实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.pet.**.domain
+  # 启动时是否检查 MyBatis XML 文件的存在，默认不检查
+  checkConfigLocation: false
+  configuration:
+    # 自动驼峰命名规则（camel case）映射
+    mapUnderscoreToCamelCase: true
+    # MyBatis 自动映射策略
+    # NONE：不启用 PARTIAL：只对非嵌套 resultMap 自动映射 FULL：对所有 resultMap 自动映射
+    autoMappingBehavior: PARTIAL
+    # MyBatis 自动映射时未知列或未知属性处理策
+    # NONE：不做处理 WARNING：打印相关警告 FAILING：抛出异常和详细信息
+    autoMappingUnknownColumnBehavior: NONE
+    # 更详细的日志输出 会有性能损耗 org.apache.ibatis.logging.stdout.StdOutImpl
+    # 关闭日志记录 (可单纯使用 p6spy 分析) org.apache.ibatis.logging.nologging.NoLoggingImpl
+    # 默认日志输出 org.apache.ibatis.logging.slf4j.Slf4jImpl
+    logImpl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+  global-config:
+    # 是否打印 Logo banner
+    banner: true
+    dbConfig:
+      # 主键类型
+      # AUTO 自增 NONE 空 INPUT 用户输入 ASSIGN_ID 雪花 ASSIGN_UUID 唯一 UUID
+      idType: ASSIGN_ID
+      # 逻辑已删除值
+      logicDeleteValue: 2
+      # 逻辑未删除值
+      logicNotDeleteValue: 0
+      insertStrategy: NOT_NULL
+      updateStrategy: NOT_NULL
+      where-strategy: NOT_NULL
+
+# 数据加密
+mybatis-encryptor:
+  # 是否开启加密
+  enable: false
+  # 默认加密算法
+  algorithm: BASE64
+  # 编码方式 BASE64/HEX。默认BASE64
+  encode: BASE64
+  # 安全秘钥 对称算法的秘钥 如：AES，SM4
+  password:
+  # 公私钥 非对称算法的公私钥 如：SM2，RSA
+  publicKey:
+  privateKey:
+
+# swagger配置
+swagger:
+  info:
+    # 标题
+    title: '标题：微服务权限管理系统_接口文档'
+    # 描述
+    description: '描述：微服务权限管理系统, 具体包括XXX,XXX模块...'
+    # 版本
+    version: '版本号：系统版本...'
+    # 作者信息
+    contact:
+      name: zy
+      email: 503897166@qq.com
+      url: 
+  components:
+    # 鉴权方式配置
+    security-schemes:
+      apiKey:
+        type: APIKEY
+        in: HEADER
+        name: ${sa-token.token-name}
+  # 服务文档路径映射 参考 gateway router 配置
+  # 默认为服务名去除前缀转换为path 此处填特殊的配置
+  service-mapping:
+    ruoyi-gen: /code
+
+springdoc:
+  api-docs:
+    # 是否开启接口文档
+    enabled: true
+  swagger-ui:
+    # 持久化认证数据
+    persistAuthorization: true
+
+# seata配置
+seata:
+  # 默认关闭，如需启用spring.datasource.dynami.seata需要同时开启
+  enabled: true
+  # Seata 应用编号，默认为 ${spring.application.name}
+  application-id: ${spring.application.name}
+  # Seata 事务组编号，用于 TC 集群名
+  tx-service-group: ${spring.application.name}-group
+  config:
+    type: nacos
+    nacos:
+      server-addr: ${spring.cloud.nacos.server-addr}
+      group: ${spring.cloud.nacos.config.group}
+      namespace: ${spring.profiles.active}
+      data-id: seata-server.properties
+  registry:
+    type: nacos
+    nacos:
+      application: pet-seata-serve
+      server-addr: ${spring.cloud.nacos.server-addr}
+      group: ${spring.cloud.nacos.discovery.group}
+      namespace: ${spring.profiles.active}
+
+2023-04-13 16:05:52,903 DEBUG [main] c.b.m.a.MybatisPlusAutoConfiguration [MybatisPlusAutoConfiguration.java : 309] Searching for mappers annotated with @Mapper
+2023-04-13 16:05:52,903 DEBUG [main] c.b.m.a.MybatisPlusAutoConfiguration [MybatisPlusAutoConfiguration.java : 313] Using auto-configuration base package 'com.xxl.job.executor'
+2023-04-13 16:05:53,793 DEBUG [main] org.apache.ibatis.logging.LogFactory [LogFactory.java : 109] Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-04-13 16:05:53,797 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [ClassPathScanningCandidateComponentProvider.java : 435] Identified candidate component class: file [D:\pet\pet\pet-xxl-nacos\pet-xxl-executor\target\classes\com\xxl\job\executor\dao\AlgoMgDao.class]
+2023-04-13 16:05:53,797 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [ClassPathScanningCandidateComponentProvider.java : 435] Identified candidate component class: file [D:\pet\pet\pet-xxl-nacos\pet-xxl-executor\target\classes\com\xxl\job\executor\dao\AlgoParamDao.class]
+2023-04-13 16:05:53,797 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [ClassPathScanningCandidateComponentProvider.java : 435] Identified candidate component class: file [D:\pet\pet\pet-xxl-nacos\pet-xxl-executor\target\classes\com\xxl\job\executor\dao\JobHandleLogDao.class]
+2023-04-13 16:05:53,797 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [ClassPathScanningCandidateComponentProvider.java : 435] Identified candidate component class: file [D:\pet\pet\pet-xxl-nacos\pet-xxl-executor\target\classes\com\xxl\job\executor\dao\JobParamDao.class]
+2023-04-13 16:05:53,797 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [ClassPathScanningCandidateComponentProvider.java : 435] Identified candidate component class: file [D:\pet\pet\pet-xxl-nacos\pet-xxl-executor\target\classes\com\xxl\job\executor\dao\XxlJobInfoDao.class]
+2023-04-13 16:05:53,799 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 49] Creating MapperFactoryBean with name 'algoMgDao' and 'com.xxl.job.executor.dao.AlgoMgDao' mapperInterface
+2023-04-13 16:05:53,799 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 49] Creating MapperFactoryBean with name 'algoParamDao' and 'com.xxl.job.executor.dao.AlgoParamDao' mapperInterface
+2023-04-13 16:05:53,799 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 49] Creating MapperFactoryBean with name 'jobHandleLogDao' and 'com.xxl.job.executor.dao.JobHandleLogDao' mapperInterface
+2023-04-13 16:05:53,799 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 49] Creating MapperFactoryBean with name 'jobParamDao' and 'com.xxl.job.executor.dao.JobParamDao' mapperInterface
+2023-04-13 16:05:53,799 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 49] Creating MapperFactoryBean with name 'xxlJobInfoDao' and 'com.xxl.job.executor.dao.XxlJobInfoDao' mapperInterface
+2023-04-13 16:05:53,828 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [ClassPathScanningCandidateComponentProvider.java : 435] Identified candidate component class: file [D:\pet\pet\pet-common\pet-common-mybatis\target\classes\com\pet\common\mybatis\core\mapper\BaseMapperPlus.class]
+2023-04-13 16:05:53,829 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 49] Creating MapperFactoryBean with name 'baseMapperPlus' and 'com.pet.common.mybatis.core.mapper.BaseMapperPlus' mapperInterface
+2023-04-13 16:05:53,829 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 49] Enabling autowire by type for MapperFactoryBean with name 'baseMapperPlus'.
+2023-04-13 16:05:54,832 DEBUG [main] i.n.u.i.l.InternalLoggerFactory [InternalLoggerFactory.java : 63] Using SLF4J as the default logging framework
+2023-04-13 16:05:54,835 DEBUG [main] io.netty.util.ResourceLeakDetector [ResourceLeakDetector.java : 129] -Dio.netty.leakDetection.level: simple
+2023-04-13 16:05:54,835 DEBUG [main] io.netty.util.ResourceLeakDetector [ResourceLeakDetector.java : 130] -Dio.netty.leakDetection.targetRecords: 4
+2023-04-13 16:05:54,838 DEBUG [main] i.n.util.ResourceLeakDetectorFactory [ResourceLeakDetectorFactory.java : 196] Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@61d2f267
+2023-04-13 16:05:54,847 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 496] -Dio.netty.noUnsafe: false
+2023-04-13 16:05:54,848 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 1000] Java version: 8
+2023-04-13 16:05:54,849 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 137] sun.misc.Unsafe.theUnsafe: available
+2023-04-13 16:05:54,850 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 161] sun.misc.Unsafe.copyMemory: available
+2023-04-13 16:05:54,850 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 193] sun.misc.Unsafe.storeFence: available
+2023-04-13 16:05:54,851 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 236] java.nio.Buffer.address: available
+2023-04-13 16:05:54,852 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 307] direct buffer constructor: available
+2023-04-13 16:05:54,853 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 385] java.nio.Bits.unaligned: available, true
+2023-04-13 16:05:54,854 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 459] jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2023-04-13 16:05:54,854 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 482] java.nio.DirectByteBuffer.<init>(long, int): available
+2023-04-13 16:05:54,854 DEBUG [main] i.n.util.internal.PlatformDependent [PlatformDependent.java : 1159] sun.misc.Unsafe: available
+2023-04-13 16:05:54,854 DEBUG [main] i.n.util.internal.PlatformDependent [PlatformDependent.java : 1289] -Dio.netty.tmpdir: C:\Users\zhuangyong\AppData\Local\Temp (java.io.tmpdir)
+2023-04-13 16:05:54,855 DEBUG [main] i.n.util.internal.PlatformDependent [PlatformDependent.java : 1368] -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2023-04-13 16:05:54,855 DEBUG [main] i.n.util.internal.PlatformDependent [PlatformDependent.java : 1119] Platform: Windows
+2023-04-13 16:05:54,856 DEBUG [main] i.n.util.internal.PlatformDependent [PlatformDependent.java : 178] -Dio.netty.maxDirectMemory: 15131475968 bytes
+2023-04-13 16:05:54,856 DEBUG [main] i.n.util.internal.PlatformDependent [PlatformDependent.java : 185] -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2023-04-13 16:05:54,857 DEBUG [main] io.netty.util.internal.CleanerJava6 [CleanerJava6.java : 92] java.nio.ByteBuffer.cleaner(): available
+2023-04-13 16:05:54,857 DEBUG [main] i.n.util.internal.PlatformDependent [PlatformDependent.java : 205] -Dio.netty.noPreferDirect: false
+2023-04-13 16:05:54,858 DEBUG [main] i.n.util.internal.PlatformDependent [PlatformDependent.java : 1010] org.jctools-core.MpscChunkedArrayQueue: available
+2023-04-13 16:05:54,908 INFO [main] i.s.s.b.a.SeataAutoConfiguration [SeataAutoConfiguration.java : 63] Automatically configure Seata
+2023-04-13 16:05:54,958 INFO [main] io.seata.config.ConfigurationFactory [ConfigurationFactory.java : 69] load Configuration from :Spring Configuration
+2023-04-13 16:05:54,973 DEBUG [configOperate_1_1_2] io.seata.config.FileConfiguration [FileConfiguration.java : 335] Could not found property config.nacos.username, try to use default value instead. exception:No configuration setting found for key 'config'
+2023-04-13 16:05:54,973 DEBUG [configOperate_1_1_2] io.seata.config.FileConfiguration [FileConfiguration.java : 335] Could not found property config.nacos.accessKey, try to use default value instead. exception:No configuration setting found for key 'config'
+2023-04-13 16:05:54,973 DEBUG [configOperate_1_1_2] io.seata.config.FileConfiguration [FileConfiguration.java : 335] Could not found property config.nacos.contextPath, try to use default value instead. exception:No configuration setting found for key 'config'
+2023-04-13 16:05:55,240 DEBUG [configOperate_1_1_2] io.seata.config.FileConfiguration [FileConfiguration.java : 335] Could not found property config.dataType, try to use default value instead. exception:No configuration setting found for key 'config'
+2023-04-13 16:05:55,495 INFO [main] i.s.s.a.GlobalTransactionScanner [GlobalTransactionScanner.java : 208] Initializing Global Transaction Clients ... 
+2023-04-13 16:05:55,561 DEBUG [main] i.n.c.MultithreadEventLoopGroup [MultithreadEventLoopGroup.java : 44] -Dio.netty.eventLoopThreads: 16
+2023-04-13 16:05:55,569 DEBUG [main] i.n.u.concurrent.GlobalEventExecutor [GlobalEventExecutor.java : 53] -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+2023-04-13 16:05:55,575 DEBUG [main] i.n.u.i.InternalThreadLocalMap [InternalThreadLocalMap.java : 100] -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2023-04-13 16:05:55,575 DEBUG [main] i.n.u.i.InternalThreadLocalMap [InternalThreadLocalMap.java : 101] -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2023-04-13 16:05:55,580 DEBUG [main] io.netty.channel.nio.NioEventLoop [NioEventLoop.java : 110] -Dio.netty.noKeySetOptimization: false
+2023-04-13 16:05:55,580 DEBUG [main] io.netty.channel.nio.NioEventLoop [NioEventLoop.java : 111] -Dio.netty.selectorAutoRebuildThreshold: 512
+2023-04-13 16:05:55,601 INFO [main] i.s.c.rpc.netty.NettyClientBootstrap [NettyClientBootstrap.java : 147] NettyClientBootstrap has started
+2023-04-13 16:05:55,718 DEBUG [configOperate_1_1_2] io.seata.config.FileConfiguration [FileConfiguration.java : 335] Could not found property registry.nacos.slbPattern, try to use default value instead. exception:No configuration setting found for key 'registry'
+2023-04-13 16:05:55,719 DEBUG [configOperate_1_1_2] io.seata.config.FileConfiguration [FileConfiguration.java : 335] Could not found property registry.nacos.username, try to use default value instead. exception:No configuration setting found for key 'registry'
+2023-04-13 16:05:55,719 DEBUG [configOperate_1_1_2] io.seata.config.FileConfiguration [FileConfiguration.java : 335] Could not found property registry.nacos.accessKey, try to use default value instead. exception:No configuration setting found for key 'registry'
+2023-04-13 16:05:55,719 DEBUG [configOperate_1_1_2] io.seata.config.FileConfiguration [FileConfiguration.java : 335] Could not found property registry.nacos.contextPath, try to use default value instead. exception:No configuration setting found for key 'registry'
+2023-04-13 16:05:55,953 ERROR [main] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:05:55,953 INFO [main] i.s.s.a.GlobalTransactionScanner [GlobalTransactionScanner.java : 222] Transaction Manager Client is initialized. applicationId[pet-xxl-executor] txServiceGroup[pet-xxl-executor-group]
+2023-04-13 16:05:55,995 INFO [main] io.seata.rm.datasource.AsyncWorker [AsyncWorker.java : 73] Async Commit Buffer Limit: 10000
+2023-04-13 16:05:55,996 INFO [main] i.s.r.d.xa.ResourceManagerXA [ResourceManagerXA.java : 59] ResourceManagerXA init ...
+2023-04-13 16:05:56,000 INFO [main] i.s.c.rpc.netty.NettyClientBootstrap [NettyClientBootstrap.java : 147] NettyClientBootstrap has started
+2023-04-13 16:05:56,001 INFO [main] i.s.s.a.GlobalTransactionScanner [GlobalTransactionScanner.java : 227] Resource Manager is initialized. applicationId[pet-xxl-executor] txServiceGroup[pet-xxl-executor-group]
+2023-04-13 16:05:56,001 INFO [main] i.s.s.a.GlobalTransactionScanner [GlobalTransactionScanner.java : 231] Global Transaction Clients are initialized. 
+2023-04-13 16:05:56,594 DEBUG [main] io.undertow.session [DelegatingBasicLogger.java : 384] Setting default session timeout to 1800
+2023-04-13 16:05:56,605 INFO [main] io.undertow.servlet [ServletContextImpl.java : 388] Initializing Spring embedded WebApplicationContext
+2023-04-13 16:05:56,669 DEBUG [main] i.m.c.u.i.l.InternalLoggerFactory [InternalLoggerFactory.java : 59] Using SLF4J as the default logging framework
+2023-04-13 16:05:56,809 INFO [main] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 244] dynamic-datasource detect P6SPY plugin and enabled it
+2023-04-13 16:05:56,810 INFO [main] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 252] dynamic-datasource detect ALIBABA SEATA and enabled it
+2023-04-13 16:05:56,810 WARN [main] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 236] dynamic-datasource initial loaded [0] datasource,Please add your primary datasource or check your configuration
+2023-04-13 16:05:56,836 DEBUG [main] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:05:56,846 DEBUG [main] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:05:56,998 DEBUG [main] io.undertow.session [InMemorySessionManager.java : 263] Registered session listener io.undertow.servlet.core.SessionListenerBridge@65d23aa3
+2023-04-13 16:05:57,053 DEBUG [main] io.undertow.session [DelegatingBasicLogger.java : 384] Setting default session timeout to 1800
+2023-04-13 16:05:59,362 DEBUG [main] o.h.v.m.ResourceBundleMessageInterpolator [ResourceBundleMessageInterpolator.java : 172] Loaded expression factory via original TCCL
+2023-04-13 16:05:59,370 DEBUG [main] o.h.v.i.e.AbstractConfigurationImpl [AbstractConfigurationImpl.java : 174] Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2023-04-13 16:05:59,371 DEBUG [main] o.h.v.i.e.AbstractConfigurationImpl [AbstractConfigurationImpl.java : 206] Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2023-04-13 16:05:59,371 DEBUG [main] o.h.v.i.e.AbstractConfigurationImpl [AbstractConfigurationImpl.java : 220] Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2023-04-13 16:05:59,372 DEBUG [main] o.h.v.i.x.config.ValidationXmlParser [ValidationXmlParser.java : 120] Trying to load META-INF/validation.xml for XML based Validator configuration.
+2023-04-13 16:05:59,372 DEBUG [main] o.h.v.i.x.c.ResourceLoaderHelper [ResourceLoaderHelper.java : 53] Trying to load META-INF/validation.xml via user class loader
+2023-04-13 16:05:59,373 DEBUG [main] o.h.v.i.x.c.ResourceLoaderHelper [ResourceLoaderHelper.java : 60] Trying to load META-INF/validation.xml via TCCL
+2023-04-13 16:05:59,373 DEBUG [main] o.h.v.i.x.c.ResourceLoaderHelper [ResourceLoaderHelper.java : 66] Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2023-04-13 16:05:59,374 DEBUG [main] o.h.v.i.x.config.ValidationXmlParser [ValidationXmlParser.java : 127] No META-INF/validation.xml found. Using annotation based configuration only.
+2023-04-13 16:05:59,374 DEBUG [main] o.h.v.i.e.r.TraversableResolvers [TraversableResolvers.java : 60] Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2023-04-13 16:05:59,376 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 345] HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2023-04-13 16:05:59,377 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 420] HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2023-04-13 16:05:59,378 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 421] HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2023-04-13 16:05:59,378 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 422] HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2023-04-13 16:05:59,378 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 423] HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2023-04-13 16:05:59,378 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 424] HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2023-04-13 16:05:59,649 INFO [main] c.p.common.core.config.JacksonConfig [JacksonConfig.java : 43] 初始化 com.pet.common.core.jackson 配置
+2023-04-13 16:05:59,918 DEBUG [main] _.s.w.s.HandlerMapping.Mappings [AbstractHandlerMethodMapping.java : 295] 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-04-13 16:05:59,956 DEBUG [main] _.s.w.s.HandlerMapping.Mappings [AbstractDetectingUrlHandlerMapping.java : 86] 'beanNameHandlerMapping' {}
+2023-04-13 16:06:00,010 DEBUG [main] _.s.w.s.HandlerMapping.Mappings [SimpleUrlHandlerMapping.java : 177] 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-04-13 16:06:00,821 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 157] -Dio.netty.allocator.numHeapArenas: 16
+2023-04-13 16:06:00,822 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 158] -Dio.netty.allocator.numDirectArenas: 16
+2023-04-13 16:06:00,822 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 160] -Dio.netty.allocator.pageSize: 8192
+2023-04-13 16:06:00,822 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 165] -Dio.netty.allocator.maxOrder: 9
+2023-04-13 16:06:00,823 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 169] -Dio.netty.allocator.chunkSize: 4194304
+2023-04-13 16:06:00,823 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 170] -Dio.netty.allocator.smallCacheSize: 256
+2023-04-13 16:06:00,823 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 171] -Dio.netty.allocator.normalCacheSize: 64
+2023-04-13 16:06:00,823 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 172] -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2023-04-13 16:06:00,823 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 173] -Dio.netty.allocator.cacheTrimInterval: 8192
+2023-04-13 16:06:00,824 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 174] -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2023-04-13 16:06:00,824 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 175] -Dio.netty.allocator.useCacheForAllThreads: false
+2023-04-13 16:06:00,824 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 176] -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2023-04-13 16:06:00,834 DEBUG [main] io.netty.buffer.ByteBufUtil [ByteBufUtil.java : 87] -Dio.netty.allocator.type: pooled
+2023-04-13 16:06:00,834 DEBUG [main] io.netty.buffer.ByteBufUtil [ByteBufUtil.java : 96] -Dio.netty.threadLocalDirectBufferSize: 0
+2023-04-13 16:06:00,835 DEBUG [main] io.netty.buffer.ByteBufUtil [ByteBufUtil.java : 99] -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2023-04-13 16:06:00,837 DEBUG [main] io.netty.buffer.AbstractByteBuf [AbstractByteBuf.java : 63] -Dio.netty.buffer.checkAccessible: true
+2023-04-13 16:06:00,837 DEBUG [main] io.netty.buffer.AbstractByteBuf [AbstractByteBuf.java : 64] -Dio.netty.buffer.checkBounds: true
+2023-04-13 16:06:00,837 DEBUG [main] i.n.util.ResourceLeakDetectorFactory [ResourceLeakDetectorFactory.java : 196] Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@1983a4e4
+2023-04-13 16:06:00,842 DEBUG [main] io.netty.util.Recycler [Recycler.java : 90] -Dio.netty.recycler.maxCapacityPerThread: 4096
+2023-04-13 16:06:00,842 DEBUG [main] io.netty.util.Recycler [Recycler.java : 91] -Dio.netty.recycler.ratio: 8
+2023-04-13 16:06:00,842 DEBUG [main] io.netty.util.Recycler [Recycler.java : 92] -Dio.netty.recycler.chunkSize: 32
+2023-04-13 16:06:00,842 DEBUG [main] io.netty.util.Recycler [Recycler.java : 93] -Dio.netty.recycler.blocking: false
+2023-04-13 16:06:00,842 DEBUG [main] io.netty.util.Recycler [Recycler.java : 94] -Dio.netty.recycler.batchFastThreadLocalOnly: true
+2023-04-13 16:06:00,886 INFO [main] c.p.c.r.config.RedisConfiguration [RedisConfiguration.java : 71] 初始化 redis 配置
+2023-04-13 16:06:00,917 INFO [main] org.redisson.Version [Version.java : 41] Redisson 3.20.0
+2023-04-13 16:06:00,936 DEBUG [main] i.n.r.d.DefaultDnsServerAddressStreamProvider [DefaultDnsServerAddressStreamProvider.java : 82] Default DNS servers: [/172.30.109.96:53, /172.30.109.196:53, /172.30.100.196:53] (sun.net.dns.ResolverConfiguration)
+2023-04-13 16:06:00,946 DEBUG [main] io.netty.util.NetUtil [NetUtil.java : 142] -Djava.net.preferIPv4Stack: false
+2023-04-13 16:06:00,946 DEBUG [main] io.netty.util.NetUtil [NetUtil.java : 143] -Djava.net.preferIPv6Addresses: false
+2023-04-13 16:06:01,158 DEBUG [main] io.netty.util.NetUtilInitializations [NetUtilInitializations.java : 139] Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2023-04-13 16:06:01,159 DEBUG [main] io.netty.util.NetUtil [NetUtil.java : 200] Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2023-04-13 16:06:01,173 DEBUG [main] i.n.r.DefaultHostsFileEntriesResolver [DefaultHostsFileEntriesResolver.java : 53] -Dio.netty.hostsFileRefreshInterval: 0
+2023-04-13 16:06:01,215 DEBUG [main] io.netty.channel.DefaultChannelId [DefaultChannelId.java : 79] -Dio.netty.processId: 4508 (auto-detected)
+2023-04-13 16:06:01,229 DEBUG [main] io.netty.channel.DefaultChannelId [DefaultChannelId.java : 101] -Dio.netty.machineId: f4:7b:09:ff:fe:0d:33:d8 (auto-detected)
+2023-04-13 16:06:01,289 DEBUG [redisson-netty-2-3] org.redisson.client.RedisConnection [RedisConnection.java : 72] Connection created [addr=redis://47.122.40.114:16379]
+2023-04-13 16:06:01,289 DEBUG [redisson-netty-2-2] org.redisson.client.RedisConnection [RedisConnection.java : 72] Connection created [addr=redis://47.122.40.114:16379]
+2023-04-13 16:06:01,308 DEBUG [redisson-netty-2-4] org.redisson.client.RedisConnection [RedisConnection.java : 72] Connection created [addr=redis://47.122.40.114:16379]
+2023-04-13 16:06:01,398 DEBUG [redisson-netty-2-6] o.r.c.ClientConnectionsEntry [ClientConnectionsEntry.java : 202] new connection created: RedisConnection@1263734288 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0x969b20af, L:/172.31.33.77:59587 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@4a9e331[Not completed, 1 dependents], command=(PING), params=[], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:06:01,398 DEBUG [redisson-netty-2-5] o.r.c.ClientConnectionsEntry [ClientConnectionsEntry.java : 202] new connection created: RedisConnection@724311215 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0x2c580a18, L:/172.31.33.77:59586 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@25ebe7ba[Not completed, 1 dependents], command=(PING), params=[], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:06:01,409 DEBUG [redisson-netty-2-1] org.redisson.client.RedisConnection [RedisConnection.java : 72] Connection created [addr=redis://47.122.40.114:16379]
+2023-04-13 16:06:01,410 DEBUG [redisson-netty-2-7] org.redisson.client.RedisConnection [RedisConnection.java : 72] Connection created [addr=redis://47.122.40.114:16379]
+2023-04-13 16:06:01,427 DEBUG [redisson-netty-2-8] o.r.c.ClientConnectionsEntry [ClientConnectionsEntry.java : 215] new pubsub connection created: RedisPubSubConnection@1103670238 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0x7461edb4, L:/172.31.33.77:59588 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@4f0f5d97[Not completed, 1 dependents], command=(PING), params=[], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:06:01,427 INFO [redisson-netty-2-8] o.r.c.p.MasterPubSubConnectionPool [ConnectionPool.java : 162] 1 connections initialized for 47.122.40.114/47.122.40.114:16379
+2023-04-13 16:06:01,470 DEBUG [redisson-netty-2-2] o.r.c.ClientConnectionsEntry [ClientConnectionsEntry.java : 202] new connection created: RedisConnection@899543095 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0x42b0fc7a, L:/172.31.33.77:59589 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@2c580316[Not completed, 1 dependents], command=(PING), params=[], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:06:01,471 DEBUG [redisson-netty-2-3] org.redisson.client.RedisConnection [RedisConnection.java : 72] Connection created [addr=redis://47.122.40.114:16379]
+2023-04-13 16:06:01,474 DEBUG [redisson-netty-2-4] o.r.c.ClientConnectionsEntry [ClientConnectionsEntry.java : 202] new connection created: RedisConnection@265449363 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0xcc80be16, L:/172.31.33.77:59590 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@6aac0783[Not completed, 1 dependents], command=(PING), params=[], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:06:01,476 DEBUG [redisson-netty-2-6] org.redisson.client.RedisConnection [RedisConnection.java : 72] Connection created [addr=redis://47.122.40.114:16379]
+2023-04-13 16:06:01,538 DEBUG [redisson-netty-2-5] o.r.c.ClientConnectionsEntry [ClientConnectionsEntry.java : 202] new connection created: RedisConnection@1433970871 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0x6604c2f3, L:/172.31.33.77:59591 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@57104748[Not completed, 1 dependents], command=(PING), params=[], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:06:01,539 DEBUG [redisson-netty-2-7] org.redisson.client.RedisConnection [RedisConnection.java : 72] Connection created [addr=redis://47.122.40.114:16379]
+2023-04-13 16:06:01,551 DEBUG [redisson-netty-2-1] o.r.c.ClientConnectionsEntry [ClientConnectionsEntry.java : 202] new connection created: RedisConnection@734938571 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0xfacdee65, L:/172.31.33.77:59592 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@127f3cb4[Not completed, 1 dependents], command=(PING), params=[], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:06:01,553 DEBUG [redisson-netty-2-8] org.redisson.client.RedisConnection [RedisConnection.java : 72] Connection created [addr=redis://47.122.40.114:16379]
+2023-04-13 16:06:01,610 DEBUG [redisson-netty-2-2] o.r.c.ClientConnectionsEntry [ClientConnectionsEntry.java : 202] new connection created: RedisConnection@171536045 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0x9f811e3c, L:/172.31.33.77:59594 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@5e61a408[Not completed, 1 dependents], command=(PING), params=[], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:06:01,613 DEBUG [redisson-netty-2-3] o.r.c.ClientConnectionsEntry [ClientConnectionsEntry.java : 202] new connection created: RedisConnection@1126918877 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0xdebbb238, L:/172.31.33.77:59595 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@5dd5c4b7[Not completed, 1 dependents], command=(PING), params=[], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:06:01,613 INFO [redisson-netty-2-3] o.r.c.pool.MasterConnectionPool [ConnectionPool.java : 162] 8 connections initialized for 47.122.40.114/47.122.40.114:16379
+2023-04-13 16:06:01,671 DEBUG [main] c.b.m.a.MybatisPlusAutoConfiguration [MybatisPlusAutoConfiguration.java : 381] Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2023-04-13 16:06:01,706 DEBUG [main] o.h.v.m.ResourceBundleMessageInterpolator [ResourceBundleMessageInterpolator.java : 172] Loaded expression factory via original TCCL
+2023-04-13 16:06:01,709 DEBUG [main] o.h.v.i.e.AbstractConfigurationImpl [AbstractConfigurationImpl.java : 174] Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2023-04-13 16:06:01,709 DEBUG [main] o.h.v.i.e.AbstractConfigurationImpl [AbstractConfigurationImpl.java : 220] Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2023-04-13 16:06:01,710 DEBUG [main] o.h.v.i.x.config.ValidationXmlParser [ValidationXmlParser.java : 120] Trying to load META-INF/validation.xml for XML based Validator configuration.
+2023-04-13 16:06:01,710 DEBUG [main] o.h.v.i.x.c.ResourceLoaderHelper [ResourceLoaderHelper.java : 60] Trying to load META-INF/validation.xml via TCCL
+2023-04-13 16:06:01,711 DEBUG [main] o.h.v.i.x.c.ResourceLoaderHelper [ResourceLoaderHelper.java : 66] Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2023-04-13 16:06:01,712 DEBUG [main] o.h.v.i.x.config.ValidationXmlParser [ValidationXmlParser.java : 127] No META-INF/validation.xml found. Using annotation based configuration only.
+2023-04-13 16:06:01,714 DEBUG [main] o.h.v.i.e.r.TraversableResolvers [TraversableResolvers.java : 60] Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2023-04-13 16:06:01,716 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 345] HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2023-04-13 16:06:01,717 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 420] HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2023-04-13 16:06:01,717 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 421] HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2023-04-13 16:06:01,717 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 422] HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2023-04-13 16:06:01,717 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 423] HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2023-04-13 16:06:01,718 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 424] HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2023-04-13 16:06:02,002 DEBUG [main] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:06:03,893 INFO [main] io.undertow [Undertow.java : 120] starting server: Undertow - 2.2.23.Final
+2023-04-13 16:06:03,901 INFO [main] org.xnio [Xnio.java : 95] XNIO version 3.8.7.Final
+2023-04-13 16:06:03,908 INFO [main] org.xnio.nio [NioXnio.java : 58] XNIO NIO Implementation Version 3.8.7.Final
+2023-04-13 16:06:03,932 DEBUG [main] org.xnio [XnioWorker.java : 1191] Creating worker:null, pool size:256, max pool size:256, keep alive:60000, io threads:8, stack size:0
+2023-04-13 16:06:03,949 INFO [main] org.jboss.threads [Version.java : 52] JBoss Threads version 3.1.0.Final
+2023-04-13 16:06:03,964 DEBUG [XNIO-1 I/O-8] org.xnio.nio [WorkerThread.java : 444] Started channel thread 'XNIO-1 I/O-8', selector sun.nio.ch.WindowsSelectorImpl@44099bf
+2023-04-13 16:06:03,964 DEBUG [XNIO-1 I/O-3] org.xnio.nio [WorkerThread.java : 444] Started channel thread 'XNIO-1 I/O-3', selector sun.nio.ch.WindowsSelectorImpl@23e904d3
+2023-04-13 16:06:03,964 DEBUG [XNIO-1 I/O-5] org.xnio.nio [WorkerThread.java : 444] Started channel thread 'XNIO-1 I/O-5', selector sun.nio.ch.WindowsSelectorImpl@461f35c1
+2023-04-13 16:06:03,964 DEBUG [XNIO-1 I/O-4] org.xnio.nio [WorkerThread.java : 444] Started channel thread 'XNIO-1 I/O-4', selector sun.nio.ch.WindowsSelectorImpl@5af96f08
+2023-04-13 16:06:03,964 DEBUG [XNIO-1 I/O-1] org.xnio.nio [WorkerThread.java : 444] Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.WindowsSelectorImpl@77bd01af
+2023-04-13 16:06:03,964 DEBUG [main] io.undertow [Undertow.java : 160] Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9209
+2023-04-13 16:06:03,964 DEBUG [XNIO-1 I/O-6] org.xnio.nio [WorkerThread.java : 444] Started channel thread 'XNIO-1 I/O-6', selector sun.nio.ch.WindowsSelectorImpl@69bb20b5
+2023-04-13 16:06:03,964 DEBUG [XNIO-1 I/O-7] org.xnio.nio [WorkerThread.java : 444] Started channel thread 'XNIO-1 I/O-7', selector sun.nio.ch.WindowsSelectorImpl@12d64f59
+2023-04-13 16:06:03,964 DEBUG [XNIO-1 I/O-2] org.xnio.nio [WorkerThread.java : 444] Started channel thread 'XNIO-1 I/O-2', selector sun.nio.ch.WindowsSelectorImpl@4441d5a5
+2023-04-13 16:06:03,964 DEBUG [XNIO-1 Accept] org.xnio.nio [WorkerThread.java : 444] Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.WindowsSelectorImpl@24466c89
+2023-04-13 16:06:04,039 INFO [main] c.a.c.n.r.NacosServiceRegistry [NacosServiceRegistry.java : 75] nacos registry, DEFAULT_GROUP pet-xxl-executor 172.31.33.77:9209 register finished
+2023-04-13 16:06:05,637 WARN [main] o.a.d.r.c.AbstractServiceDiscovery [? : ?]  [DUBBO] No valid instance found, stop registering instance address to registry., dubbo version: 3.1.7, current host: 172.31.33.77, error code: 1-12. This may be caused by , go to https://dubbo.apache.org/faq/1/12 to find instructions. 
+2023-04-13 16:06:05,644 INFO [main] c.x.j.e.XxlJobSpringCloudExecutorApp [StartupInfoLogger.java : 61] Started XxlJobSpringCloudExecutorApp in 20.345 seconds (JVM running for 22.091)
+2023-04-13 16:06:05,655 INFO [main] c.a.c.n.r.NacosContextRefresher [NacosContextRefresher.java : 129] [Nacos Config] Listening config: dataId=datasource.yml, group=DEFAULT_GROUP
+2023-04-13 16:06:05,666 INFO [main] c.a.c.n.r.NacosContextRefresher [NacosContextRefresher.java : 129] [Nacos Config] Listening config: dataId=application-common.yml, group=DEFAULT_GROUP
+2023-04-13 16:06:05,666 INFO [main] c.a.c.n.r.NacosContextRefresher [NacosContextRefresher.java : 129] [Nacos Config] Listening config: dataId=pet-xxl-executor.yml, group=DEFAULT_GROUP
+2023-04-13 16:06:06,392 INFO [RMI TCP Connection(4)-172.31.33.77] io.undertow.servlet [ServletContextImpl.java : 388] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-13 16:06:07,283 DEBUG [RMI TCP Connection(5)-172.31.33.77] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:06:07,288 WARN [RMI TCP Connection(5)-172.31.33.77] o.s.b.a.j.DataSourceHealthIndicator [AbstractHealthIndicator.java : 94] DataSource health check failed
+com.baomidou.dynamic.datasource.exception.CannotFindDataSourceException: dynamic-datasource can not find primary datasource
+	at com.baomidou.dynamic.datasource.DynamicRoutingDataSource.determinePrimaryDataSource(DynamicRoutingDataSource.java:97)
+	at com.baomidou.dynamic.datasource.DynamicRoutingDataSource.getDataSource(DynamicRoutingDataSource.java:126)
+	at com.baomidou.dynamic.datasource.DynamicRoutingDataSource.determineDataSource(DynamicRoutingDataSource.java:83)
+	at com.baomidou.dynamic.datasource.ds.AbstractRoutingDataSource.getConnection(AbstractRoutingDataSource.java:55)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:330)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.getProduct(DataSourceHealthIndicator.java:122)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doDataSourceHealthCheck(DataSourceHealthIndicator.java:105)
+	at org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator.doHealthCheck(DataSourceHealthIndicator.java:100)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:94)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:41)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getLoggedHealth(HealthEndpointSupport.java:172)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:145)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:156)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:141)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:81)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:88)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:124)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.GeneratedMethodAccessor47.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2023-04-13 16:06:07,336 DEBUG [RMI TCP Connection(5)-172.31.33.77] reactor.util.Loggers [Loggers.java : 254] Using Slf4j logging framework
+2023-04-13 16:06:07,390 DEBUG [boundedElastic-1] org.redisson.command.RedisExecutor [RedisExecutor.java : 605] acquired connection for command (INFO) and params [server] from slot NodeSource [slot=0, addr=null, redisClient=null, redirect=null, entry=null] using node 47.122.40.114/47.122.40.114:16379... RedisConnection@1263734288 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0x969b20af, L:/172.31.33.77:59587 - R:47.122.40.114/47.122.40.114:16379], currentCommand=null, usage=1]
+2023-04-13 16:06:07,435 DEBUG [redisson-netty-2-2] org.redisson.command.RedisExecutor [RedisExecutor.java : 640] connection released for command (INFO) and params [server] from slot NodeSource [slot=0, addr=null, redisClient=null, redirect=null, entry=null] using connection RedisConnection@1263734288 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0x969b20af, L:/172.31.33.77:59587 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@8ca26bb[Completed normally], command=(INFO), params=[server], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:06:55,672 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:06:56,237 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:06:58,045 INFO [nacos.client.cachedata.internal.notifier] c.a.c.n.c.NacosConfigDataLoader [NacosConfigDataLoader.java : 149] [Nacos Config] Load config[dataId=pet-xxl-executor.yml, group=DEFAULT_GROUP] success
+2023-04-13 16:06:58,045 DEBUG [nacos.client.cachedata.internal.notifier] c.a.c.n.c.NacosConfigDataLoader [NacosConfigDataLoader.java : 158] [Nacos Config] config[dataId=pet-xxl-executor.yml, group=DEFAULT_GROUP] content: 
+spring:
+  datasource:
+    dynamic:
+      # 设置默认的数据源或者数据源组,默认值即为 master
+      primary: master
+      datasource:
+        # 主库数据源
+        master:
+          type: ${spring.datasource.type}
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: ${datasource.system-master.url}
+          username: ${datasource.system-master.username}
+          password: ${datasource.system-master.password}
+2023-04-13 16:06:58,092 INFO [nacos.client.cachedata.internal.notifier] c.a.c.n.c.NacosConfigDataLoader [NacosConfigDataLoader.java : 149] [Nacos Config] Load config[dataId=datasource.yml, group=DEFAULT_GROUP] success
+2023-04-13 16:06:58,092 DEBUG [nacos.client.cachedata.internal.notifier] c.a.c.n.c.NacosConfigDataLoader [NacosConfigDataLoader.java : 158] [Nacos Config] config[dataId=datasource.yml, group=DEFAULT_GROUP] content: 
+datasource:
+  system-master:
+    # jdbc 所有参数配置参考 https://lionli.blog.csdn.net/article/details/122018562
+    # rewriteBatchedStatements=true 批处理优化 大幅提升批量插入更新删除性能
+    url: jdbc:mysql://47.122.40.114:3306/pet-cloud?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&rewriteBatchedStatements=true
+    username: root
+    password: hash@1234
+  gen:
+    url: jdbc:mysql://47.122.40.114:3306/pet-cloud?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&rewriteBatchedStatements=true
+    username: root
+    password: hash@1234
+  job:
+    url: jdbc:mysql://47.122.40.114:3306/pet-job?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&rewriteBatchedStatements=true
+    username: root
+    password: hash@1234
+#  system-oracle:
+#    url: jdbc:oracle:thin:@//localhost:1521/XE
+#    username: ROOT
+#    password: password
+#  system-postgres:
+#    url: jdbc:postgresql://localhost:5432/postgres?useUnicode=true&characterEncoding=utf8&useSSL=true&autoReconnect=true&reWriteBatchedInserts=true
+#    username: root
+#    password: password
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    # 动态数据源文档 https://www.kancloud.cn/tracy5546/dynamic-datasource/content
+    dynamic:
+      # 性能分析插件(有性能损耗 不建议生产环境使用)
+      p6spy: true
+      # 开启seata代理，开启后默认每个数据源都代理，如果某个不需要代理可单独关闭
+      seata: true
+      # 严格模式 匹配不到数据源则报错
+      strict: true
+      hikari:
+        # 最大连接池数量
+        maxPoolSize: 20
+        # 最小空闲线程数量
+        minIdle: 10
+        # 配置获取连接等待超时的时间
+        connectionTimeout: 30000
+        # 校验超时时间
+        validationTimeout: 5000
+        # 空闲连接存活最大时间，默认10分钟
+        idleTimeout: 600000
+        # 此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认30分钟
+        maxLifetime: 1800000
+        # 连接测试query（配置检测连接是否有效）
+        connectionTestQuery: SELECT 1
+        # 多久检查一次连接的活性
+        keepaliveTime: 30000
+
+# seata配置
+seata:
+  # 关闭自动代理
+  enable-auto-data-source-proxy: false
+
+2023-04-13 16:06:58,314 INFO [nacos.client.cachedata.internal.notifier] c.a.c.n.c.NacosConfigDataLoader [NacosConfigDataLoader.java : 149] [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2023-04-13 16:06:58,314 DEBUG [nacos.client.cachedata.internal.notifier] c.a.c.n.c.NacosConfigDataLoader [NacosConfigDataLoader.java : 158] [Nacos Config] config[dataId=application-common.yml, group=DEFAULT_GROUP] content: 
+server:
+  # undertow 配置
+  undertow:
+    # HTTP post内容的最大大小。当值为-1时，默认值为大小是无限的
+    max-http-post-size: -1
+    # 以下的配置会影响buffer,这些buffer会用于服务器连接的IO操作,有点类似netty的池化内存管理
+    # 每块buffer的空间大小,越小的空间被利用越充分
+    buffer-size: 512
+    # 是否分配的直接内存
+    direct-buffers: true
+    threads:
+      # 设置IO线程数, 它主要执行非阻塞的任务,它们会负责多个连接, 默认设置每个CPU核心一个线程
+      io: 8
+      # 阻塞任务线程池, 当执行类似servlet请求阻塞操作, undertow会从这个线程池中取得线程,它的值设置取决于系统的负载
+      worker: 256
+nacos:
+  server: 47.122.40.114:8848
+  discovery:
+    group: DEFAULT_GROUP
+  config:
+    group: DEFAULT_GROUP
+
+dubbo:
+  application:
+    logger: slf4j
+    # 元数据中心 local 本地 remote 远程 这里使用远程便于其他服务获取
+    metadataType: remote
+    # 可选值 interface、instance、all，默认是 all，即接口级地址、应用级地址都注册
+    register-mode: instance
+    service-discovery:
+      # FORCE_INTERFACE，只消费接口级地址，如无地址则报错，单订阅 2.x 地址
+      # APPLICATION_FIRST，智能决策接口级/应用级地址，双订阅
+      # FORCE_APPLICATION，只消费应用级地址，如无地址则报错，单订阅 3.x 地址
+      migration: FORCE_APPLICATION
+    qos-enable: false
+  protocol:
+    # 设置为 tri 即可使用 Triple 3.0 新协议
+    # 性能对比 dubbo 协议并没有提升 但基于 http2 用于多语言异构等 http 交互场景
+    # 使用 dubbo 协议通信
+    name: dubbo
+    # dubbo 协议端口(-1表示自增端口,从20880开始)
+    port: -1
+    # 指定dubbo协议注册ip
+    # host: 192.168.0.100
+  # 注册中心配置
+  registry:
+    address: nacos://${spring.cloud.nacos.server-addr}
+    group: DUBBO_GROUP
+    parameters:
+      namespace: ${spring.profiles.active}
+  # 消费者相关配置
+  consumer:
+    # 结果缓存(LRU算法)
+    # 会有数据不一致问题 建议在注解局部开启
+    cache: false
+    # 支持校验注解
+    validation: true
+    # 超时时间
+    timeout: 3000
+    # 初始化检查
+    check: false
+  scan:
+    # 接口实现类扫描
+    base-packages: com.pet.**.dubbo
+  # 自定义配置
+  custom:
+    # 全局请求log
+    request-log: true
+    # info 基础信息 param 参数信息 full 全部
+    log-level: info
+
+spring:
+  # 资源信息
+  messages:
+    # 国际化资源文件路径
+    basename: i18n/messages
+  servlet:
+    multipart:
+      # 整个请求大小限制
+      max-request-size: 20MB
+      # 上传单个文件大小限制
+      max-file-size: 10MB
+  mvc:
+    format:
+      date-time: yyyy-MM-dd HH:mm:ss
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  #jackson配置
+  jackson:
+    # 日期格式化
+    date-format: yyyy-MM-dd HH:mm:ss
+    serialization:
+      # 格式化输出
+      INDENT_OUTPUT: false
+      # 忽略无法转换的对象
+      fail_on_empty_beans: false
+    deserialization:
+      # 允许对象忽略json中不存在的属性
+      fail_on_unknown_properties: false
+  cloud:
+    # sentinel 配置
+    sentinel:
+      # sentinel 开关
+      enabled: true
+      # 取消控制台懒加载
+      eager: true
+      transport:
+        # dashboard控制台服务名 用于服务发现
+        # 如无此配置将默认使用下方 dashboard 配置直接注册
+        server-name: pet-sentinel-dashboard
+        # 客户端指定注册的ip 用于多网卡ip不稳点使用
+        # client-ip:
+        # 控制台地址 从1.3.0开始使用 server-name 注册
+        # dashboard: localhost:8718
+
+  # redis通用配置 子服务可以自行配置进行覆盖
+  redis:
+    host: 47.122.40.114
+    port: 16379
+    # 密码(如没有密码请注释掉)
+    # password:
+    database: 0
+    timeout: 10s
+    ssl: false
+
+# redisson 配置
+redisson:
+  # redis key前缀
+  keyPrefix:
+  # 线程池数量
+  threads: 4
+  # Netty线程池数量
+  nettyThreads: 8
+  # 单节点配置
+  singleServerConfig:
+    # 客户端名称
+    clientName: ${spring.application.name}
+    # 最小空闲连接数
+    connectionMinimumIdleSize: 8
+    # 连接池大小
+    connectionPoolSize: 32
+    # 连接空闲超时，单位：毫秒
+    idleConnectionTimeout: 10000
+    # 命令等待超时，单位：毫秒
+    timeout: 3000
+    # 发布和订阅连接池大小
+    subscriptionConnectionPoolSize: 50
+
+# 分布式锁 lock4j 全局配置
+lock4j:
+  # 获取分布式锁超时时间，默认为 3000 毫秒
+  acquire-timeout: 3000
+  # 分布式锁的超时时间，默认为 30 秒
+  expire: 30000
+
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+    logfile:
+      external-file: /mnt/logs/${spring.application.name}/console.log
+
+# 日志配置
+logging:
+  level:
+    org.springframework: warn
+    org.apache.dubbo: warn
+    com.alibaba.nacos: warn
+  config: classpath:logback.xml
+
+# Sa-Token配置
+sa-token:
+  # token名称 (同时也是cookie名称)
+  token-name: Authorization
+  # token有效期 设为一天 (必定过期) 单位: 秒
+  timeout: 86400
+  # token临时有效期 (指定时间无操作就过期) 单位: 秒
+  activity-timeout: 1800
+  # 开启内网服务调用鉴权
+  check-same-token: true
+  # Same-Token的有效期 (单位: 秒)
+  same-token-timeout: 600
+  # 是否允许同一账号并发登录 (为true时允许一起登录, 为false时新登录挤掉旧登录)
+  is-concurrent: true
+  # 在多人登录同一账号时，是否共用一个token (为true时所有登录共用一个token, 为false时每次登录新建一个token)
+  is-share: false
+  # 是否尝试从header里读取token
+  is-read-header: true
+  # 是否尝试从cookie里读取token
+  is-read-cookie: false
+  # token前缀
+  token-prefix: "Bearer"
+  # jwt秘钥
+  jwt-secret-key: abcdefghijklmnopqrstuvwxyz
+
+# MyBatisPlus配置
+# https://baomidou.com/config/
+mybatis-plus:
+  # 不支持多包, 如有需要可在注解配置 或 提升扫包等级
+  # 例如 com.**.**.mapper
+  mapperPackage: com.pet.**.mapper
+  # 对应的 XML 文件位置
+  mapperLocations: classpath*:mapper/**/*Mapper.xml,classpath:/mybatis-mapper/**Mapper.xml
+  # 实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.pet.**.domain
+  # 启动时是否检查 MyBatis XML 文件的存在，默认不检查
+  checkConfigLocation: false
+  configuration:
+    # 自动驼峰命名规则（camel case）映射
+    mapUnderscoreToCamelCase: true
+    # MyBatis 自动映射策略
+    # NONE：不启用 PARTIAL：只对非嵌套 resultMap 自动映射 FULL：对所有 resultMap 自动映射
+    autoMappingBehavior: PARTIAL
+    # MyBatis 自动映射时未知列或未知属性处理策
+    # NONE：不做处理 WARNING：打印相关警告 FAILING：抛出异常和详细信息
+    autoMappingUnknownColumnBehavior: NONE
+    # 更详细的日志输出 会有性能损耗 org.apache.ibatis.logging.stdout.StdOutImpl
+    # 关闭日志记录 (可单纯使用 p6spy 分析) org.apache.ibatis.logging.nologging.NoLoggingImpl
+    # 默认日志输出 org.apache.ibatis.logging.slf4j.Slf4jImpl
+    logImpl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+  global-config:
+    # 是否打印 Logo banner
+    banner: true
+    dbConfig:
+      # 主键类型
+      # AUTO 自增 NONE 空 INPUT 用户输入 ASSIGN_ID 雪花 ASSIGN_UUID 唯一 UUID
+      idType: ASSIGN_ID
+      # 逻辑已删除值
+      logicDeleteValue: 2
+      # 逻辑未删除值
+      logicNotDeleteValue: 0
+      insertStrategy: NOT_NULL
+      updateStrategy: NOT_NULL
+      where-strategy: NOT_NULL
+
+# 数据加密
+mybatis-encryptor:
+  # 是否开启加密
+  enable: false
+  # 默认加密算法
+  algorithm: BASE64
+  # 编码方式 BASE64/HEX。默认BASE64
+  encode: BASE64
+  # 安全秘钥 对称算法的秘钥 如：AES，SM4
+  password:
+  # 公私钥 非对称算法的公私钥 如：SM2，RSA
+  publicKey:
+  privateKey:
+
+# swagger配置
+swagger:
+  info:
+    # 标题
+    title: '标题：微服务权限管理系统_接口文档'
+    # 描述
+    description: '描述：微服务权限管理系统, 具体包括XXX,XXX模块...'
+    # 版本
+    version: '版本号：系统版本...'
+    # 作者信息
+    contact:
+      name: zy
+      email: 503897166@qq.com
+      url: 
+  components:
+    # 鉴权方式配置
+    security-schemes:
+      apiKey:
+        type: APIKEY
+        in: HEADER
+        name: ${sa-token.token-name}
+  # 服务文档路径映射 参考 gateway router 配置
+  # 默认为服务名去除前缀转换为path 此处填特殊的配置
+  service-mapping:
+    ruoyi-gen: /code
+
+springdoc:
+  api-docs:
+    # 是否开启接口文档
+    enabled: true
+  swagger-ui:
+    # 持久化认证数据
+    persistAuthorization: true
+
+# seata配置
+seata:
+  # 默认关闭，如需启用spring.datasource.dynami.seata需要同时开启
+  enabled: true
+  # Seata 应用编号，默认为 ${spring.application.name}
+  application-id: ${spring.application.name}
+  # Seata 事务组编号，用于 TC 集群名
+  tx-service-group: ${spring.application.name}-group
+  config:
+    type: nacos
+    nacos:
+      server-addr: ${spring.cloud.nacos.server-addr}
+      group: ${spring.cloud.nacos.config.group}
+      namespace: ${spring.profiles.active}
+      data-id: seata-server.properties
+  registry:
+    type: nacos
+    nacos:
+      application: pet-seata-serve
+      server-addr: ${spring.cloud.nacos.server-addr}
+      group: ${spring.cloud.nacos.discovery.group}
+      namespace: ${spring.profiles.active}
+
+2023-04-13 16:06:58,987 DEBUG [nacos.client.cachedata.internal.notifier] c.a.c.n.r.NacosContextRefresher [NacosContextRefresher.java : 121] Refresh Nacos config group=DEFAULT_GROUP,dataId=pet-xxl-executor.yml,configInfo=spring:
+  datasource:
+    dynamic:
+      # 设置默认的数据源或者数据源组,默认值即为 master
+      primary: master
+      datasource:
+        # 主库数据源
+        master:
+          type: ${spring.datasource.type}
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: ${datasource.system-master.url}
+          username: ${datasource.system-master.username}
+          password: ${datasource.system-master.password}
+2023-04-13 16:07:05,674 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:07:06,077 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:07:15,675 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:07:16,073 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:07:25,676 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:07:26,071 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:07:32,233 WARN [Thread-7] c.a.nacos.common.notify.NotifyCenter [NotifyCenter.java : 136] [NotifyCenter] Start destroying Publisher
+2023-04-13 16:07:32,233 WARN [Thread-2] c.a.n.c.http.HttpClientBeanHolder [HttpClientBeanHolder.java : 102] [HttpClientBeanHolder] Start destroying common HttpClient
+2023-04-13 16:07:32,234 WARN [Thread-7] c.a.nacos.common.notify.NotifyCenter [NotifyCenter.java : 153] [NotifyCenter] Destruction of the end
+2023-04-13 16:07:32,235 WARN [Thread-2] c.a.n.c.http.HttpClientBeanHolder [HttpClientBeanHolder.java : 111] [HttpClientBeanHolder] Destruction of the end
+2023-04-13 16:07:32,258 INFO [SpringContextShutdownHook] io.undertow [Undertow.java : 259] stopping server: Undertow - 2.2.23.Final
+2023-04-13 16:07:32,268 INFO [SpringContextShutdownHook] io.undertow.servlet [ServletContextImpl.java : 388] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-13 16:07:32,359 DEBUG [redisson-netty-2-7] io.netty.buffer.PoolThreadCache [PoolThreadCache.java : 227] Freed 5 thread-local buffer(s) from thread: redisson-netty-2-7
+2023-04-13 16:07:32,359 DEBUG [redisson-netty-2-8] io.netty.buffer.PoolThreadCache [PoolThreadCache.java : 227] Freed 5 thread-local buffer(s) from thread: redisson-netty-2-8
+2023-04-13 16:07:32,359 DEBUG [redisson-netty-2-6] io.netty.buffer.PoolThreadCache [PoolThreadCache.java : 227] Freed 5 thread-local buffer(s) from thread: redisson-netty-2-6
+2023-04-13 16:07:32,359 DEBUG [redisson-netty-2-3] io.netty.buffer.PoolThreadCache [PoolThreadCache.java : 227] Freed 5 thread-local buffer(s) from thread: redisson-netty-2-3
+2023-04-13 16:07:32,359 DEBUG [redisson-netty-2-4] io.netty.buffer.PoolThreadCache [PoolThreadCache.java : 227] Freed 5 thread-local buffer(s) from thread: redisson-netty-2-4
+2023-04-13 16:07:32,376 DEBUG [redisson-netty-2-2] io.netty.buffer.PoolThreadCache [PoolThreadCache.java : 227] Freed 6 thread-local buffer(s) from thread: redisson-netty-2-2
+2023-04-13 16:07:32,376 DEBUG [redisson-netty-2-1] io.netty.buffer.PoolThreadCache [PoolThreadCache.java : 227] Freed 5 thread-local buffer(s) from thread: redisson-netty-2-1
+2023-04-13 16:07:32,377 INFO [SpringContextShutdownHook] c.a.c.n.r.NacosServiceRegistry [NacosServiceRegistry.java : 94] De-registering from Nacos Server now...
+2023-04-13 16:07:32,415 INFO [SpringContextShutdownHook] c.a.c.n.r.NacosServiceRegistry [NacosServiceRegistry.java : 114] De-registration finished.
+2023-04-13 16:07:32,421 INFO [SpringContextShutdownHook] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 211] dynamic-datasource start closing ....
+2023-04-13 16:07:32,421 INFO [SpringContextShutdownHook] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 215] dynamic-datasource all closed success,bye
+2023-04-13 16:07:32,421 DEBUG [SpringContextShutdownHook] io.seata.core.rpc.ShutdownHook [ShutdownHook.java : 78] destroyAll starting
+2023-04-13 16:07:32,426 DEBUG [SpringContextShutdownHook] io.seata.core.rpc.ShutdownHook [ShutdownHook.java : 87] destroyAll finish
+2023-04-13 16:08:16,634 DEBUG [background-preinit] org.jboss.logging [LoggerProviders.java : 152] Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2023-04-13 16:08:16,636 INFO [background-preinit] o.h.validator.internal.util.Version [Version.java : 21] HV000001: Hibernate Validator 6.2.5.Final
+2023-04-13 16:08:16,648 DEBUG [background-preinit] o.h.v.i.x.config.ValidationXmlParser [ValidationXmlParser.java : 120] Trying to load META-INF/validation.xml for XML based Validator configuration.
+2023-04-13 16:08:16,650 DEBUG [background-preinit] o.h.v.i.x.c.ResourceLoaderHelper [ResourceLoaderHelper.java : 60] Trying to load META-INF/validation.xml via TCCL
+2023-04-13 16:08:16,651 DEBUG [background-preinit] o.h.v.i.x.c.ResourceLoaderHelper [ResourceLoaderHelper.java : 66] Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2023-04-13 16:08:16,652 DEBUG [background-preinit] o.h.v.i.x.config.ValidationXmlParser [ValidationXmlParser.java : 127] No META-INF/validation.xml found. Using annotation based configuration only.
+2023-04-13 16:08:16,658 DEBUG [background-preinit] o.h.v.i.e.r.TraversableResolvers [TraversableResolvers.java : 60] Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2023-04-13 16:08:16,693 DEBUG [background-preinit] o.h.v.m.ResourceBundleMessageInterpolator [ResourceBundleMessageInterpolator.java : 172] Loaded expression factory via original TCCL
+2023-04-13 16:08:16,881 DEBUG [background-preinit] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 345] HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2023-04-13 16:08:16,889 DEBUG [background-preinit] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 420] HV000234: Using org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2023-04-13 16:08:16,889 DEBUG [background-preinit] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 421] HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2023-04-13 16:08:16,889 DEBUG [background-preinit] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 422] HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2023-04-13 16:08:16,889 DEBUG [background-preinit] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 423] HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2023-04-13 16:08:16,890 DEBUG [background-preinit] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 424] HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2023-04-13 16:08:17,058 INFO [main] c.x.j.e.XxlJobSpringCloudExecutorApp [StartupInfoLogger.java : 55] Starting XxlJobSpringCloudExecutorApp using Java 1.8.0_302 on zy9471-nb with PID 22772 (D:\pet\pet\pet-xxl-nacos\pet-xxl-executor\target\classes started by zhuangyong in D:\pet\pet)
+2023-04-13 16:08:17,058 DEBUG [main] c.x.j.e.XxlJobSpringCloudExecutorApp [StartupInfoLogger.java : 56] Running with Spring Boot v2.7.9, Spring v5.3.25
+2023-04-13 16:08:17,058 INFO [main] c.x.j.e.XxlJobSpringCloudExecutorApp [SpringApplication.java : 637] The following 1 profile is active: "dev"
+2023-04-13 16:08:17,241 INFO [main] c.a.c.n.c.NacosConfigDataLoader [DeferredLog.java : 255] [Nacos Config] Load config[dataId=pet-xxl-executor.yml, group=DEFAULT_GROUP] success
+2023-04-13 16:08:17,241 DEBUG [main] c.a.c.n.c.NacosConfigDataLoader [DeferredLog.java : 252] [Nacos Config] config[dataId=pet-xxl-executor.yml, group=DEFAULT_GROUP] content: 
+spring:
+  datasource:
+    dynamic:
+      # 设置默认的数据源或者数据源组,默认值即为 master
+      primary: master
+      datasource:
+        # 主库数据源
+        master:
+          type: ${spring.datasource.type}
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: ${datasource.system-master.url}
+          username: ${datasource.system-master.username}
+          password: ${datasource.system-master.password}
+2023-04-13 16:08:17,241 INFO [main] c.a.c.n.c.NacosConfigDataLoader [DeferredLog.java : 255] [Nacos Config] Load config[dataId=datasource.yml, group=DEFAULT_GROUP] success
+2023-04-13 16:08:17,241 DEBUG [main] c.a.c.n.c.NacosConfigDataLoader [DeferredLog.java : 252] [Nacos Config] config[dataId=datasource.yml, group=DEFAULT_GROUP] content: 
+datasource:
+  system-master:
+    # jdbc 所有参数配置参考 https://lionli.blog.csdn.net/article/details/122018562
+    # rewriteBatchedStatements=true 批处理优化 大幅提升批量插入更新删除性能
+    url: jdbc:mysql://47.122.40.114:3306/pet-cloud?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&rewriteBatchedStatements=true
+    username: root
+    password: hash@1234
+  gen:
+    url: jdbc:mysql://47.122.40.114:3306/pet-cloud?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&rewriteBatchedStatements=true
+    username: root
+    password: hash@1234
+  job:
+    url: jdbc:mysql://47.122.40.114:3306/pet-job?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&rewriteBatchedStatements=true
+    username: root
+    password: hash@1234
+#  system-oracle:
+#    url: jdbc:oracle:thin:@//localhost:1521/XE
+#    username: ROOT
+#    password: password
+#  system-postgres:
+#    url: jdbc:postgresql://localhost:5432/postgres?useUnicode=true&characterEncoding=utf8&useSSL=true&autoReconnect=true&reWriteBatchedInserts=true
+#    username: root
+#    password: password
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    # 动态数据源文档 https://www.kancloud.cn/tracy5546/dynamic-datasource/content
+    dynamic:
+      # 性能分析插件(有性能损耗 不建议生产环境使用)
+      p6spy: true
+      # 开启seata代理，开启后默认每个数据源都代理，如果某个不需要代理可单独关闭
+      seata: true
+      # 严格模式 匹配不到数据源则报错
+      strict: true
+      hikari:
+        # 最大连接池数量
+        maxPoolSize: 20
+        # 最小空闲线程数量
+        minIdle: 10
+        # 配置获取连接等待超时的时间
+        connectionTimeout: 30000
+        # 校验超时时间
+        validationTimeout: 5000
+        # 空闲连接存活最大时间，默认10分钟
+        idleTimeout: 600000
+        # 此属性控制池中连接的最长生命周期，值0表示无限生命周期，默认30分钟
+        maxLifetime: 1800000
+        # 连接测试query（配置检测连接是否有效）
+        connectionTestQuery: SELECT 1
+        # 多久检查一次连接的活性
+        keepaliveTime: 30000
+
+# seata配置
+seata:
+  # 关闭自动代理
+  enable-auto-data-source-proxy: false
+
+2023-04-13 16:08:17,241 INFO [main] c.a.c.n.c.NacosConfigDataLoader [DeferredLog.java : 255] [Nacos Config] Load config[dataId=application-common.yml, group=DEFAULT_GROUP] success
+2023-04-13 16:08:17,241 DEBUG [main] c.a.c.n.c.NacosConfigDataLoader [DeferredLog.java : 252] [Nacos Config] config[dataId=application-common.yml, group=DEFAULT_GROUP] content: 
+server:
+  # undertow 配置
+  undertow:
+    # HTTP post内容的最大大小。当值为-1时，默认值为大小是无限的
+    max-http-post-size: -1
+    # 以下的配置会影响buffer,这些buffer会用于服务器连接的IO操作,有点类似netty的池化内存管理
+    # 每块buffer的空间大小,越小的空间被利用越充分
+    buffer-size: 512
+    # 是否分配的直接内存
+    direct-buffers: true
+    threads:
+      # 设置IO线程数, 它主要执行非阻塞的任务,它们会负责多个连接, 默认设置每个CPU核心一个线程
+      io: 8
+      # 阻塞任务线程池, 当执行类似servlet请求阻塞操作, undertow会从这个线程池中取得线程,它的值设置取决于系统的负载
+      worker: 256
+nacos:
+  server: 47.122.40.114:8848
+  discovery:
+    group: DEFAULT_GROUP
+  config:
+    group: DEFAULT_GROUP
+
+dubbo:
+  application:
+    logger: slf4j
+    # 元数据中心 local 本地 remote 远程 这里使用远程便于其他服务获取
+    metadataType: remote
+    # 可选值 interface、instance、all，默认是 all，即接口级地址、应用级地址都注册
+    register-mode: instance
+    service-discovery:
+      # FORCE_INTERFACE，只消费接口级地址，如无地址则报错，单订阅 2.x 地址
+      # APPLICATION_FIRST，智能决策接口级/应用级地址，双订阅
+      # FORCE_APPLICATION，只消费应用级地址，如无地址则报错，单订阅 3.x 地址
+      migration: FORCE_APPLICATION
+    qos-enable: false
+  protocol:
+    # 设置为 tri 即可使用 Triple 3.0 新协议
+    # 性能对比 dubbo 协议并没有提升 但基于 http2 用于多语言异构等 http 交互场景
+    # 使用 dubbo 协议通信
+    name: dubbo
+    # dubbo 协议端口(-1表示自增端口,从20880开始)
+    port: -1
+    # 指定dubbo协议注册ip
+    # host: 192.168.0.100
+  # 注册中心配置
+  registry:
+    address: nacos://${spring.cloud.nacos.server-addr}
+    group: DUBBO_GROUP
+    parameters:
+      namespace: ${spring.profiles.active}
+  # 消费者相关配置
+  consumer:
+    # 结果缓存(LRU算法)
+    # 会有数据不一致问题 建议在注解局部开启
+    cache: false
+    # 支持校验注解
+    validation: true
+    # 超时时间
+    timeout: 3000
+    # 初始化检查
+    check: false
+  scan:
+    # 接口实现类扫描
+    base-packages: com.pet.**.dubbo
+  # 自定义配置
+  custom:
+    # 全局请求log
+    request-log: true
+    # info 基础信息 param 参数信息 full 全部
+    log-level: info
+
+spring:
+  # 资源信息
+  messages:
+    # 国际化资源文件路径
+    basename: i18n/messages
+  servlet:
+    multipart:
+      # 整个请求大小限制
+      max-request-size: 20MB
+      # 上传单个文件大小限制
+      max-file-size: 10MB
+  mvc:
+    format:
+      date-time: yyyy-MM-dd HH:mm:ss
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  #jackson配置
+  jackson:
+    # 日期格式化
+    date-format: yyyy-MM-dd HH:mm:ss
+    serialization:
+      # 格式化输出
+      INDENT_OUTPUT: false
+      # 忽略无法转换的对象
+      fail_on_empty_beans: false
+    deserialization:
+      # 允许对象忽略json中不存在的属性
+      fail_on_unknown_properties: false
+  cloud:
+    # sentinel 配置
+    sentinel:
+      # sentinel 开关
+      enabled: true
+      # 取消控制台懒加载
+      eager: true
+      transport:
+        # dashboard控制台服务名 用于服务发现
+        # 如无此配置将默认使用下方 dashboard 配置直接注册
+        server-name: pet-sentinel-dashboard
+        # 客户端指定注册的ip 用于多网卡ip不稳点使用
+        # client-ip:
+        # 控制台地址 从1.3.0开始使用 server-name 注册
+        # dashboard: localhost:8718
+
+  # redis通用配置 子服务可以自行配置进行覆盖
+  redis:
+    host: 47.122.40.114
+    port: 16379
+    # 密码(如没有密码请注释掉)
+    # password:
+    database: 0
+    timeout: 10s
+    ssl: false
+
+# redisson 配置
+redisson:
+  # redis key前缀
+  keyPrefix:
+  # 线程池数量
+  threads: 4
+  # Netty线程池数量
+  nettyThreads: 8
+  # 单节点配置
+  singleServerConfig:
+    # 客户端名称
+    clientName: ${spring.application.name}
+    # 最小空闲连接数
+    connectionMinimumIdleSize: 8
+    # 连接池大小
+    connectionPoolSize: 32
+    # 连接空闲超时，单位：毫秒
+    idleConnectionTimeout: 10000
+    # 命令等待超时，单位：毫秒
+    timeout: 3000
+    # 发布和订阅连接池大小
+    subscriptionConnectionPoolSize: 50
+
+# 分布式锁 lock4j 全局配置
+lock4j:
+  # 获取分布式锁超时时间，默认为 3000 毫秒
+  acquire-timeout: 3000
+  # 分布式锁的超时时间，默认为 30 秒
+  expire: 30000
+
+# 暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+    logfile:
+      external-file: /mnt/logs/${spring.application.name}/console.log
+
+# 日志配置
+logging:
+  level:
+    org.springframework: warn
+    org.apache.dubbo: warn
+    com.alibaba.nacos: warn
+  config: classpath:logback.xml
+
+# Sa-Token配置
+sa-token:
+  # token名称 (同时也是cookie名称)
+  token-name: Authorization
+  # token有效期 设为一天 (必定过期) 单位: 秒
+  timeout: 86400
+  # token临时有效期 (指定时间无操作就过期) 单位: 秒
+  activity-timeout: 1800
+  # 开启内网服务调用鉴权
+  check-same-token: true
+  # Same-Token的有效期 (单位: 秒)
+  same-token-timeout: 600
+  # 是否允许同一账号并发登录 (为true时允许一起登录, 为false时新登录挤掉旧登录)
+  is-concurrent: true
+  # 在多人登录同一账号时，是否共用一个token (为true时所有登录共用一个token, 为false时每次登录新建一个token)
+  is-share: false
+  # 是否尝试从header里读取token
+  is-read-header: true
+  # 是否尝试从cookie里读取token
+  is-read-cookie: false
+  # token前缀
+  token-prefix: "Bearer"
+  # jwt秘钥
+  jwt-secret-key: abcdefghijklmnopqrstuvwxyz
+
+# MyBatisPlus配置
+# https://baomidou.com/config/
+mybatis-plus:
+  # 不支持多包, 如有需要可在注解配置 或 提升扫包等级
+  # 例如 com.**.**.mapper
+  mapperPackage: com.pet.**.mapper
+  # 对应的 XML 文件位置
+  mapperLocations: classpath*:mapper/**/*Mapper.xml,classpath:/mybatis-mapper/**Mapper.xml
+  # 实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.pet.**.domain
+  # 启动时是否检查 MyBatis XML 文件的存在，默认不检查
+  checkConfigLocation: false
+  configuration:
+    # 自动驼峰命名规则（camel case）映射
+    mapUnderscoreToCamelCase: true
+    # MyBatis 自动映射策略
+    # NONE：不启用 PARTIAL：只对非嵌套 resultMap 自动映射 FULL：对所有 resultMap 自动映射
+    autoMappingBehavior: PARTIAL
+    # MyBatis 自动映射时未知列或未知属性处理策
+    # NONE：不做处理 WARNING：打印相关警告 FAILING：抛出异常和详细信息
+    autoMappingUnknownColumnBehavior: NONE
+    # 更详细的日志输出 会有性能损耗 org.apache.ibatis.logging.stdout.StdOutImpl
+    # 关闭日志记录 (可单纯使用 p6spy 分析) org.apache.ibatis.logging.nologging.NoLoggingImpl
+    # 默认日志输出 org.apache.ibatis.logging.slf4j.Slf4jImpl
+    logImpl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+  global-config:
+    # 是否打印 Logo banner
+    banner: true
+    dbConfig:
+      # 主键类型
+      # AUTO 自增 NONE 空 INPUT 用户输入 ASSIGN_ID 雪花 ASSIGN_UUID 唯一 UUID
+      idType: ASSIGN_ID
+      # 逻辑已删除值
+      logicDeleteValue: 2
+      # 逻辑未删除值
+      logicNotDeleteValue: 0
+      insertStrategy: NOT_NULL
+      updateStrategy: NOT_NULL
+      where-strategy: NOT_NULL
+
+# 数据加密
+mybatis-encryptor:
+  # 是否开启加密
+  enable: false
+  # 默认加密算法
+  algorithm: BASE64
+  # 编码方式 BASE64/HEX。默认BASE64
+  encode: BASE64
+  # 安全秘钥 对称算法的秘钥 如：AES，SM4
+  password:
+  # 公私钥 非对称算法的公私钥 如：SM2，RSA
+  publicKey:
+  privateKey:
+
+# swagger配置
+swagger:
+  info:
+    # 标题
+    title: '标题：微服务权限管理系统_接口文档'
+    # 描述
+    description: '描述：微服务权限管理系统, 具体包括XXX,XXX模块...'
+    # 版本
+    version: '版本号：系统版本...'
+    # 作者信息
+    contact:
+      name: zy
+      email: 503897166@qq.com
+      url: 
+  components:
+    # 鉴权方式配置
+    security-schemes:
+      apiKey:
+        type: APIKEY
+        in: HEADER
+        name: ${sa-token.token-name}
+  # 服务文档路径映射 参考 gateway router 配置
+  # 默认为服务名去除前缀转换为path 此处填特殊的配置
+  service-mapping:
+    ruoyi-gen: /code
+
+springdoc:
+  api-docs:
+    # 是否开启接口文档
+    enabled: true
+  swagger-ui:
+    # 持久化认证数据
+    persistAuthorization: true
+
+# seata配置
+seata:
+  # 默认关闭，如需启用spring.datasource.dynami.seata需要同时开启
+  enabled: true
+  # Seata 应用编号，默认为 ${spring.application.name}
+  application-id: ${spring.application.name}
+  # Seata 事务组编号，用于 TC 集群名
+  tx-service-group: ${spring.application.name}-group
+  config:
+    type: nacos
+    nacos:
+      server-addr: ${spring.cloud.nacos.server-addr}
+      group: ${spring.cloud.nacos.config.group}
+      namespace: ${spring.profiles.active}
+      data-id: seata-server.properties
+  registry:
+    type: nacos
+    nacos:
+      application: pet-seata-serve
+      server-addr: ${spring.cloud.nacos.server-addr}
+      group: ${spring.cloud.nacos.discovery.group}
+      namespace: ${spring.profiles.active}
+
+2023-04-13 16:08:18,495 DEBUG [main] c.b.m.a.MybatisPlusAutoConfiguration [MybatisPlusAutoConfiguration.java : 309] Searching for mappers annotated with @Mapper
+2023-04-13 16:08:18,496 DEBUG [main] c.b.m.a.MybatisPlusAutoConfiguration [MybatisPlusAutoConfiguration.java : 313] Using auto-configuration base package 'com.xxl.job.executor'
+2023-04-13 16:08:19,343 DEBUG [main] org.apache.ibatis.logging.LogFactory [LogFactory.java : 109] Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2023-04-13 16:08:19,347 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [ClassPathScanningCandidateComponentProvider.java : 435] Identified candidate component class: file [D:\pet\pet\pet-xxl-nacos\pet-xxl-executor\target\classes\com\xxl\job\executor\dao\AlgoMgDao.class]
+2023-04-13 16:08:19,347 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [ClassPathScanningCandidateComponentProvider.java : 435] Identified candidate component class: file [D:\pet\pet\pet-xxl-nacos\pet-xxl-executor\target\classes\com\xxl\job\executor\dao\AlgoParamDao.class]
+2023-04-13 16:08:19,347 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [ClassPathScanningCandidateComponentProvider.java : 435] Identified candidate component class: file [D:\pet\pet\pet-xxl-nacos\pet-xxl-executor\target\classes\com\xxl\job\executor\dao\JobHandleLogDao.class]
+2023-04-13 16:08:19,347 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [ClassPathScanningCandidateComponentProvider.java : 435] Identified candidate component class: file [D:\pet\pet\pet-xxl-nacos\pet-xxl-executor\target\classes\com\xxl\job\executor\dao\JobParamDao.class]
+2023-04-13 16:08:19,347 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [ClassPathScanningCandidateComponentProvider.java : 435] Identified candidate component class: file [D:\pet\pet\pet-xxl-nacos\pet-xxl-executor\target\classes\com\xxl\job\executor\dao\XxlJobInfoDao.class]
+2023-04-13 16:08:19,348 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 49] Creating MapperFactoryBean with name 'algoMgDao' and 'com.xxl.job.executor.dao.AlgoMgDao' mapperInterface
+2023-04-13 16:08:19,348 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 49] Creating MapperFactoryBean with name 'algoParamDao' and 'com.xxl.job.executor.dao.AlgoParamDao' mapperInterface
+2023-04-13 16:08:19,348 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 49] Creating MapperFactoryBean with name 'jobHandleLogDao' and 'com.xxl.job.executor.dao.JobHandleLogDao' mapperInterface
+2023-04-13 16:08:19,348 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 49] Creating MapperFactoryBean with name 'jobParamDao' and 'com.xxl.job.executor.dao.JobParamDao' mapperInterface
+2023-04-13 16:08:19,348 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 49] Creating MapperFactoryBean with name 'xxlJobInfoDao' and 'com.xxl.job.executor.dao.XxlJobInfoDao' mapperInterface
+2023-04-13 16:08:19,373 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [ClassPathScanningCandidateComponentProvider.java : 435] Identified candidate component class: file [D:\pet\pet\pet-common\pet-common-mybatis\target\classes\com\pet\common\mybatis\core\mapper\BaseMapperPlus.class]
+2023-04-13 16:08:19,374 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 49] Creating MapperFactoryBean with name 'baseMapperPlus' and 'com.pet.common.mybatis.core.mapper.BaseMapperPlus' mapperInterface
+2023-04-13 16:08:19,374 DEBUG [main] o.m.s.mapper.ClassPathMapperScanner [Logger.java : 49] Enabling autowire by type for MapperFactoryBean with name 'baseMapperPlus'.
+2023-04-13 16:08:20,107 DEBUG [main] i.n.u.i.l.InternalLoggerFactory [InternalLoggerFactory.java : 63] Using SLF4J as the default logging framework
+2023-04-13 16:08:20,109 DEBUG [main] io.netty.util.ResourceLeakDetector [ResourceLeakDetector.java : 129] -Dio.netty.leakDetection.level: simple
+2023-04-13 16:08:20,110 DEBUG [main] io.netty.util.ResourceLeakDetector [ResourceLeakDetector.java : 130] -Dio.netty.leakDetection.targetRecords: 4
+2023-04-13 16:08:20,113 DEBUG [main] i.n.util.ResourceLeakDetectorFactory [ResourceLeakDetectorFactory.java : 196] Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@1805383
+2023-04-13 16:08:20,119 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 496] -Dio.netty.noUnsafe: false
+2023-04-13 16:08:20,119 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 1000] Java version: 8
+2023-04-13 16:08:20,120 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 137] sun.misc.Unsafe.theUnsafe: available
+2023-04-13 16:08:20,120 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 161] sun.misc.Unsafe.copyMemory: available
+2023-04-13 16:08:20,121 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 193] sun.misc.Unsafe.storeFence: available
+2023-04-13 16:08:20,121 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 236] java.nio.Buffer.address: available
+2023-04-13 16:08:20,121 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 307] direct buffer constructor: available
+2023-04-13 16:08:20,122 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 385] java.nio.Bits.unaligned: available, true
+2023-04-13 16:08:20,122 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 459] jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2023-04-13 16:08:20,122 DEBUG [main] i.n.util.internal.PlatformDependent0 [PlatformDependent0.java : 482] java.nio.DirectByteBuffer.<init>(long, int): available
+2023-04-13 16:08:20,122 DEBUG [main] i.n.util.internal.PlatformDependent [PlatformDependent.java : 1159] sun.misc.Unsafe: available
+2023-04-13 16:08:20,122 DEBUG [main] i.n.util.internal.PlatformDependent [PlatformDependent.java : 1289] -Dio.netty.tmpdir: C:\Users\zhuangyong\AppData\Local\Temp (java.io.tmpdir)
+2023-04-13 16:08:20,123 DEBUG [main] i.n.util.internal.PlatformDependent [PlatformDependent.java : 1368] -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2023-04-13 16:08:20,123 DEBUG [main] i.n.util.internal.PlatformDependent [PlatformDependent.java : 1119] Platform: Windows
+2023-04-13 16:08:20,124 DEBUG [main] i.n.util.internal.PlatformDependent [PlatformDependent.java : 178] -Dio.netty.maxDirectMemory: 15131475968 bytes
+2023-04-13 16:08:20,125 DEBUG [main] i.n.util.internal.PlatformDependent [PlatformDependent.java : 185] -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2023-04-13 16:08:20,125 DEBUG [main] io.netty.util.internal.CleanerJava6 [CleanerJava6.java : 92] java.nio.ByteBuffer.cleaner(): available
+2023-04-13 16:08:20,125 DEBUG [main] i.n.util.internal.PlatformDependent [PlatformDependent.java : 205] -Dio.netty.noPreferDirect: false
+2023-04-13 16:08:20,127 DEBUG [main] i.n.util.internal.PlatformDependent [PlatformDependent.java : 1010] org.jctools-core.MpscChunkedArrayQueue: available
+2023-04-13 16:08:20,162 INFO [main] i.s.s.b.a.SeataAutoConfiguration [SeataAutoConfiguration.java : 63] Automatically configure Seata
+2023-04-13 16:08:20,195 INFO [main] io.seata.config.ConfigurationFactory [ConfigurationFactory.java : 69] load Configuration from :Spring Configuration
+2023-04-13 16:08:20,207 DEBUG [configOperate_1_1_2] io.seata.config.FileConfiguration [FileConfiguration.java : 335] Could not found property config.nacos.username, try to use default value instead. exception:No configuration setting found for key 'config'
+2023-04-13 16:08:20,207 DEBUG [configOperate_1_1_2] io.seata.config.FileConfiguration [FileConfiguration.java : 335] Could not found property config.nacos.accessKey, try to use default value instead. exception:No configuration setting found for key 'config'
+2023-04-13 16:08:20,207 DEBUG [configOperate_1_1_2] io.seata.config.FileConfiguration [FileConfiguration.java : 335] Could not found property config.nacos.contextPath, try to use default value instead. exception:No configuration setting found for key 'config'
+2023-04-13 16:08:20,498 DEBUG [configOperate_1_1_2] io.seata.config.FileConfiguration [FileConfiguration.java : 335] Could not found property config.dataType, try to use default value instead. exception:No configuration setting found for key 'config'
+2023-04-13 16:08:20,679 INFO [main] i.s.s.a.GlobalTransactionScanner [GlobalTransactionScanner.java : 208] Initializing Global Transaction Clients ... 
+2023-04-13 16:08:20,734 DEBUG [main] i.n.c.MultithreadEventLoopGroup [MultithreadEventLoopGroup.java : 44] -Dio.netty.eventLoopThreads: 16
+2023-04-13 16:08:20,740 DEBUG [main] i.n.u.concurrent.GlobalEventExecutor [GlobalEventExecutor.java : 53] -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+2023-04-13 16:08:20,744 DEBUG [main] i.n.u.i.InternalThreadLocalMap [InternalThreadLocalMap.java : 100] -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2023-04-13 16:08:20,745 DEBUG [main] i.n.u.i.InternalThreadLocalMap [InternalThreadLocalMap.java : 101] -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2023-04-13 16:08:20,748 DEBUG [main] io.netty.channel.nio.NioEventLoop [NioEventLoop.java : 110] -Dio.netty.noKeySetOptimization: false
+2023-04-13 16:08:20,748 DEBUG [main] io.netty.channel.nio.NioEventLoop [NioEventLoop.java : 111] -Dio.netty.selectorAutoRebuildThreshold: 512
+2023-04-13 16:08:20,766 INFO [main] i.s.c.rpc.netty.NettyClientBootstrap [NettyClientBootstrap.java : 147] NettyClientBootstrap has started
+2023-04-13 16:08:20,882 DEBUG [configOperate_1_1_2] io.seata.config.FileConfiguration [FileConfiguration.java : 335] Could not found property registry.nacos.slbPattern, try to use default value instead. exception:No configuration setting found for key 'registry'
+2023-04-13 16:08:20,883 DEBUG [configOperate_1_1_2] io.seata.config.FileConfiguration [FileConfiguration.java : 335] Could not found property registry.nacos.username, try to use default value instead. exception:No configuration setting found for key 'registry'
+2023-04-13 16:08:20,883 DEBUG [configOperate_1_1_2] io.seata.config.FileConfiguration [FileConfiguration.java : 335] Could not found property registry.nacos.accessKey, try to use default value instead. exception:No configuration setting found for key 'registry'
+2023-04-13 16:08:20,883 DEBUG [configOperate_1_1_2] io.seata.config.FileConfiguration [FileConfiguration.java : 335] Could not found property registry.nacos.contextPath, try to use default value instead. exception:No configuration setting found for key 'registry'
+2023-04-13 16:08:21,123 ERROR [main] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:08:21,124 INFO [main] i.s.s.a.GlobalTransactionScanner [GlobalTransactionScanner.java : 222] Transaction Manager Client is initialized. applicationId[pet-xxl-executor] txServiceGroup[pet-xxl-executor-group]
+2023-04-13 16:08:21,172 INFO [main] io.seata.rm.datasource.AsyncWorker [AsyncWorker.java : 73] Async Commit Buffer Limit: 10000
+2023-04-13 16:08:21,172 INFO [main] i.s.r.d.xa.ResourceManagerXA [ResourceManagerXA.java : 59] ResourceManagerXA init ...
+2023-04-13 16:08:21,177 INFO [main] i.s.c.rpc.netty.NettyClientBootstrap [NettyClientBootstrap.java : 147] NettyClientBootstrap has started
+2023-04-13 16:08:21,177 INFO [main] i.s.s.a.GlobalTransactionScanner [GlobalTransactionScanner.java : 227] Resource Manager is initialized. applicationId[pet-xxl-executor] txServiceGroup[pet-xxl-executor-group]
+2023-04-13 16:08:21,177 INFO [main] i.s.s.a.GlobalTransactionScanner [GlobalTransactionScanner.java : 231] Global Transaction Clients are initialized. 
+2023-04-13 16:08:22,513 DEBUG [main] io.undertow.session [DelegatingBasicLogger.java : 384] Setting default session timeout to 1800
+2023-04-13 16:08:22,520 INFO [main] io.undertow.servlet [ServletContextImpl.java : 388] Initializing Spring embedded WebApplicationContext
+2023-04-13 16:08:22,576 DEBUG [main] i.m.c.u.i.l.InternalLoggerFactory [InternalLoggerFactory.java : 59] Using SLF4J as the default logging framework
+2023-04-13 16:08:22,661 INFO [main] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 244] dynamic-datasource detect P6SPY plugin and enabled it
+2023-04-13 16:08:22,663 INFO [main] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 252] dynamic-datasource detect ALIBABA SEATA and enabled it
+2023-04-13 16:08:22,667 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 971] Driver class com.mysql.cj.jdbc.Driver found in Thread context class loader sun.misc.Launcher$AppClassLoader@18b4aac2
+2023-04-13 16:08:22,772 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1103] master - configuration:
+2023-04-13 16:08:22,774 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] allowPoolSuspension................................false
+2023-04-13 16:08:22,774 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] autoCommit................................true
+2023-04-13 16:08:22,774 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] catalog................................none
+2023-04-13 16:08:22,774 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] connectionInitSql................................none
+2023-04-13 16:08:22,774 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] connectionTestQuery................................"SELECT 1"
+2023-04-13 16:08:22,774 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] connectionTimeout................................30000
+2023-04-13 16:08:22,775 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] dataSource................................none
+2023-04-13 16:08:22,775 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] dataSourceClassName................................none
+2023-04-13 16:08:22,775 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] dataSourceJNDI................................none
+2023-04-13 16:08:22,775 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] dataSourceProperties................................{password=<masked>}
+2023-04-13 16:08:22,775 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] driverClassName................................"com.mysql.cj.jdbc.Driver"
+2023-04-13 16:08:22,776 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] exceptionOverrideClassName................................none
+2023-04-13 16:08:22,776 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] healthCheckProperties................................{}
+2023-04-13 16:08:22,776 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] healthCheckRegistry................................none
+2023-04-13 16:08:22,776 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] idleTimeout................................600000
+2023-04-13 16:08:22,776 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] initializationFailTimeout................................1
+2023-04-13 16:08:22,776 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] isolateInternalQueries................................false
+2023-04-13 16:08:22,776 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] jdbcUrl................................jdbc:mysql://47.122.40.114:3306/pet-cloud?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8&rewriteBatchedStatements=true
+2023-04-13 16:08:22,777 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] keepaliveTime................................30000
+2023-04-13 16:08:22,777 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] leakDetectionThreshold................................0
+2023-04-13 16:08:22,777 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] maxLifetime................................1800000
+2023-04-13 16:08:22,777 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] maximumPoolSize................................20
+2023-04-13 16:08:22,777 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] metricRegistry................................none
+2023-04-13 16:08:22,777 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] metricsTrackerFactory................................none
+2023-04-13 16:08:22,777 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] minimumIdle................................10
+2023-04-13 16:08:22,777 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] password................................<masked>
+2023-04-13 16:08:22,778 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] poolName................................"master"
+2023-04-13 16:08:22,778 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] readOnly................................false
+2023-04-13 16:08:22,778 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] registerMbeans................................false
+2023-04-13 16:08:22,778 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] scheduledExecutor................................none
+2023-04-13 16:08:22,778 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] schema................................none
+2023-04-13 16:08:22,778 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] threadFactory................................internal
+2023-04-13 16:08:22,778 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] transactionIsolation................................default
+2023-04-13 16:08:22,779 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] username................................"root"
+2023-04-13 16:08:22,779 DEBUG [main] com.zaxxer.hikari.HikariConfig [HikariConfig.java : 1135] validationTimeout................................5000
+2023-04-13 16:08:22,779 INFO [main] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java : 80] master - Starting...
+2023-04-13 16:08:23,476 DEBUG [main] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 565] master - Added connection com.mysql.cj.jdbc.ConnectionImpl@7614378d
+2023-04-13 16:08:23,477 INFO [main] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java : 82] master - Start completed.
+2023-04-13 16:08:23,477 DEBUG [main] c.b.d.d.c.AbstractDataSourceCreator [AbstractDataSourceCreator.java : 98] dynamic-datasource [master] wrap p6spy plugin
+2023-04-13 16:08:23,581 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - Before cleanup stats (total=1, active=1, idle=0, waiting=0)
+2023-04-13 16:08:23,582 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - After cleanup  stats (total=1, active=1, idle=0, waiting=0)
+2023-04-13 16:08:23,697 ERROR [main] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:08:23,703 DEBUG [main] c.b.d.d.c.AbstractDataSourceCreator [AbstractDataSourceCreator.java : 109] dynamic-datasource [master] wrap seata plugin transaction mode 
+2023-04-13 16:08:23,705 INFO [main] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 154] dynamic-datasource - add a datasource named [master] success
+2023-04-13 16:08:23,705 INFO [main] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 234] dynamic-datasource initial loaded [1] datasource,primary datasource named [master]
+2023-04-13 16:08:23,728 DEBUG [main] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:08:23,729 DEBUG [main] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:08:23,746 DEBUG [main] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:08:23,746 DEBUG [main] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:08:23,882 DEBUG [main] io.undertow.session [InMemorySessionManager.java : 263] Registered session listener io.undertow.servlet.core.SessionListenerBridge@1cee3e05
+2023-04-13 16:08:23,926 DEBUG [master connection adder] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 729] master - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c62cb9
+2023-04-13 16:08:23,934 DEBUG [main] io.undertow.session [DelegatingBasicLogger.java : 384] Setting default session timeout to 1800
+2023-04-13 16:08:24,297 DEBUG [master connection adder] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 729] master - Added connection com.mysql.cj.jdbc.ConnectionImpl@71ce410a
+2023-04-13 16:08:24,678 DEBUG [master connection adder] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 729] master - Added connection com.mysql.cj.jdbc.ConnectionImpl@20eb5d2a
+2023-04-13 16:08:25,053 DEBUG [master connection adder] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 729] master - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e5d9584
+2023-04-13 16:08:25,420 DEBUG [master connection adder] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 729] master - Added connection com.mysql.cj.jdbc.ConnectionImpl@9002525
+2023-04-13 16:08:25,818 DEBUG [master connection adder] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 729] master - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b66f15e
+2023-04-13 16:08:26,054 DEBUG [main] o.h.v.m.ResourceBundleMessageInterpolator [ResourceBundleMessageInterpolator.java : 172] Loaded expression factory via original TCCL
+2023-04-13 16:08:26,063 DEBUG [main] o.h.v.i.e.AbstractConfigurationImpl [AbstractConfigurationImpl.java : 174] Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2023-04-13 16:08:26,063 DEBUG [main] o.h.v.i.e.AbstractConfigurationImpl [AbstractConfigurationImpl.java : 206] Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2023-04-13 16:08:26,064 DEBUG [main] o.h.v.i.e.AbstractConfigurationImpl [AbstractConfigurationImpl.java : 220] Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2023-04-13 16:08:26,065 DEBUG [main] o.h.v.i.x.config.ValidationXmlParser [ValidationXmlParser.java : 120] Trying to load META-INF/validation.xml for XML based Validator configuration.
+2023-04-13 16:08:26,065 DEBUG [main] o.h.v.i.x.c.ResourceLoaderHelper [ResourceLoaderHelper.java : 53] Trying to load META-INF/validation.xml via user class loader
+2023-04-13 16:08:26,066 DEBUG [main] o.h.v.i.x.c.ResourceLoaderHelper [ResourceLoaderHelper.java : 60] Trying to load META-INF/validation.xml via TCCL
+2023-04-13 16:08:26,066 DEBUG [main] o.h.v.i.x.c.ResourceLoaderHelper [ResourceLoaderHelper.java : 66] Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2023-04-13 16:08:26,067 DEBUG [main] o.h.v.i.x.config.ValidationXmlParser [ValidationXmlParser.java : 127] No META-INF/validation.xml found. Using annotation based configuration only.
+2023-04-13 16:08:26,068 DEBUG [main] o.h.v.i.e.r.TraversableResolvers [TraversableResolvers.java : 60] Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2023-04-13 16:08:26,069 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 345] HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2023-04-13 16:08:26,069 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 420] HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2023-04-13 16:08:26,070 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 421] HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2023-04-13 16:08:26,070 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 422] HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2023-04-13 16:08:26,070 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 423] HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2023-04-13 16:08:26,070 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 424] HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2023-04-13 16:08:26,108 DEBUG [master connection adder] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 729] master - Added connection com.mysql.cj.jdbc.ConnectionImpl@1210ae32
+2023-04-13 16:08:26,286 INFO [main] c.p.common.core.config.JacksonConfig [JacksonConfig.java : 43] 初始化 com.pet.common.core.jackson 配置
+2023-04-13 16:08:26,438 DEBUG [master connection adder] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 729] master - Added connection com.mysql.cj.jdbc.ConnectionImpl@198e6ced
+2023-04-13 16:08:26,504 DEBUG [main] _.s.w.s.HandlerMapping.Mappings [AbstractHandlerMethodMapping.java : 295] 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-04-13 16:08:26,536 DEBUG [main] _.s.w.s.HandlerMapping.Mappings [AbstractDetectingUrlHandlerMapping.java : 86] 'beanNameHandlerMapping' {}
+2023-04-13 16:08:26,571 DEBUG [main] _.s.w.s.HandlerMapping.Mappings [SimpleUrlHandlerMapping.java : 177] 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-04-13 16:08:26,826 DEBUG [master connection adder] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 729] master - Added connection com.mysql.cj.jdbc.ConnectionImpl@613a3dae
+2023-04-13 16:08:27,098 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 157] -Dio.netty.allocator.numHeapArenas: 16
+2023-04-13 16:08:27,099 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 158] -Dio.netty.allocator.numDirectArenas: 16
+2023-04-13 16:08:27,099 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 160] -Dio.netty.allocator.pageSize: 8192
+2023-04-13 16:08:27,099 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 165] -Dio.netty.allocator.maxOrder: 9
+2023-04-13 16:08:27,099 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 169] -Dio.netty.allocator.chunkSize: 4194304
+2023-04-13 16:08:27,099 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 170] -Dio.netty.allocator.smallCacheSize: 256
+2023-04-13 16:08:27,099 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 171] -Dio.netty.allocator.normalCacheSize: 64
+2023-04-13 16:08:27,099 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 172] -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2023-04-13 16:08:27,099 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 173] -Dio.netty.allocator.cacheTrimInterval: 8192
+2023-04-13 16:08:27,100 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 174] -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2023-04-13 16:08:27,100 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 175] -Dio.netty.allocator.useCacheForAllThreads: false
+2023-04-13 16:08:27,100 DEBUG [main] i.n.buffer.PooledByteBufAllocator [PooledByteBufAllocator.java : 176] -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2023-04-13 16:08:27,107 DEBUG [main] io.netty.buffer.ByteBufUtil [ByteBufUtil.java : 87] -Dio.netty.allocator.type: pooled
+2023-04-13 16:08:27,108 DEBUG [main] io.netty.buffer.ByteBufUtil [ByteBufUtil.java : 96] -Dio.netty.threadLocalDirectBufferSize: 0
+2023-04-13 16:08:27,108 DEBUG [main] io.netty.buffer.ByteBufUtil [ByteBufUtil.java : 99] -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2023-04-13 16:08:27,110 DEBUG [main] io.netty.buffer.AbstractByteBuf [AbstractByteBuf.java : 63] -Dio.netty.buffer.checkAccessible: true
+2023-04-13 16:08:27,110 DEBUG [main] io.netty.buffer.AbstractByteBuf [AbstractByteBuf.java : 64] -Dio.netty.buffer.checkBounds: true
+2023-04-13 16:08:27,110 DEBUG [main] i.n.util.ResourceLeakDetectorFactory [ResourceLeakDetectorFactory.java : 196] Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@4b9dc62f
+2023-04-13 16:08:27,113 DEBUG [main] io.netty.util.Recycler [Recycler.java : 90] -Dio.netty.recycler.maxCapacityPerThread: 4096
+2023-04-13 16:08:27,113 DEBUG [main] io.netty.util.Recycler [Recycler.java : 91] -Dio.netty.recycler.ratio: 8
+2023-04-13 16:08:27,113 DEBUG [main] io.netty.util.Recycler [Recycler.java : 92] -Dio.netty.recycler.chunkSize: 32
+2023-04-13 16:08:27,113 DEBUG [main] io.netty.util.Recycler [Recycler.java : 93] -Dio.netty.recycler.blocking: false
+2023-04-13 16:08:27,113 DEBUG [main] io.netty.util.Recycler [Recycler.java : 94] -Dio.netty.recycler.batchFastThreadLocalOnly: true
+2023-04-13 16:08:27,160 INFO [main] c.p.c.r.config.RedisConfiguration [RedisConfiguration.java : 71] 初始化 redis 配置
+2023-04-13 16:08:27,181 INFO [main] org.redisson.Version [Version.java : 41] Redisson 3.20.0
+2023-04-13 16:08:27,195 DEBUG [main] i.n.r.d.DefaultDnsServerAddressStreamProvider [DefaultDnsServerAddressStreamProvider.java : 82] Default DNS servers: [/172.30.109.96:53, /172.30.109.196:53, /172.30.100.196:53] (sun.net.dns.ResolverConfiguration)
+2023-04-13 16:08:27,202 DEBUG [main] io.netty.util.NetUtil [NetUtil.java : 142] -Djava.net.preferIPv4Stack: false
+2023-04-13 16:08:27,203 DEBUG [main] io.netty.util.NetUtil [NetUtil.java : 143] -Djava.net.preferIPv6Addresses: false
+2023-04-13 16:08:27,365 DEBUG [main] io.netty.util.NetUtilInitializations [NetUtilInitializations.java : 139] Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2023-04-13 16:08:27,366 DEBUG [main] io.netty.util.NetUtil [NetUtil.java : 200] Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2023-04-13 16:08:27,376 DEBUG [main] i.n.r.DefaultHostsFileEntriesResolver [DefaultHostsFileEntriesResolver.java : 53] -Dio.netty.hostsFileRefreshInterval: 0
+2023-04-13 16:08:27,414 DEBUG [main] io.netty.channel.DefaultChannelId [DefaultChannelId.java : 79] -Dio.netty.processId: 22772 (auto-detected)
+2023-04-13 16:08:27,430 DEBUG [main] io.netty.channel.DefaultChannelId [DefaultChannelId.java : 101] -Dio.netty.machineId: f4:7b:09:ff:fe:0d:33:d8 (auto-detected)
+2023-04-13 16:08:27,509 DEBUG [redisson-netty-2-2] org.redisson.client.RedisConnection [RedisConnection.java : 72] Connection created [addr=redis://47.122.40.114:16379]
+2023-04-13 16:08:27,509 DEBUG [redisson-netty-2-3] org.redisson.client.RedisConnection [RedisConnection.java : 72] Connection created [addr=redis://47.122.40.114:16379]
+2023-04-13 16:08:27,531 DEBUG [redisson-netty-2-4] org.redisson.client.RedisConnection [RedisConnection.java : 72] Connection created [addr=redis://47.122.40.114:16379]
+2023-04-13 16:08:27,595 DEBUG [redisson-netty-2-5] o.r.c.ClientConnectionsEntry [ClientConnectionsEntry.java : 202] new connection created: RedisConnection@1240772544 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0xc18d7e8c, L:/172.31.33.77:60025 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@60e42b5[Not completed, 1 dependents], command=(PING), params=[], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:08:27,601 DEBUG [redisson-netty-2-6] o.r.c.ClientConnectionsEntry [ClientConnectionsEntry.java : 202] new connection created: RedisConnection@754130204 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0xbd2c9cf1, L:/172.31.33.77:60024 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@2234f6f2[Not completed, 1 dependents], command=(PING), params=[], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:08:27,608 DEBUG [redisson-netty-2-1] org.redisson.client.RedisConnection [RedisConnection.java : 72] Connection created [addr=redis://47.122.40.114:16379]
+2023-04-13 16:08:27,609 DEBUG [redisson-netty-2-7] org.redisson.client.RedisConnection [RedisConnection.java : 72] Connection created [addr=redis://47.122.40.114:16379]
+2023-04-13 16:08:27,645 DEBUG [redisson-netty-2-8] o.r.c.ClientConnectionsEntry [ClientConnectionsEntry.java : 215] new pubsub connection created: RedisPubSubConnection@425007657 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0xabe6c0b8, L:/172.31.33.77:60026 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@1792e773[Not completed, 1 dependents], command=(PING), params=[], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:08:27,645 INFO [redisson-netty-2-8] o.r.c.p.MasterPubSubConnectionPool [ConnectionPool.java : 162] 1 connections initialized for 47.122.40.114/47.122.40.114:16379
+2023-04-13 16:08:27,667 DEBUG [redisson-netty-2-2] o.r.c.ClientConnectionsEntry [ClientConnectionsEntry.java : 202] new connection created: RedisConnection@1459560339 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0xa73a0314, L:/172.31.33.77:60027 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@627bd6ac[Not completed, 1 dependents], command=(PING), params=[], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:08:27,668 DEBUG [redisson-netty-2-3] org.redisson.client.RedisConnection [RedisConnection.java : 72] Connection created [addr=redis://47.122.40.114:16379]
+2023-04-13 16:08:27,688 DEBUG [redisson-netty-2-4] o.r.c.ClientConnectionsEntry [ClientConnectionsEntry.java : 202] new connection created: RedisConnection@1943795640 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0x1b6b27d8, L:/172.31.33.77:60028 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@2da1f58f[Not completed, 1 dependents], command=(PING), params=[], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:08:27,690 DEBUG [redisson-netty-2-5] org.redisson.client.RedisConnection [RedisConnection.java : 72] Connection created [addr=redis://47.122.40.114:16379]
+2023-04-13 16:08:27,728 DEBUG [redisson-netty-2-6] o.r.c.ClientConnectionsEntry [ClientConnectionsEntry.java : 202] new connection created: RedisConnection@1661598921 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0xab3c0d07, L:/172.31.33.77:60029 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@57261649[Not completed, 1 dependents], command=(PING), params=[], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:08:27,729 DEBUG [redisson-netty-2-7] org.redisson.client.RedisConnection [RedisConnection.java : 72] Connection created [addr=redis://47.122.40.114:16379]
+2023-04-13 16:08:27,765 DEBUG [redisson-netty-2-1] o.r.c.ClientConnectionsEntry [ClientConnectionsEntry.java : 202] new connection created: RedisConnection@224966962 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0x32fba198, L:/172.31.33.77:60030 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@5aa3306f[Not completed, 1 dependents], command=(PING), params=[], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:08:27,767 DEBUG [redisson-netty-2-8] org.redisson.client.RedisConnection [RedisConnection.java : 72] Connection created [addr=redis://47.122.40.114:16379]
+2023-04-13 16:08:27,803 DEBUG [redisson-netty-2-2] o.r.c.ClientConnectionsEntry [ClientConnectionsEntry.java : 202] new connection created: RedisConnection@1375580571 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0xbd522280, L:/172.31.33.77:60032 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@3a461069[Not completed, 1 dependents], command=(PING), params=[], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:08:27,822 DEBUG [redisson-netty-2-3] o.r.c.ClientConnectionsEntry [ClientConnectionsEntry.java : 202] new connection created: RedisConnection@776941751 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0x44d0e1ad, L:/172.31.33.77:60033 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@13d0e75f[Not completed, 1 dependents], command=(PING), params=[], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:08:27,822 INFO [redisson-netty-2-3] o.r.c.pool.MasterConnectionPool [ConnectionPool.java : 162] 8 connections initialized for 47.122.40.114/47.122.40.114:16379
+2023-04-13 16:08:27,876 DEBUG [main] c.b.m.a.MybatisPlusAutoConfiguration [MybatisPlusAutoConfiguration.java : 381] Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2023-04-13 16:08:27,906 DEBUG [main] o.h.v.m.ResourceBundleMessageInterpolator [ResourceBundleMessageInterpolator.java : 172] Loaded expression factory via original TCCL
+2023-04-13 16:08:27,909 DEBUG [main] o.h.v.i.e.AbstractConfigurationImpl [AbstractConfigurationImpl.java : 174] Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2023-04-13 16:08:27,909 DEBUG [main] o.h.v.i.e.AbstractConfigurationImpl [AbstractConfigurationImpl.java : 220] Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2023-04-13 16:08:27,910 DEBUG [main] o.h.v.i.x.config.ValidationXmlParser [ValidationXmlParser.java : 120] Trying to load META-INF/validation.xml for XML based Validator configuration.
+2023-04-13 16:08:27,910 DEBUG [main] o.h.v.i.x.c.ResourceLoaderHelper [ResourceLoaderHelper.java : 60] Trying to load META-INF/validation.xml via TCCL
+2023-04-13 16:08:27,911 DEBUG [main] o.h.v.i.x.c.ResourceLoaderHelper [ResourceLoaderHelper.java : 66] Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2023-04-13 16:08:27,912 DEBUG [main] o.h.v.i.x.config.ValidationXmlParser [ValidationXmlParser.java : 127] No META-INF/validation.xml found. Using annotation based configuration only.
+2023-04-13 16:08:27,913 DEBUG [main] o.h.v.i.e.r.TraversableResolvers [TraversableResolvers.java : 60] Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2023-04-13 16:08:27,914 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 345] HV000252: Using org.hibernate.validator.internal.engine.DefaultPropertyNodeNameProvider as property node name provider.
+2023-04-13 16:08:27,915 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 420] HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2023-04-13 16:08:27,915 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 421] HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2023-04-13 16:08:27,915 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 422] HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2023-04-13 16:08:27,915 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 423] HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2023-04-13 16:08:27,916 DEBUG [main] o.h.v.i.e.ValidatorFactoryConfigurationHelper [ValidatorFactoryConfigurationHelper.java : 424] HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2023-04-13 16:08:28,147 DEBUG [main] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:08:28,147 DEBUG [main] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:08:29,645 INFO [main] io.undertow [Undertow.java : 120] starting server: Undertow - 2.2.23.Final
+2023-04-13 16:08:29,654 INFO [main] org.xnio [Xnio.java : 95] XNIO version 3.8.7.Final
+2023-04-13 16:08:29,661 INFO [main] org.xnio.nio [NioXnio.java : 58] XNIO NIO Implementation Version 3.8.7.Final
+2023-04-13 16:08:29,681 DEBUG [main] org.xnio [XnioWorker.java : 1191] Creating worker:null, pool size:256, max pool size:256, keep alive:60000, io threads:8, stack size:0
+2023-04-13 16:08:29,694 INFO [main] org.jboss.threads [Version.java : 52] JBoss Threads version 3.1.0.Final
+2023-04-13 16:08:29,706 DEBUG [XNIO-1 I/O-1] org.xnio.nio [WorkerThread.java : 444] Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.WindowsSelectorImpl@2e5a282e
+2023-04-13 16:08:29,706 DEBUG [main] io.undertow [Undertow.java : 160] Configuring listener with protocol HTTP for interface 0.0.0.0 and port 9209
+2023-04-13 16:08:29,706 DEBUG [XNIO-1 I/O-2] org.xnio.nio [WorkerThread.java : 444] Started channel thread 'XNIO-1 I/O-2', selector sun.nio.ch.WindowsSelectorImpl@18a0ea
+2023-04-13 16:08:29,706 DEBUG [XNIO-1 I/O-4] org.xnio.nio [WorkerThread.java : 444] Started channel thread 'XNIO-1 I/O-4', selector sun.nio.ch.WindowsSelectorImpl@f4f1c07
+2023-04-13 16:08:29,706 DEBUG [XNIO-1 I/O-3] org.xnio.nio [WorkerThread.java : 444] Started channel thread 'XNIO-1 I/O-3', selector sun.nio.ch.WindowsSelectorImpl@8b159db
+2023-04-13 16:08:29,706 DEBUG [XNIO-1 I/O-5] org.xnio.nio [WorkerThread.java : 444] Started channel thread 'XNIO-1 I/O-5', selector sun.nio.ch.WindowsSelectorImpl@6e4e7925
+2023-04-13 16:08:29,707 DEBUG [XNIO-1 I/O-7] org.xnio.nio [WorkerThread.java : 444] Started channel thread 'XNIO-1 I/O-7', selector sun.nio.ch.WindowsSelectorImpl@15252c8f
+2023-04-13 16:08:29,707 DEBUG [XNIO-1 I/O-6] org.xnio.nio [WorkerThread.java : 444] Started channel thread 'XNIO-1 I/O-6', selector sun.nio.ch.WindowsSelectorImpl@244af1c2
+2023-04-13 16:08:29,707 DEBUG [XNIO-1 I/O-8] org.xnio.nio [WorkerThread.java : 444] Started channel thread 'XNIO-1 I/O-8', selector sun.nio.ch.WindowsSelectorImpl@5981a197
+2023-04-13 16:08:29,707 DEBUG [XNIO-1 Accept] org.xnio.nio [WorkerThread.java : 444] Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.WindowsSelectorImpl@54e67243
+2023-04-13 16:08:29,782 INFO [main] c.a.c.n.r.NacosServiceRegistry [NacosServiceRegistry.java : 75] nacos registry, DEFAULT_GROUP pet-xxl-executor 172.31.33.77:9209 register finished
+2023-04-13 16:08:31,248 WARN [main] o.a.d.r.c.AbstractServiceDiscovery [? : ?]  [DUBBO] No valid instance found, stop registering instance address to registry., dubbo version: 3.1.7, current host: 172.31.33.77, error code: 1-12. This may be caused by , go to https://dubbo.apache.org/faq/1/12 to find instructions. 
+2023-04-13 16:08:31,255 INFO [main] c.x.j.e.XxlJobSpringCloudExecutorApp [StartupInfoLogger.java : 61] Started XxlJobSpringCloudExecutorApp in 17.321 seconds (JVM running for 18.401)
+2023-04-13 16:08:31,263 INFO [main] c.a.c.n.r.NacosContextRefresher [NacosContextRefresher.java : 129] [Nacos Config] Listening config: dataId=datasource.yml, group=DEFAULT_GROUP
+2023-04-13 16:08:31,272 INFO [main] c.a.c.n.r.NacosContextRefresher [NacosContextRefresher.java : 129] [Nacos Config] Listening config: dataId=application-common.yml, group=DEFAULT_GROUP
+2023-04-13 16:08:31,274 INFO [main] c.a.c.n.r.NacosContextRefresher [NacosContextRefresher.java : 129] [Nacos Config] Listening config: dataId=pet-xxl-executor.yml, group=DEFAULT_GROUP
+2023-04-13 16:08:31,631 INFO [RMI TCP Connection(2)-172.31.33.77] io.undertow.servlet [ServletContextImpl.java : 388] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-13 16:08:32,518 DEBUG [RMI TCP Connection(1)-172.31.33.77] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:08:32,562 DEBUG [RMI TCP Connection(1)-172.31.33.77] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:08:32,660 DEBUG [RMI TCP Connection(1)-172.31.33.77] reactor.util.Loggers [Loggers.java : 254] Using Slf4j logging framework
+2023-04-13 16:08:32,705 DEBUG [boundedElastic-1] org.redisson.command.RedisExecutor [RedisExecutor.java : 605] acquired connection for command (INFO) and params [server] from slot NodeSource [slot=0, addr=null, redisClient=null, redirect=null, entry=null] using node 47.122.40.114/47.122.40.114:16379... RedisConnection@754130204 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0xbd2c9cf1, L:/172.31.33.77:60024 - R:47.122.40.114/47.122.40.114:16379], currentCommand=null, usage=1]
+2023-04-13 16:08:32,744 DEBUG [redisson-netty-2-2] org.redisson.command.RedisExecutor [RedisExecutor.java : 640] connection released for command (INFO) and params [server] from slot NodeSource [slot=0, addr=null, redisClient=null, redirect=null, entry=null] using connection RedisConnection@754130204 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0xbd2c9cf1, L:/172.31.33.77:60024 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@6e412efa[Completed normally], command=(INFO), params=[server], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:08:51,414 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@71ce410a is alive
+2023-04-13 16:08:52,047 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@5c62cb9 is alive
+2023-04-13 16:08:52,405 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7614378d is alive
+2023-04-13 16:08:52,654 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@20eb5d2a is alive
+2023-04-13 16:08:52,973 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@9002525 is alive
+2023-04-13 16:08:53,633 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@3b66f15e is alive
+2023-04-13 16:08:53,633 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:08:53,633 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:08:53,634 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 518] master - Fill pool skipped, pool is at sufficient level.
+2023-04-13 16:08:53,871 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@1210ae32 is alive
+2023-04-13 16:08:54,296 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@613a3dae is alive
+2023-04-13 16:08:54,769 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@5e5d9584 is alive
+2023-04-13 16:08:55,315 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@198e6ced is alive
+2023-04-13 16:09:18,528 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@71ce410a is alive
+2023-04-13 16:09:20,173 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@5c62cb9 is alive
+2023-04-13 16:09:20,526 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@9002525 is alive
+2023-04-13 16:09:20,634 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@20eb5d2a is alive
+2023-04-13 16:09:20,850 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:09:21,335 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7614378d is alive
+2023-04-13 16:09:21,417 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:09:21,443 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@3b66f15e is alive
+2023-04-13 16:09:21,631 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@1210ae32 is alive
+2023-04-13 16:09:21,778 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@613a3dae is alive
+2023-04-13 16:09:23,638 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:09:23,638 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:09:23,638 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 518] master - Fill pool skipped, pool is at sufficient level.
+2023-04-13 16:09:24,193 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@198e6ced is alive
+2023-04-13 16:09:24,483 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@5e5d9584 is alive
+2023-04-13 16:09:30,850 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:09:31,257 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:09:40,851 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:09:41,265 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:09:45,641 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@71ce410a is alive
+2023-04-13 16:09:48,083 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@9002525 is alive
+2023-04-13 16:09:48,290 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@5c62cb9 is alive
+2023-04-13 16:09:48,614 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@20eb5d2a is alive
+2023-04-13 16:09:49,245 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@3b66f15e is alive
+2023-04-13 16:09:49,281 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@613a3dae is alive
+2023-04-13 16:09:49,446 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@1210ae32 is alive
+2023-04-13 16:09:50,270 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7614378d is alive
+2023-04-13 16:09:50,855 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:09:51,270 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:09:53,099 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@198e6ced is alive
+2023-04-13 16:09:53,646 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:09:53,646 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:09:53,646 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 518] master - Fill pool skipped, pool is at sufficient level.
+2023-04-13 16:09:54,185 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@5e5d9584 is alive
+2023-04-13 16:10:00,843 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:10:01,268 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:10:10,854 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:10:11,272 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:10:12,761 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@71ce410a is alive
+2023-04-13 16:10:15,637 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@9002525 is alive
+2023-04-13 16:10:16,417 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@5c62cb9 is alive
+2023-04-13 16:10:16,598 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@20eb5d2a is alive
+2023-04-13 16:10:16,756 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@613a3dae is alive
+2023-04-13 16:10:17,059 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@3b66f15e is alive
+2023-04-13 16:10:17,217 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@1210ae32 is alive
+2023-04-13 16:10:19,214 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7614378d is alive
+2023-04-13 16:10:20,842 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:10:21,267 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:10:21,975 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@198e6ced is alive
+2023-04-13 16:10:23,659 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:10:23,659 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:10:23,659 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 518] master - Fill pool skipped, pool is at sufficient level.
+2023-04-13 16:10:23,897 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@5e5d9584 is alive
+2023-04-13 16:10:30,857 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:10:31,269 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:10:39,869 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@71ce410a is alive
+2023-04-13 16:10:40,844 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:10:41,253 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:10:43,213 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@9002525 is alive
+2023-04-13 16:10:44,229 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@613a3dae is alive
+2023-04-13 16:10:44,530 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@5c62cb9 is alive
+2023-04-13 16:10:44,585 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@20eb5d2a is alive
+2023-04-13 16:10:44,874 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@3b66f15e is alive
+2023-04-13 16:10:44,986 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@1210ae32 is alive
+2023-04-13 16:10:48,155 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7614378d is alive
+2023-04-13 16:10:50,850 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@198e6ced is alive
+2023-04-13 16:10:50,860 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:10:51,318 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:10:53,600 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@5e5d9584 is alive
+2023-04-13 16:10:53,661 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:10:53,661 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:10:53,661 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 518] master - Fill pool skipped, pool is at sufficient level.
+2023-04-13 16:11:00,850 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:11:01,260 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:11:06,982 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@71ce410a is alive
+2023-04-13 16:11:10,767 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@9002525 is alive
+2023-04-13 16:11:10,858 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:11:11,272 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:11:11,697 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@613a3dae is alive
+2023-04-13 16:11:12,565 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@20eb5d2a is alive
+2023-04-13 16:11:12,653 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@5c62cb9 is alive
+2023-04-13 16:11:12,690 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@3b66f15e is alive
+2023-04-13 16:11:12,763 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@1210ae32 is alive
+2023-04-13 16:11:17,100 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7614378d is alive
+2023-04-13 16:11:19,735 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@198e6ced is alive
+2023-04-13 16:11:20,844 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:11:21,258 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-executor-group', please make sure registry config correct
+2023-04-13 16:11:23,306 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@5e5d9584 is alive
+2023-04-13 16:11:23,667 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:11:23,667 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:11:23,667 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 518] master - Fill pool skipped, pool is at sufficient level.

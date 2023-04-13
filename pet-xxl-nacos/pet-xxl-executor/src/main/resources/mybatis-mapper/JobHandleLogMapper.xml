@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxl.job.executor.dao.JobHandleLogDao">
+	
+	<resultMap type="com.xxl.job.core.biz.model.JobHandleLog" id="jobHandleLog">
+		<result column="id" property="id" />
+		<result column="log_id" property="logId" />
+		<result column="algo_id" property="algoId" />
+		<result column="execute_param" property="executeParam" />
+		<result column="handle_start_time" property="handleStartTime" />
+		<result column="handle_end_time" property="handleEndTime" />
+		<result column="handle_cost_time" property="handleCostTime" />
+		<result column="handle_code" property="handleCode" />
+		<result column="handle_msg" property="handleMsg" />
+	</resultMap>
+	
+	<sql id="Base_Column_List">
+		`id`,`log_id`,`algo_id`,`execute_param`,`handle_start_time`,`handle_end_time`,`handle_cost_time`,`handle_code`,`handle_msg`
+	</sql>
+	
+	<select id="selectById" resultMap="jobHandleLog">
+		select <include refid="Base_Column_List"></include> from job_handle_log where id=#{id}
+	</select>
+	
+	<insert id="insert" parameterType="com.xxl.job.core.biz.model.JobHandleLog"  useGeneratedKeys="true" keyProperty="id">
+		 insert into job_handle_log (`id`,`log_id`,`algo_id`,`execute_param`,`handle_start_time`)
+		 values (#{id},#{logId},#{algoId},#{executeParam},#{handleStartTime});
+	</insert>
+	
+	<update id="update">
+		update job_handle_log set handle_end_time=#{handleEndTime},handle_cost_time=#{handleCostTime},handle_code=#{handleCode},handle_msg=#{handleMsg} where id=#{id}
+	</update>
+</mapper>
