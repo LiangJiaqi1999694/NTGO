@@ -34930,3 +34930,507 @@ javax.mail.MessagingException: Got bad greeting from SMTP host: smtp.qq.com, por
 2023-04-13 16:11:29,061 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@13884657 is alive
 2023-04-13 16:11:30,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 30 = [[]]
 2023-04-13 16:11:30,004 DEBUG [xxl-job, admin JobFailMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:11:31,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 31 = [[]]
+2023-04-13 16:11:31,886 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:11:32,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 32 = [[]]
+2023-04-13 16:11:32,211 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:11:33,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 33 = [[]]
+2023-04-13 16:11:33,000 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:11:33,118 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:11:33,552 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@2a0eada3 is alive
+2023-04-13 16:11:34,014 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 34 = [[]]
+2023-04-13 16:11:35,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 35 = [[]]
+2023-04-13 16:11:36,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 36 = [[]]
+2023-04-13 16:11:37,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 37 = [[]]
+2023-04-13 16:11:37,681 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@5edd035f is alive
+2023-04-13 16:11:38,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 38 = [[]]
+2023-04-13 16:11:38,000 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:11:38,118 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:11:39,005 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 39 = [[]]
+2023-04-13 16:11:40,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 40 = [[]]
+2023-04-13 16:11:40,060 DEBUG [xxl-job, admin JobFailMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:11:40,331 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7bf069af is alive
+2023-04-13 16:11:41,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 41 = [[]]
+2023-04-13 16:11:41,319 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@2f510013 is alive
+2023-04-13 16:11:41,890 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:11:42,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 42 = [[]]
+2023-04-13 16:11:42,213 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:11:43,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 43 = [[]]
+2023-04-13 16:11:43,000 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:11:43,121 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:11:43,844 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@105e387b is alive
+2023-04-13 16:11:44,004 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 44 = [[]]
+2023-04-13 16:11:45,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 45 = [[]]
+2023-04-13 16:11:45,443 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@1fc40209 is alive
+2023-04-13 16:11:46,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 46 = [[]]
+2023-04-13 16:11:47,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 47 = [[]]
+2023-04-13 16:11:48,001 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:11:48,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 48 = [[]]
+2023-04-13 16:11:48,117 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:11:48,325 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7fbdab7 is alive
+2023-04-13 16:11:49,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 49 = [[]]
+2023-04-13 16:11:50,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 50 = [[]]
+2023-04-13 16:11:50,183 DEBUG [xxl-job, admin JobFailMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:11:51,009 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 51 = [[]]
+2023-04-13 16:11:51,146 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@63f90ca1 is alive
+2023-04-13 16:11:51,901 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:11:52,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 52 = [[]]
+2023-04-13 16:11:52,211 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:11:53,000 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:11:53,006 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 53 = [[]]
+2023-04-13 16:11:53,120 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:11:53,708 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@63a7af06 is alive
+2023-04-13 16:11:54,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 54 = [[]]
+2023-04-13 16:11:54,178 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:11:54,178 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:11:54,178 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 518] master - Fill pool skipped, pool is at sufficient level.
+2023-04-13 16:11:55,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 55 = [[]]
+2023-04-13 16:11:56,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 56 = [[]]
+2023-04-13 16:11:57,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 57 = [[]]
+2023-04-13 16:11:57,369 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@13884657 is alive
+2023-04-13 16:11:58,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 58 = [[]]
+2023-04-13 16:11:58,000 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:11:58,120 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:11:59,006 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 59 = [[]]
+2023-04-13 16:12:00,000 DEBUG [schedule-pool-3] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:00,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 0 = [[]]
+2023-04-13 16:12:00,057 DEBUG [schedule-pool-3] org.redisson.command.RedisExecutor [RedisExecutor.java : 605] acquired connection for command (SET) and params [[-84, -19, 0, 5, 116, 0, 17, 116, 105, 109, ...], [-84, -19, 0, 5, 116, 0, 2, 123, 125]] from slot NodeSource [slot=0, addr=null, redisClient=null, redirect=null, entry=null] using node 47.122.40.114/47.122.40.114:16379... RedisConnection@505690837 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0x13e60ef1, L:/172.31.33.77:56864 - R:47.122.40.114/47.122.40.114:16379], currentCommand=null, usage=1]
+2023-04-13 16:12:00,095 DEBUG [redisson-netty-2-2] org.redisson.command.RedisExecutor [RedisExecutor.java : 640] connection released for command (SET) and params [[-84, -19, 0, 5, 116, 0, 17, 116, 105, 109, ...], [-84, -19, 0, 5, 116, 0, 2, 123, 125]] from slot NodeSource [slot=0, addr=null, redisClient=null, redirect=null, entry=null] using connection RedisConnection@505690837 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0x13e60ef1, L:/172.31.33.77:56864 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@6367f7ec[Completed normally], command=(SET), params=[[-84, -19, 0, 5, 116, 0, 17, 116, 105, 109, ...], [-84, -19, 0, 5, 116, 0, 2, 123, 125]], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:12:00,250 DEBUG [xxl-job, admin JobFailMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:00,707 DEBUG [xxl-job, admin JobLosedMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:01,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 1 = [[]]
+2023-04-13 16:12:01,887 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:12:02,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 2 = [[]]
+2023-04-13 16:12:02,211 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:12:03,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 3 = [[]]
+2023-04-13 16:12:03,000 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:03,119 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:04,006 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 4 = [[]]
+2023-04-13 16:12:05,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 5 = [[]]
+2023-04-13 16:12:05,148 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@5edd035f is alive
+2023-04-13 16:12:06,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 6 = [[]]
+2023-04-13 16:12:06,361 DEBUG [xxl-job, admin JobLogReportHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:06,426 DEBUG [xxl-job, admin JobLogReportHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:06,484 DEBUG [xxl-job, admin JobLogReportHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:06,513 DEBUG [xxl-job, admin JobLogReportHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:06,570 DEBUG [xxl-job, admin JobLogReportHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:06,598 DEBUG [xxl-job, admin JobLogReportHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:07,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 7 = [[]]
+2023-04-13 16:12:08,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 8 = [[]]
+2023-04-13 16:12:08,001 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:08,118 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:09,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 9 = [[]]
+2023-04-13 16:12:09,113 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@2f510013 is alive
+2023-04-13 16:12:09,452 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7bf069af is alive
+2023-04-13 16:12:10,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 10 = [[]]
+2023-04-13 16:12:10,280 DEBUG [xxl-job, admin JobFailMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:11,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 11 = [[]]
+2023-04-13 16:12:11,886 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:12:12,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 12 = [[]]
+2023-04-13 16:12:12,214 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:12:12,515 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@1fc40209 is alive
+2023-04-13 16:12:13,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 13 = [[]]
+2023-04-13 16:12:13,000 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:13,018 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@105e387b is alive
+2023-04-13 16:12:13,117 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:14,006 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 14 = [[]]
+2023-04-13 16:12:15,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 15 = [[]]
+2023-04-13 16:12:16,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 16 = [[]]
+2023-04-13 16:12:17,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 17 = [[]]
+2023-04-13 16:12:17,594 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7fbdab7 is alive
+2023-04-13 16:12:18,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 18 = [[]]
+2023-04-13 16:12:18,000 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:18,122 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:19,011 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 19 = [[]]
+2023-04-13 16:12:20,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 20 = [[]]
+2023-04-13 16:12:20,292 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@63f90ca1 is alive
+2023-04-13 16:12:20,343 DEBUG [xxl-job, admin JobFailMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:21,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 21 = [[]]
+2023-04-13 16:12:21,887 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:12:22,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 22 = [[]]
+2023-04-13 16:12:22,381 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:12:22,548 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@63a7af06 is alive
+2023-04-13 16:12:23,000 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:23,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 23 = [[]]
+2023-04-13 16:12:23,121 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:24,014 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 24 = [[]]
+2023-04-13 16:12:24,178 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:12:24,178 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:12:24,178 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 518] master - Fill pool skipped, pool is at sufficient level.
+2023-04-13 16:12:25,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 25 = [[]]
+2023-04-13 16:12:25,677 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@13884657 is alive
+2023-04-13 16:12:26,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 26 = [[]]
+2023-04-13 16:12:27,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 27 = [[]]
+2023-04-13 16:12:28,000 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:28,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 28 = [[]]
+2023-04-13 16:12:28,118 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:29,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 29 = [[]]
+2023-04-13 16:12:30,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 30 = [[]]
+2023-04-13 16:12:30,411 DEBUG [xxl-job, admin JobFailMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:31,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 31 = [[]]
+2023-04-13 16:12:31,896 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:12:32,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 32 = [[]]
+2023-04-13 16:12:32,211 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:12:32,614 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@5edd035f is alive
+2023-04-13 16:12:32,656 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@2a0eada3 is alive
+2023-04-13 16:12:33,000 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:33,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 33 = [[]]
+2023-04-13 16:12:33,118 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:34,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 34 = [[]]
+2023-04-13 16:12:35,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 35 = [[]]
+2023-04-13 16:12:36,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 36 = [[]]
+2023-04-13 16:12:36,911 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@2f510013 is alive
+2023-04-13 16:12:37,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 37 = [[]]
+2023-04-13 16:12:38,001 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:38,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 38 = [[]]
+2023-04-13 16:12:38,121 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:38,570 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7bf069af is alive
+2023-04-13 16:12:39,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 39 = [[]]
+2023-04-13 16:12:39,584 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@1fc40209 is alive
+2023-04-13 16:12:40,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 40 = [[]]
+2023-04-13 16:12:40,471 DEBUG [xxl-job, admin JobFailMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:41,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 41 = [[]]
+2023-04-13 16:12:41,884 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:12:42,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 42 = [[]]
+2023-04-13 16:12:42,193 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@105e387b is alive
+2023-04-13 16:12:42,212 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:12:43,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 43 = [[]]
+2023-04-13 16:12:43,000 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:43,117 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:44,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 44 = [[]]
+2023-04-13 16:12:45,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 45 = [[]]
+2023-04-13 16:12:46,011 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 46 = [[]]
+2023-04-13 16:12:46,862 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7fbdab7 is alive
+2023-04-13 16:12:47,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 47 = [[]]
+2023-04-13 16:12:48,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 48 = [[]]
+2023-04-13 16:12:48,015 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:48,131 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:49,015 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 49 = [[]]
+2023-04-13 16:12:49,439 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@63f90ca1 is alive
+2023-04-13 16:12:50,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 50 = [[]]
+2023-04-13 16:12:50,528 DEBUG [xxl-job, admin JobFailMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:51,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 51 = [[]]
+2023-04-13 16:12:51,392 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@63a7af06 is alive
+2023-04-13 16:12:51,884 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:12:52,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 52 = [[]]
+2023-04-13 16:12:52,210 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:12:53,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 53 = [[]]
+2023-04-13 16:12:53,001 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:53,123 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:53,988 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@13884657 is alive
+2023-04-13 16:12:54,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 54 = [[]]
+2023-04-13 16:12:54,179 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:12:54,179 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:12:54,179 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 518] master - Fill pool skipped, pool is at sufficient level.
+2023-04-13 16:12:55,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 55 = [[]]
+2023-04-13 16:12:56,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 56 = [[]]
+2023-04-13 16:12:57,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 57 = [[]]
+2023-04-13 16:12:58,000 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:58,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 58 = [[]]
+2023-04-13 16:12:58,129 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:12:59,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 59 = [[]]
+2023-04-13 16:13:00,000 DEBUG [schedule-pool-10] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:00,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 0 = [[]]
+2023-04-13 16:13:00,057 DEBUG [schedule-pool-10] org.redisson.command.RedisExecutor [RedisExecutor.java : 605] acquired connection for command (SET) and params [[-84, -19, 0, 5, 116, 0, 17, 116, 105, 109, ...], [-84, -19, 0, 5, 116, 0, 2, 123, 125]] from slot NodeSource [slot=0, addr=null, redisClient=null, redirect=null, entry=null] using node 47.122.40.114/47.122.40.114:16379... RedisConnection@1522046887 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0xb8bd3e86, L:/172.31.33.77:56867 - R:47.122.40.114/47.122.40.114:16379], currentCommand=null, usage=1]
+2023-04-13 16:13:00,083 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@5edd035f is alive
+2023-04-13 16:13:00,086 DEBUG [redisson-netty-2-1] org.redisson.command.RedisExecutor [RedisExecutor.java : 640] connection released for command (SET) and params [[-84, -19, 0, 5, 116, 0, 17, 116, 105, 109, ...], [-84, -19, 0, 5, 116, 0, 2, 123, 125]] from slot NodeSource [slot=0, addr=null, redisClient=null, redirect=null, entry=null] using connection RedisConnection@1522046887 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0xb8bd3e86, L:/172.31.33.77:56867 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@7f6f734f[Completed normally], command=(SET), params=[[-84, -19, 0, 5, 116, 0, 17, 116, 105, 109, ...], [-84, -19, 0, 5, 116, 0, 2, 123, 125]], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:13:00,585 DEBUG [xxl-job, admin JobFailMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:00,786 DEBUG [xxl-job, admin JobLosedMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:01,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 1 = [[]]
+2023-04-13 16:13:01,886 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:13:02,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 2 = [[]]
+2023-04-13 16:13:02,211 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:13:02,227 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@2a0eada3 is alive
+2023-04-13 16:13:03,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 3 = [[]]
+2023-04-13 16:13:03,001 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:03,119 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:04,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 4 = [[]]
+2023-04-13 16:13:04,720 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@2f510013 is alive
+2023-04-13 16:13:05,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 5 = [[]]
+2023-04-13 16:13:06,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 6 = [[]]
+2023-04-13 16:13:06,652 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@1fc40209 is alive
+2023-04-13 16:13:06,656 DEBUG [xxl-job, admin JobLogReportHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:06,712 DEBUG [xxl-job, admin JobLogReportHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:06,774 DEBUG [xxl-job, admin JobLogReportHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:06,805 DEBUG [xxl-job, admin JobLogReportHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:06,865 DEBUG [xxl-job, admin JobLogReportHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:06,893 DEBUG [xxl-job, admin JobLogReportHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:07,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 7 = [[]]
+2023-04-13 16:13:07,689 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7bf069af is alive
+2023-04-13 16:13:08,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 8 = [[]]
+2023-04-13 16:13:08,001 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:08,121 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:09,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 9 = [[]]
+2023-04-13 16:13:10,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 10 = [[]]
+2023-04-13 16:13:10,640 DEBUG [xxl-job, admin JobFailMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:11,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 11 = [[]]
+2023-04-13 16:13:11,365 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@105e387b is alive
+2023-04-13 16:13:11,885 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:13:12,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 12 = [[]]
+2023-04-13 16:13:12,212 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:13:13,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 13 = [[]]
+2023-04-13 16:13:13,000 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:13,119 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:14,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 14 = [[]]
+2023-04-13 16:13:15,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 15 = [[]]
+2023-04-13 16:13:16,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 16 = [[]]
+2023-04-13 16:13:16,132 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7fbdab7 is alive
+2023-04-13 16:13:17,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 17 = [[]]
+2023-04-13 16:13:18,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 18 = [[]]
+2023-04-13 16:13:18,000 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:18,122 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:18,591 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@63f90ca1 is alive
+2023-04-13 16:13:19,011 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 19 = [[]]
+2023-04-13 16:13:20,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 20 = [[]]
+2023-04-13 16:13:20,234 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@63a7af06 is alive
+2023-04-13 16:13:20,701 DEBUG [xxl-job, admin JobFailMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:21,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 21 = [[]]
+2023-04-13 16:13:21,885 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:13:22,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 22 = [[]]
+2023-04-13 16:13:22,220 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:13:22,301 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@13884657 is alive
+2023-04-13 16:13:23,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 23 = [[]]
+2023-04-13 16:13:23,001 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:23,121 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:24,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 24 = [[]]
+2023-04-13 16:13:24,180 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:13:24,180 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:13:24,180 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 518] master - Fill pool skipped, pool is at sufficient level.
+2023-04-13 16:13:25,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 25 = [[]]
+2023-04-13 16:13:26,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 26 = [[]]
+2023-04-13 16:13:27,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 27 = [[]]
+2023-04-13 16:13:27,548 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@5edd035f is alive
+2023-04-13 16:13:28,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 28 = [[]]
+2023-04-13 16:13:28,001 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:28,119 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:29,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 29 = [[]]
+2023-04-13 16:13:30,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 30 = [[]]
+2023-04-13 16:13:30,760 DEBUG [xxl-job, admin JobFailMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:31,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 31 = [[]]
+2023-04-13 16:13:31,799 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@2a0eada3 is alive
+2023-04-13 16:13:31,886 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:13:32,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 32 = [[]]
+2023-04-13 16:13:32,209 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:13:32,517 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@2f510013 is alive
+2023-04-13 16:13:33,001 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:33,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 33 = [[]]
+2023-04-13 16:13:33,129 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:33,721 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@1fc40209 is alive
+2023-04-13 16:13:34,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 34 = [[]]
+2023-04-13 16:13:35,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 35 = [[]]
+2023-04-13 16:13:36,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 36 = [[]]
+2023-04-13 16:13:36,818 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7bf069af is alive
+2023-04-13 16:13:37,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 37 = [[]]
+2023-04-13 16:13:38,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 38 = [[]]
+2023-04-13 16:13:38,000 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:38,122 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:39,009 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 39 = [[]]
+2023-04-13 16:13:40,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 40 = [[]]
+2023-04-13 16:13:40,717 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@105e387b is alive
+2023-04-13 16:13:40,818 DEBUG [xxl-job, admin JobFailMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:41,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 41 = [[]]
+2023-04-13 16:13:41,885 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:13:42,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 42 = [[]]
+2023-04-13 16:13:42,209 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:13:43,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 43 = [[]]
+2023-04-13 16:13:43,001 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:43,120 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:44,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 44 = [[]]
+2023-04-13 16:13:45,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 45 = [[]]
+2023-04-13 16:13:45,400 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7fbdab7 is alive
+2023-04-13 16:13:46,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 46 = [[]]
+2023-04-13 16:13:47,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 47 = [[]]
+2023-04-13 16:13:47,736 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@63f90ca1 is alive
+2023-04-13 16:13:48,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 48 = [[]]
+2023-04-13 16:13:48,000 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:48,119 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:49,008 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 49 = [[]]
+2023-04-13 16:13:49,075 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@63a7af06 is alive
+2023-04-13 16:13:50,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 50 = [[]]
+2023-04-13 16:13:50,610 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@13884657 is alive
+2023-04-13 16:13:50,880 DEBUG [xxl-job, admin JobFailMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:51,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 51 = [[]]
+2023-04-13 16:13:51,885 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:13:52,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 52 = [[]]
+2023-04-13 16:13:52,212 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:13:53,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 53 = [[]]
+2023-04-13 16:13:53,001 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:53,122 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:54,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 54 = [[]]
+2023-04-13 16:13:54,181 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - Before cleanup stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:13:54,181 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - After cleanup  stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:13:54,181 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 518] master - Fill pool skipped, pool is at sufficient level.
+2023-04-13 16:13:55,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 55 = [[]]
+2023-04-13 16:13:55,028 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@5edd035f is alive
+2023-04-13 16:13:56,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 56 = [[]]
+2023-04-13 16:13:57,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 57 = [[]]
+2023-04-13 16:13:58,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 58 = [[]]
+2023-04-13 16:13:58,001 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:58,118 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:13:59,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 59 = [[]]
+2023-04-13 16:14:00,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 0 = [[]]
+2023-04-13 16:14:00,000 DEBUG [schedule-pool-7] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:14:00,057 DEBUG [schedule-pool-7] org.redisson.command.RedisExecutor [RedisExecutor.java : 605] acquired connection for command (SET) and params [[-84, -19, 0, 5, 116, 0, 17, 116, 105, 109, ...], [-84, -19, 0, 5, 116, 0, 2, 123, 125]] from slot NodeSource [slot=0, addr=null, redisClient=null, redirect=null, entry=null] using node 47.122.40.114/47.122.40.114:16379... RedisConnection@452134589 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0x94cad463, L:/172.31.33.77:56868 - R:47.122.40.114/47.122.40.114:16379], currentCommand=null, usage=1]
+2023-04-13 16:14:00,089 DEBUG [redisson-netty-2-7] org.redisson.command.RedisExecutor [RedisExecutor.java : 640] connection released for command (SET) and params [[-84, -19, 0, 5, 116, 0, 17, 116, 105, 109, ...], [-84, -19, 0, 5, 116, 0, 2, 123, 125]] from slot NodeSource [slot=0, addr=null, redisClient=null, redirect=null, entry=null] using connection RedisConnection@452134589 [redisClient=[addr=redis://47.122.40.114:16379], channel=[id: 0x94cad463, L:/172.31.33.77:56868 - R:47.122.40.114/47.122.40.114:16379], currentCommand=CommandData [promise=java.util.concurrent.CompletableFuture@79c9bd2a[Completed normally], command=(SET), params=[[-84, -19, 0, 5, 116, 0, 17, 116, 105, 109, ...], [-84, -19, 0, 5, 116, 0, 2, 123, 125]], codec=org.redisson.client.codec.StringCodec], usage=0]
+2023-04-13 16:14:00,314 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@2f510013 is alive
+2023-04-13 16:14:00,793 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@1fc40209 is alive
+2023-04-13 16:14:00,867 DEBUG [xxl-job, admin JobLosedMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:14:00,942 DEBUG [xxl-job, admin JobFailMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:14:01,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 1 = [[]]
+2023-04-13 16:14:01,372 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@2a0eada3 is alive
+2023-04-13 16:14:01,885 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:14:02,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 2 = [[]]
+2023-04-13 16:14:02,212 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 181] can not get cluster name in registry config 'service.vgroupMapping.pet-xxl-group', please make sure registry config correct
+2023-04-13 16:14:03,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 3 = [[]]
+2023-04-13 16:14:03,001 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:14:03,120 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:14:04,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 4 = [[]]
+2023-04-13 16:14:05,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 5 = [[]]
+2023-04-13 16:14:05,937 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@7bf069af is alive
+2023-04-13 16:14:06,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 6 = [[]]
+2023-04-13 16:14:06,951 DEBUG [xxl-job, admin JobLogReportHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:14:07,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 7 = [[]]
+2023-04-13 16:14:07,009 DEBUG [xxl-job, admin JobLogReportHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:14:07,067 DEBUG [xxl-job, admin JobLogReportHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:14:07,098 DEBUG [xxl-job, admin JobLogReportHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:14:07,161 DEBUG [xxl-job, admin JobLogReportHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:14:07,190 DEBUG [xxl-job, admin JobLogReportHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:14:08,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 8 = [[]]
+2023-04-13 16:14:08,002 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:14:08,121 DEBUG [xxl-job, admin JobScheduleHelper#scheduleThread] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:14:09,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 9 = [[]]
+2023-04-13 16:14:09,891 DEBUG [master housekeeper] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 853] master - keepalive: connection com.mysql.cj.jdbc.ConnectionImpl@105e387b is alive
+2023-04-13 16:14:10,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 10 = [[]]
+2023-04-13 16:14:11,000 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 11 = [[]]
+2023-04-13 16:14:11,002 DEBUG [xxl-job, admin JobFailMonitorHelper] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:14:11,554 WARN [Thread-4] c.a.n.c.http.HttpClientBeanHolder [HttpClientBeanHolder.java : 102] [HttpClientBeanHolder] Start destroying common HttpClient
+2023-04-13 16:14:11,554 WARN [Thread-9] c.a.nacos.common.notify.NotifyCenter [NotifyCenter.java : 136] [NotifyCenter] Start destroying Publisher
+2023-04-13 16:14:11,554 WARN [Thread-9] c.a.nacos.common.notify.NotifyCenter [NotifyCenter.java : 153] [NotifyCenter] Destruction of the end
+2023-04-13 16:14:11,555 WARN [Thread-4] c.a.n.c.http.HttpClientBeanHolder [HttpClientBeanHolder.java : 111] [HttpClientBeanHolder] Destruction of the end
+2023-04-13 16:14:11,580 INFO [SpringContextShutdownHook] io.undertow [Undertow.java : 259] stopping server: Undertow - 2.2.23.Final
+2023-04-13 16:14:11,588 INFO [SpringContextShutdownHook] io.undertow.servlet [ServletContextImpl.java : 388] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-04-13 16:14:11,639 INFO [SpringContextShutdownHook] c.a.c.n.r.NacosServiceRegistry [NacosServiceRegistry.java : 94] De-registering from Nacos Server now...
+2023-04-13 16:14:11,678 INFO [SpringContextShutdownHook] c.a.c.n.r.NacosServiceRegistry [NacosServiceRegistry.java : 114] De-registration finished.
+2023-04-13 16:14:11,812 ERROR [timeoutChecker_1_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 173] Failed to get available servers: null
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.GeneratedMethodAccessor84.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.seata.config.ConfigurationCache.lambda$proxy$1(ConfigurationCache.java:119)
+	at io.seata.config.Configuration$ByteBuddy$WyOws5TY.getConfig(Unknown Source)
+	at io.seata.discovery.registry.RegistryService.getServiceGroup(RegistryService.java:116)
+	at io.seata.discovery.registry.nacos.NacosRegistryServiceImpl.lookup(NacosRegistryServiceImpl.java:146)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.getAvailServerList(NettyClientChannelManager.java:257)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.reconnect(NettyClientChannelManager.java:171)
+	at io.seata.core.rpc.netty.AbstractNettyRemotingClient$1.run(AbstractNettyRemotingClient.java:115)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: UT015023: This Context has been already destroyed
+	at io.undertow.servlet.spec.ServletContextImpl.getDeploymentInfo(ServletContextImpl.java:211)
+	at io.undertow.servlet.spec.ServletContextImpl.getInitParameter(ServletContextImpl.java:450)
+	at org.springframework.web.context.support.ServletContextPropertySource.getProperty(ServletContextPropertySource.java:47)
+	at org.springframework.web.context.support.ServletContextPropertySource.getProperty(ServletContextPropertySource.java:33)
+	at org.springframework.core.env.PropertySourcesPropertyResolver.getProperty(PropertySourcesPropertyResolver.java:85)
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:123)
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.findPropertyValue(ConfigurationPropertySourcesPropertyResolver.java:97)
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:74)
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:65)
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:605)
+	at io.seata.spring.boot.autoconfigure.provider.SpringBootConfigurationProvider.getConfig(SpringBootConfigurationProvider.java:202)
+	at io.seata.spring.boot.autoconfigure.provider.SpringBootConfigurationProvider.getFieldValue(SpringBootConfigurationProvider.java:139)
+	at io.seata.spring.boot.autoconfigure.provider.SpringBootConfigurationProvider.get(SpringBootConfigurationProvider.java:100)
+	at io.seata.spring.boot.autoconfigure.provider.SpringBootConfigurationProvider.get(SpringBootConfigurationProvider.java:86)
+	at io.seata.spring.boot.autoconfigure.provider.SpringBootConfigurationProvider.lambda$provide$0(SpringBootConfigurationProvider.java:69)
+	at io.seata.config.FileConfiguration$$EnhancerByCGLIB$$862af1eb.getConfig(<generated>)
+	at io.seata.config.nacos.NacosConfiguration.getNacosGroup(NacosConfiguration.java:290)
+	at io.seata.config.nacos.NacosConfiguration.getLatestConfig(NacosConfiguration.java:110)
+	at io.seata.config.AbstractConfiguration.getConfig(AbstractConfiguration.java:141)
+	at io.seata.config.AbstractConfiguration.getConfig(AbstractConfiguration.java:132)
+	at io.seata.config.AbstractConfiguration.getConfig(AbstractConfiguration.java:146)
+	... 18 common frames omitted
+2023-04-13 16:14:12,001 DEBUG [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 239] >>>>>>>>>>> xxl-job, time-ring beat : 12 = [[]]
+2023-04-13 16:14:12,139 ERROR [timeoutChecker_2_1] i.s.c.r.n.NettyClientChannelManager [NettyClientChannelManager.java : 173] Failed to get available servers: null
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.GeneratedMethodAccessor84.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.seata.config.ConfigurationCache.lambda$proxy$1(ConfigurationCache.java:119)
+	at io.seata.config.Configuration$ByteBuddy$WyOws5TY.getConfig(Unknown Source)
+	at io.seata.discovery.registry.RegistryService.getServiceGroup(RegistryService.java:116)
+	at io.seata.discovery.registry.nacos.NacosRegistryServiceImpl.lookup(NacosRegistryServiceImpl.java:146)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.getAvailServerList(NettyClientChannelManager.java:257)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.reconnect(NettyClientChannelManager.java:171)
+	at io.seata.core.rpc.netty.AbstractNettyRemotingClient$1.run(AbstractNettyRemotingClient.java:115)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.IllegalStateException: UT015023: This Context has been already destroyed
+	at io.undertow.servlet.spec.ServletContextImpl.getDeploymentInfo(ServletContextImpl.java:211)
+	at io.undertow.servlet.spec.ServletContextImpl.getInitParameter(ServletContextImpl.java:450)
+	at org.springframework.web.context.support.ServletContextPropertySource.getProperty(ServletContextPropertySource.java:47)
+	at org.springframework.web.context.support.ServletContextPropertySource.getProperty(ServletContextPropertySource.java:33)
+	at org.springframework.core.env.PropertySourcesPropertyResolver.getProperty(PropertySourcesPropertyResolver.java:85)
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver$DefaultResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:123)
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.findPropertyValue(ConfigurationPropertySourcesPropertyResolver.java:97)
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:74)
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:65)
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:605)
+	at io.seata.spring.boot.autoconfigure.provider.SpringBootConfigurationProvider.getConfig(SpringBootConfigurationProvider.java:202)
+	at io.seata.spring.boot.autoconfigure.provider.SpringBootConfigurationProvider.getFieldValue(SpringBootConfigurationProvider.java:139)
+	at io.seata.spring.boot.autoconfigure.provider.SpringBootConfigurationProvider.get(SpringBootConfigurationProvider.java:100)
+	at io.seata.spring.boot.autoconfigure.provider.SpringBootConfigurationProvider.get(SpringBootConfigurationProvider.java:86)
+	at io.seata.spring.boot.autoconfigure.provider.SpringBootConfigurationProvider.lambda$provide$0(SpringBootConfigurationProvider.java:69)
+	at io.seata.config.FileConfiguration$$EnhancerByCGLIB$$862af1eb.getConfig(<generated>)
+	at io.seata.config.nacos.NacosConfiguration.getNacosGroup(NacosConfiguration.java:290)
+	at io.seata.config.nacos.NacosConfiguration.getLatestConfig(NacosConfiguration.java:110)
+	at io.seata.config.AbstractConfiguration.getConfig(AbstractConfiguration.java:141)
+	at io.seata.config.AbstractConfiguration.getConfig(AbstractConfiguration.java:132)
+	at io.seata.config.AbstractConfiguration.getConfig(AbstractConfiguration.java:146)
+	... 18 common frames omitted
+2023-04-13 16:14:12,284 INFO [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] c.x.j.a.c.conf.NacosDiscoveryConfig [NacosDiscoveryConfig.java : 83] >>>>>>>>>>> xxl-job nacos discovery service pet-xxl-executor offline 
+2023-04-13 16:14:12,285 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:14:12,353 DEBUG [nacos.publisher-com.alibaba.nacos.client.naming.event.InstancesChangeEvent] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 88] dynamic-datasource switch to the primary datasource
+2023-04-13 16:14:12,682 INFO [xxl-job, admin JobScheduleHelper#scheduleThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 203] >>>>>>>>>>> xxl-job, JobScheduleHelper#scheduleThread stop
+2023-04-13 16:14:13,001 INFO [xxl-job, admin JobScheduleHelper#ringThread] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 264] >>>>>>>>>>> xxl-job, JobScheduleHelper#ringThread stop
+2023-04-13 16:14:13,683 INFO [SpringContextShutdownHook] c.x.j.a.c.thread.JobScheduleHelper [JobScheduleHelper.java : 351] >>>>>>>>>>> xxl-job, JobScheduleHelper stop
+2023-04-13 16:14:13,683 INFO [xxl-job, admin JobLogReportHelper] c.x.j.a.c.thread.JobLogReportHelper [JobLogReportHelper.java : 132] >>>>>>>>>>> xxl-job, job log report thread stop
+2023-04-13 16:14:13,684 INFO [SpringContextShutdownHook] c.x.j.a.c.t.JobTriggerPoolHelper [JobTriggerPoolHelper.java : 62] >>>>>>>>> xxl-job trigger thread pool shutdown success.
+2023-04-13 16:14:13,684 INFO [xxl-job, admin JobLosedMonitorHelper] c.x.j.a.c.t.JobLosedMonitorHelper [JobLosedMonitorHelper.java : 75] >>>>>>>>>>> xxl-job, JobLosedMonitorHelper stop
+2023-04-13 16:14:13,684 INFO [xxl-job, admin JobFailMonitorHelper] c.x.j.a.c.t.JobFailMonitorHelper [JobFailMonitorHelper.java : 90] >>>>>>>>>>> xxl-job, job fail monitor thread stop
+2023-04-13 16:14:13,684 WARN [SpringContextShutdownHook] o.s.b.f.s.DisposableBeanAdapter [DisposableBeanAdapter.java : 222] Invocation of destroy method failed on bean with name 'xxlJobAdminConfig': java.lang.NullPointerException
+2023-04-13 16:14:13,741 DEBUG [redisson-netty-2-4] io.netty.buffer.PoolThreadCache [PoolThreadCache.java : 227] Freed 14 thread-local buffer(s) from thread: redisson-netty-2-4
+2023-04-13 16:14:13,741 DEBUG [redisson-netty-2-8] io.netty.buffer.PoolThreadCache [PoolThreadCache.java : 227] Freed 15 thread-local buffer(s) from thread: redisson-netty-2-8
+2023-04-13 16:14:13,741 DEBUG [redisson-netty-2-1] io.netty.buffer.PoolThreadCache [PoolThreadCache.java : 227] Freed 16 thread-local buffer(s) from thread: redisson-netty-2-1
+2023-04-13 16:14:13,741 DEBUG [redisson-netty-2-5] io.netty.buffer.PoolThreadCache [PoolThreadCache.java : 227] Freed 15 thread-local buffer(s) from thread: redisson-netty-2-5
+2023-04-13 16:14:13,741 DEBUG [redisson-netty-2-7] io.netty.buffer.PoolThreadCache [PoolThreadCache.java : 227] Freed 16 thread-local buffer(s) from thread: redisson-netty-2-7
+2023-04-13 16:14:13,741 DEBUG [redisson-netty-2-3] io.netty.buffer.PoolThreadCache [PoolThreadCache.java : 227] Freed 17 thread-local buffer(s) from thread: redisson-netty-2-3
+2023-04-13 16:14:13,741 DEBUG [redisson-netty-2-2] io.netty.buffer.PoolThreadCache [PoolThreadCache.java : 227] Freed 16 thread-local buffer(s) from thread: redisson-netty-2-2
+2023-04-13 16:14:13,749 INFO [SpringContextShutdownHook] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 211] dynamic-datasource start closing ....
+2023-04-13 16:14:13,750 INFO [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java : 350] master - Shutdown initiated...
+2023-04-13 16:14:13,750 DEBUG [SpringContextShutdownHook] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2023-04-13 16:14:13,750 DEBUG [master connection closer] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 134] master - Closing connection com.mysql.cj.jdbc.ConnectionImpl@63a7af06: (connection evicted)
+2023-04-13 16:14:13,752 DEBUG [master connection closer] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 134] master - Closing connection com.mysql.cj.jdbc.ConnectionImpl@5edd035f: (connection evicted)
+2023-04-13 16:14:13,752 DEBUG [master connection closer] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 134] master - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2a0eada3: (connection evicted)
+2023-04-13 16:14:13,753 DEBUG [master connection closer] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 134] master - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7bf069af: (connection evicted)
+2023-04-13 16:14:13,753 DEBUG [master connection closer] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 134] master - Closing connection com.mysql.cj.jdbc.ConnectionImpl@7fbdab7: (connection evicted)
+2023-04-13 16:14:13,754 DEBUG [master connection closer] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 134] master - Closing connection com.mysql.cj.jdbc.ConnectionImpl@105e387b: (connection evicted)
+2023-04-13 16:14:13,754 DEBUG [master connection closer] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 134] master - Closing connection com.mysql.cj.jdbc.ConnectionImpl@1fc40209: (connection evicted)
+2023-04-13 16:14:13,754 DEBUG [master connection closer] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 134] master - Closing connection com.mysql.cj.jdbc.ConnectionImpl@13884657: (connection evicted)
+2023-04-13 16:14:13,754 DEBUG [master connection closer] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 134] master - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2f510013: (connection evicted)
+2023-04-13 16:14:13,755 DEBUG [master connection closer] com.zaxxer.hikari.pool.PoolBase [PoolBase.java : 134] master - Closing connection com.mysql.cj.jdbc.ConnectionImpl@63f90ca1: (connection evicted)
+2023-04-13 16:14:13,755 DEBUG [SpringContextShutdownHook] com.zaxxer.hikari.pool.HikariPool [HikariPool.java : 421] master - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2023-04-13 16:14:13,756 INFO [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource [HikariDataSource.java : 352] master - Shutdown completed.
+2023-04-13 16:14:13,756 INFO [SpringContextShutdownHook] c.b.d.d.DynamicRoutingDataSource [DynamicRoutingDataSource.java : 215] dynamic-datasource all closed success,bye
+2023-04-13 16:14:13,757 DEBUG [SpringContextShutdownHook] io.seata.core.rpc.ShutdownHook [ShutdownHook.java : 78] destroyAll starting
+2023-04-13 16:14:13,760 DEBUG [SpringContextShutdownHook] io.seata.core.rpc.ShutdownHook [ShutdownHook.java : 87] destroyAll finish
