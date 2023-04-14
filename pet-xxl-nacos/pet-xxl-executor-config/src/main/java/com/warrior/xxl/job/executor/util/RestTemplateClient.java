@@ -24,7 +24,7 @@ public class RestTemplateClient {
     /***
      * 调度中心nacos注册服务名
      */
-    private static final String ADMIN_SERVICE = "xxl-job-admin";
+    private static final String ADMIN_SERVICE = "pet-xxl-admin";
 
     /***
      * 执行器回调接口
