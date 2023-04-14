@@ -78,6 +78,12 @@
 
         <dependency>
             <groupId>com.pet</groupId>
+            <artifactId>pet-xxl-executor-config</artifactId>
+            <version>1.6.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.pet</groupId>
             <artifactId>pet-common-dubbo</artifactId>
         </dependency>
 
