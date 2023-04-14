@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 测试handler
- * @describe 描述 
+ * @describe 描述
  *
  * @author zhd
  *
@@ -20,8 +20,8 @@ import java.util.concurrent.TimeUnit;
  */
 @Component
 public class Test2Handler extends BaseJobHandler<String>{
-	
-	
+
+
 	@Override
 	public List<String> getChildJobs(XxlJobInfo xxlJobInfo) {
 		List<String> ls = new ArrayList<String>();
@@ -33,19 +33,19 @@ public class Test2Handler extends BaseJobHandler<String>{
 
 	@Override
 	public ReturnT<String> processChildJobs(XxlJobInfo xxlJobInfo, String t) {
-		
+
 		 XxlJobLogger.log("处理："+t);
 		 String test = xxlJobInfo.getParamValue("test");
 		 XxlJobLogger.log("test："+test);
 		 try {
-			TimeUnit.SECONDS.sleep(3);
+			TimeUnit.SECONDS.sleep(1);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return ReturnT.SUCCESS;
 	}
-	
-	
+
+
 }
 
