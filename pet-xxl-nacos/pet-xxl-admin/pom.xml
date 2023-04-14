@@ -77,11 +77,6 @@
         </dependency>
 
         <dependency>
-            <groupId>com.pet</groupId>
-            <artifactId>pet-common-dubbo</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper</artifactId>
             <scope>compile</scope>
