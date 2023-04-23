@@ -85,16 +85,16 @@
             <version>${satoken.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.pet</groupId>
-            <artifactId>pet-common-sentinel</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.alibaba.csp</groupId>
-                    <artifactId>sentinel-apache-dubbo3-adapter</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.pet</groupId>-->
+<!--            <artifactId>pet-common-sentinel</artifactId>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>com.alibaba.csp</groupId>-->
+<!--                    <artifactId>sentinel-apache-dubbo3-adapter</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>com.pet</groupId>
