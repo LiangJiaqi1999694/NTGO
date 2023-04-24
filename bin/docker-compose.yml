@@ -33,14 +33,14 @@ services:
     environment:
       - TZ="Asia/Shanghai"
     ports:
-      - 6379:6379
+      - '16379:6379'
     volumes:
       - ./redis.conf:/usr/local/etc/redis/redis.conf:rw
       - /mnt/redis:/data:rw
     command:
       /bin/bash -c "redis-server /usr/local/etc/redis/redis.conf "
   nacos:
-    container_name: pet-nacos
+    container_name: nacos
     image: nacos/nacos-server:latest
     volumes:
       - /mnt/nacos/standalone-logs/:/home/nacos/logs
