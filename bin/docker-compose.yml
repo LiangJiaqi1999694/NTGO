@@ -42,6 +42,7 @@ services:
   nacos:
     container_name: nacos
     image: nacos/nacos-server:latest
+    depends_on: [mysql]
     volumes:
       - /mnt/nacos/standalone-logs/:/home/nacos/logs
       - ./nacos/custom.properties:/home/nacos/conf/application.properties
