@@ -24,7 +24,7 @@ services:
     ports:
       - '3306:3306'
     environment:
-      MYSQL_ROOT_PASSWORD: candledragon #访问密码
+      MYSQL_ROOT_PASSWORD: hash@1234 #访问密码
       secure_file_priv:
   redis:
     image: redis:latest
