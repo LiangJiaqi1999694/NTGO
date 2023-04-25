@@ -19,7 +19,8 @@ services:
     volumes:
       - /mnt/mysql:/var/lib/mysql
       - ./mysql/my.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
-      - ./sql/:/docker-entrypoint-initdb.d/
+      - ./sql/db/:/opt/
+      - ./sql/init/:/docker-entrypoint-initdb.d/
     restart: always
     ports:
       - '3306:3306'
@@ -38,16 +39,16 @@ services:
       - ./redis.conf:/usr/local/etc/redis/redis.conf:rw
       - /mnt/redis:/data:rw
     command:
-      /bin/bash -c "redis-server /usr/local/etc/redis/redis.conf "
-#  nacos:
-#    container_name: nacos
-#    image: nacos/nacos-server:latest
-#    depends_on: [mysql]
-#    volumes:
-#      - /mnt/nacos/standalone-logs/:/home/nacos/logs
-#      - ./nacos/custom.properties:/home/nacos/conf/application.properties
-#    ports:
-#      - "8848:8848"
-#      - "9848:9848"
-#      - "9849:9849"
-#    restart: always
+      /bin/bash -c "redis-server /usr/local/etc/redis/redis.conf"
+  nacos:
+    container_name: nacos
+    image: nacos/nacos-server:latest
+    depends_on: [mysql]
+    volumes:
+      - /mnt/nacos/standalone-logs/:/home/nacos/logs
+      - ./nacos/custom.properties:/home/nacos/conf/application.properties
+    ports:
+      - "8848:8848"
+      - "9848:9848"
+      - "9849:9849"
+    restart: always
