@@ -15,7 +15,7 @@ import com.pet.resource.api.RemoteFileService;
 import com.pet.resource.api.domain.SysFile;
 import com.pet.system.api.domain.SysUser;
 import com.pet.system.service.ISysUserService;
-import io.seata.spring.annotation.GlobalTransactional;
+//import io.seata.spring.annotation.GlobalTransactional;
 import lombok.RequiredArgsConstructor;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.http.MediaType;
@@ -108,7 +108,7 @@ public class SysProfileController extends BaseController {
      *
      * @param avatarfile 用户头像
      */
-    @GlobalTransactional(rollbackFor = Exception.class)
+//    @GlobalTransactional(rollbackFor = Exception.class)
     @Log(title = "用户头像", businessType = BusinessType.UPDATE)
     @PostMapping(value = "/avatar", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public R<Map<String, Object>> avatar(@RequestPart("avatarfile") MultipartFile avatarfile) throws IOException {
