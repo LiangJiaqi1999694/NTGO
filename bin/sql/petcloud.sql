@@ -101,7 +101,7 @@ create table sys_post
 insert into sys_post values(1, 'ceo',  '董事长',    1, '0', 'admin', sysdate(), '', null, '');
 insert into sys_post values(2, 'se',   '项目经理',  2, '0', 'admin', sysdate(), '', null, '');
 insert into sys_post values(3, 'hr',   '人力资源',  3, '0', 'admin', sysdate(), '', null, '');
-insert into sys_post values(4, 'com.pet.common.core.user', '普通员工',  4, '0', 'admin', sysdate(), '', null, '');
+insert into sys_post values(4, 'user', '普通员工',  4, '0', 'admin', sysdate(), '', null, '');
 
 
 -- ----------------------------
@@ -169,13 +169,13 @@ insert into sys_menu values('2', '系统监控', '0', '2', 'monitor',          n
 insert into sys_menu values('3', '系统工具', '0', '3', 'tool',             null, '', 1, 0, 'M', '0', '0', '', 'tool',     'admin', sysdate(), '', null, '系统工具目录');
 insert into sys_menu values('4', 'PLUS官网', '0', '4', 'https://gitee.com/JavaLionLi/pet-Cloud-Plus', null, '', 0, 0, 'M', '0', '0', '', 'guide',    'admin', sysdate(), '', null, 'pet-Cloud-Plus官网地址');
 -- 二级菜单
-insert into sys_menu values('100',  '用户管理',       '1',   '1', 'com.pet.common.core.user',       'system/com.pet.common.core.user/index',                 '', 1, 0, 'C', '0', '0', 'system:com.pet.common.core.user:list',        'com.pet.common.core.user',          'admin', sysdate(), '', null, '用户管理菜单');
+insert into sys_menu values('100',  '用户管理',       '1',   '1', 'user',       'system/user/index',                 '', 1, 0, 'C', '0', '0', 'system:user:list',        'user',          'admin', sysdate(), '', null, '用户管理菜单');
 insert into sys_menu values('101',  '角色管理',       '1',   '2', 'role',       'system/role/index',                 '', 1, 0, 'C', '0', '0', 'system:role:list',        'peoples',       'admin', sysdate(), '', null, '角色管理菜单');
 insert into sys_menu values('102',  '菜单管理',       '1',   '3', 'menu',       'system/menu/index',                 '', 1, 0, 'C', '0', '0', 'system:menu:list',        'tree-table',    'admin', sysdate(), '', null, '菜单管理菜单');
 insert into sys_menu values('103',  '部门管理',       '1',   '4', 'dept',       'system/dept/index',                 '', 1, 0, 'C', '0', '0', 'system:dept:list',        'tree',          'admin', sysdate(), '', null, '部门管理菜单');
 insert into sys_menu values('104',  '岗位管理',       '1',   '5', 'post',       'system/post/index',                 '', 1, 0, 'C', '0', '0', 'system:post:list',        'post',          'admin', sysdate(), '', null, '岗位管理菜单');
 insert into sys_menu values('105',  '字典管理',       '1',   '6', 'dict',       'system/dict/index',                 '', 1, 0, 'C', '0', '0', 'system:dict:list',        'dict',          'admin', sysdate(), '', null, '字典管理菜单');
-insert into sys_menu values('106',  '参数设置',       '1',   '7', 'com.pet.common.core.config',     'system/com.pet.common.core.config/index',               '', 1, 0, 'C', '0', '0', 'system:com.pet.common.core.config:list',      'edit',          'admin', sysdate(), '', null, '参数设置菜单');
+insert into sys_menu values('106',  '参数设置',       '1',   '7', 'config',     'system/config/index',               '', 1, 0, 'C', '0', '0', 'system:config:list',      'edit',          'admin', sysdate(), '', null, '参数设置菜单');
 insert into sys_menu values('107',  '通知公告',       '1',   '8', 'notice',     'system/notice/index',               '', 1, 0, 'C', '0', '0', 'system:notice:list',      'message',       'admin', sysdate(), '', null, '通知公告菜单');
 insert into sys_menu values('108',  '日志管理',       '1',   '9', 'log',        '',                                  '', 1, 0, 'M', '0', '0', '',                        'log',           'admin', sysdate(), '', null, '日志管理菜单');
 insert into sys_menu values('109',  '在线用户',       '2',   '1', 'online',     'monitor/online/index',              '', 1, 0, 'C', '0', '0', 'monitor:online:list',     'online',        'admin', sysdate(), '', null, '在线用户菜单');
@@ -191,13 +191,13 @@ insert into sys_menu values('118',  '文件管理',       '1',   '10', 'oss',   
 insert into sys_menu values('500',  '操作日志', '108', '1', 'operlog',    'system/operlog/index',    '', 1, 0, 'C', '0', '0', 'system:operlog:list',    'form',          'admin', sysdate(), '', null, '操作日志菜单');
 insert into sys_menu values('501',  '登录日志', '108', '2', 'logininfor', 'system/logininfor/index', '', 1, 0, 'C', '0', '0', 'system:logininfor:list', 'logininfor',    'admin', sysdate(), '', null, '登录日志菜单');
 -- 用户管理按钮
-insert into sys_menu values('1001', '用户查询', '100', '1',  '', '', '', 1, 0, 'F', '0', '0', 'system:com.pet.common.core.user:query',          '#', 'admin', sysdate(), '', null, '');
-insert into sys_menu values('1002', '用户新增', '100', '2',  '', '', '', 1, 0, 'F', '0', '0', 'system:com.pet.common.core.user:add',            '#', 'admin', sysdate(), '', null, '');
-insert into sys_menu values('1003', '用户修改', '100', '3',  '', '', '', 1, 0, 'F', '0', '0', 'system:com.pet.common.core.user:edit',           '#', 'admin', sysdate(), '', null, '');
-insert into sys_menu values('1004', '用户删除', '100', '4',  '', '', '', 1, 0, 'F', '0', '0', 'system:com.pet.common.core.user:remove',         '#', 'admin', sysdate(), '', null, '');
-insert into sys_menu values('1005', '用户导出', '100', '5',  '', '', '', 1, 0, 'F', '0', '0', 'system:com.pet.common.core.user:export',         '#', 'admin', sysdate(), '', null, '');
-insert into sys_menu values('1006', '用户导入', '100', '6',  '', '', '', 1, 0, 'F', '0', '0', 'system:com.pet.common.core.user:import',         '#', 'admin', sysdate(), '', null, '');
-insert into sys_menu values('1007', '重置密码', '100', '7',  '', '', '', 1, 0, 'F', '0', '0', 'system:com.pet.common.core.user:resetPwd',       '#', 'admin', sysdate(), '', null, '');
+insert into sys_menu values('1001', '用户查询', '100', '1',  '', '', '', 1, 0, 'F', '0', '0', 'system:user:query',          '#', 'admin', sysdate(), '', null, '');
+insert into sys_menu values('1002', '用户新增', '100', '2',  '', '', '', 1, 0, 'F', '0', '0', 'system:user:add',            '#', 'admin', sysdate(), '', null, '');
+insert into sys_menu values('1003', '用户修改', '100', '3',  '', '', '', 1, 0, 'F', '0', '0', 'system:user:edit',           '#', 'admin', sysdate(), '', null, '');
+insert into sys_menu values('1004', '用户删除', '100', '4',  '', '', '', 1, 0, 'F', '0', '0', 'system:user:remove',         '#', 'admin', sysdate(), '', null, '');
+insert into sys_menu values('1005', '用户导出', '100', '5',  '', '', '', 1, 0, 'F', '0', '0', 'system:user:export',         '#', 'admin', sysdate(), '', null, '');
+insert into sys_menu values('1006', '用户导入', '100', '6',  '', '', '', 1, 0, 'F', '0', '0', 'system:user:import',         '#', 'admin', sysdate(), '', null, '');
+insert into sys_menu values('1007', '重置密码', '100', '7',  '', '', '', 1, 0, 'F', '0', '0', 'system:user:resetPwd',       '#', 'admin', sysdate(), '', null, '');
 -- 角色管理按钮
 insert into sys_menu values('1008', '角色查询', '101', '1',  '', '', '', 1, 0, 'F', '0', '0', 'system:role:query',          '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1009', '角色新增', '101', '2',  '', '', '', 1, 0, 'F', '0', '0', 'system:role:add',            '#', 'admin', sysdate(), '', null, '');
@@ -227,11 +227,11 @@ insert into sys_menu values('1028', '字典修改', '105', '3', '#', '', '', 1, 
 insert into sys_menu values('1029', '字典删除', '105', '4', '#', '', '', 1, 0, 'F', '0', '0', 'system:dict:remove',         '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1030', '字典导出', '105', '5', '#', '', '', 1, 0, 'F', '0', '0', 'system:dict:export',         '#', 'admin', sysdate(), '', null, '');
 -- 参数设置按钮
-insert into sys_menu values('1031', '参数查询', '106', '1', '#', '', '', 1, 0, 'F', '0', '0', 'system:com.pet.common.core.config:query',        '#', 'admin', sysdate(), '', null, '');
-insert into sys_menu values('1032', '参数新增', '106', '2', '#', '', '', 1, 0, 'F', '0', '0', 'system:com.pet.common.core.config:add',          '#', 'admin', sysdate(), '', null, '');
-insert into sys_menu values('1033', '参数修改', '106', '3', '#', '', '', 1, 0, 'F', '0', '0', 'system:com.pet.common.core.config:edit',         '#', 'admin', sysdate(), '', null, '');
-insert into sys_menu values('1034', '参数删除', '106', '4', '#', '', '', 1, 0, 'F', '0', '0', 'system:com.pet.common.core.config:remove',       '#', 'admin', sysdate(), '', null, '');
-insert into sys_menu values('1035', '参数导出', '106', '5', '#', '', '', 1, 0, 'F', '0', '0', 'system:com.pet.common.core.config:export',       '#', 'admin', sysdate(), '', null, '');
+insert into sys_menu values('1031', '参数查询', '106', '1', '#', '', '', 1, 0, 'F', '0', '0', 'system:config:query',        '#', 'admin', sysdate(), '', null, '');
+insert into sys_menu values('1032', '参数新增', '106', '2', '#', '', '', 1, 0, 'F', '0', '0', 'system:config:add',          '#', 'admin', sysdate(), '', null, '');
+insert into sys_menu values('1033', '参数修改', '106', '3', '#', '', '', 1, 0, 'F', '0', '0', 'system:config:edit',         '#', 'admin', sysdate(), '', null, '');
+insert into sys_menu values('1034', '参数删除', '106', '4', '#', '', '', 1, 0, 'F', '0', '0', 'system:config:remove',       '#', 'admin', sysdate(), '', null, '');
+insert into sys_menu values('1035', '参数导出', '106', '5', '#', '', '', 1, 0, 'F', '0', '0', 'system:config:export',       '#', 'admin', sysdate(), '', null, '');
 -- 通知公告按钮
 insert into sys_menu values('1036', '公告查询', '107', '1', '#', '', '', 1, 0, 'F', '0', '0', 'system:notice:query',        '#', 'admin', sysdate(), '', null, '');
 insert into sys_menu values('1037', '公告新增', '107', '2', '#', '', '', 1, 0, 'F', '0', '0', 'system:notice:add',          '#', 'admin', sysdate(), '', null, '');
@@ -542,7 +542,7 @@ create table sys_config (
 ) engine=innodb comment = '参数配置表';
 
 insert into sys_config values(1, '主框架页-默认皮肤样式名称',     'sys.index.skinName',       'skin-blue',     'Y', 'admin', sysdate(), '', null, '蓝色 skin-blue、绿色 skin-green、紫色 skin-purple、红色 skin-red、黄色 skin-yellow' );
-insert into sys_config values(2, '用户管理-账号初始密码',         'sys.com.pet.common.core.user.initPassword',    '123456',        'Y', 'admin', sysdate(), '', null, '初始化密码 123456' );
+insert into sys_config values(2, '用户管理-账号初始密码',         'sys.user.initPassword',    '123456',        'Y', 'admin', sysdate(), '', null, '初始化密码 123456' );
 insert into sys_config values(3, '主框架页-侧边栏主题',           'sys.index.sideTheme',      'theme-dark',    'Y', 'admin', sysdate(), '', null, '深色主题theme-dark，浅色主题theme-light' );
 insert into sys_config values(4, '账号自助-是否开启用户注册功能', 'sys.account.registerUser', 'false',         'Y', 'admin', sysdate(), '', null, '是否开启注册用户功能（true开启，false关闭）');
 insert into sys_config values(11, 'OSS预览列表资源开关',        'sys.oss.previewListResource', 'true',      'Y', 'admin', sysdate(), '', null, 'true:开启, false:关闭');
@@ -601,7 +601,7 @@ create table sys_oss (
   create_by       varchar(64)       default ''                 comment '上传人',
   update_time     datetime          default null               comment '更新时间',
   update_by       varchar(64)       default ''                 comment '更新人',
-  com.pet.common.core.service         varchar(20)       not null default 'minio'   comment '服务商',
+  service         varchar(20)       not null default 'minio'   comment '服务商',
   primary key (oss_id)
 ) engine=innodb comment ='OSS对象存储表';
 
@@ -617,7 +617,7 @@ create table sys_oss_config (
   bucket_name     varchar(255)       default ''                 comment '桶名称',
   prefix           varchar(255)      default ''                 comment '前缀',
   endpoint         varchar(255)      default ''                 comment '访问站点',
-  com.pet.common.core.domain           varchar(255)      default ''                 comment '自定义域名',
+  domain           varchar(255)      default ''                 comment '自定义域名',
   is_https         char(1)           default 'N'                comment '是否https（Y=是,N=否）',
   region           varchar(255)      default ''                 comment '域',
   access_policy    char(1)           not null   default '1'     comment '桶权限类型(0=private 1=public 2=custom)',
