@@ -19,8 +19,7 @@ services:
     volumes:
       - /mnt/mysql:/var/lib/mysql
       - ./mysql/my.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
-      - ./sql/db-sql:/opt
-      - ./sql/init:/docker-entrypoint-initdb.d
+      - ./sql:/docker-entrypoint-initdb.d
     command:
       # 将mysql8.0默认密码策略 修改为 原先 策略 (mysql8.0对其默认策略做了更改 会导致密码无法匹配)
       --default-authentication-plugin=mysql_native_password
