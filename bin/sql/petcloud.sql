@@ -1,7 +1,7 @@
-drop database IF EXISTS pets;
-CREATE DATABASE pets DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+drop database IF EXISTS `pet-cloud`;
+CREATE DATABASE `pet-cloud` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 
-use pets;
+use `pet-cloud`;
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
