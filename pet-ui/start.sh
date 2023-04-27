@@ -9,3 +9,5 @@ rm -rf /mnt/nginx/html/pet-ui
 
 cp -r ./dist /mnt/nginx/html/pet-ui
 
+docekr restart nginx
+
