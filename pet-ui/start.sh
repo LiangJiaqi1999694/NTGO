@@ -9,6 +9,6 @@ rm -rf /mnt/nginx/html/pet-ui
 
 cp -r ./dist /mnt/nginx/html/pet-ui
 
-cp $APP_HOME/pet-ui.conf ../nginx/conf.d
+cp $APP_HOME/pet-ui.conf /mnt/nginx/conf.d
 docker restart nginx
 
