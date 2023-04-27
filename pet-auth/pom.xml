@@ -60,7 +60,7 @@
             <groupId>com.pet</groupId>
             <artifactId>pet-common-dubbo</artifactId>
         </dependency>
-
+<!-- 不使用seata -->
         <dependency>
             <groupId>com.pet</groupId>
             <artifactId>pet-common-seata</artifactId>

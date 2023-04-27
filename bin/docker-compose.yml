@@ -1,0 +1,60 @@
+version: '3.1'
+services:
+  nginx:
+    image: nginx     # 镜像名称
+    container_name: nginx     # 容器名字
+    restart: always     # 开机自动重启
+    ports:     # 端口号绑定（宿主机:容器内）
+      - '80:80'
+      - '443:443'
+    volumes:      # 目录映射（宿主机:容器内）
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf #配置文件
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - /mnt/nginx/log:/var/log/nginx  #这里面放置日志
+      - /mnt/nginx/html:/html         #这里面放置项目目录 若本地没有该目录挂载时会自动创建
+      - ./nginx/ssl:/mnt/ssl
+  mysql:
+    image: mysql:5.7 #mysql版本
+    container_name: mysql
+    volumes:
+      - /mnt/mysql:/var/lib/mysql
+      - ./mysql/my.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
+      - ./sql:/docker-entrypoint-initdb.d
+    command:
+      # 将mysql8.0默认密码策略 修改为 原先 策略 (mysql8.0对其默认策略做了更改 会导致密码无法匹配)
+      --default-authentication-plugin=mysql_native_password
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_general_ci
+      --explicit_defaults_for_timestamp=true
+      --lower_case_table_names=1
+    restart: always
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: hash@1234 #访问密码
+      secure_file_priv:
+  redis:
+    image: redis:latest
+    container_name: redis
+    restart: always
+    environment:
+      - TZ="Asia/Shanghai"
+    ports:
+      - '6379:6379'
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf:rw
+      - /mnt/redis:/data:rw
+    command:
+      /bin/bash -c "redis-server /usr/local/etc/redis/redis.conf"
+  nacos:
+    container_name: nacos
+    image: nacos/nacos-server:latest
+    depends_on: [mysql]
+    volumes:
+      - /mnt/nacos/standalone-logs/:/home/nacos/logs
+      - ./nacos/custom.properties:/home/nacos/conf/application.properties
+    ports:
+      - "8848:8848"
+      - "9848:9848"
+      - "9849:9849"
+    restart: always

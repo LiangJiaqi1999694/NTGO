@@ -119,7 +119,7 @@ spring:
     host: 47.122.40.114
     port: 16379
     # 密码(如没有密码请注释掉)
-    # password:
+    password: hash@1234
     database: 0
     timeout: 10s
     ssl: false
