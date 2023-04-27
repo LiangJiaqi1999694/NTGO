@@ -1,3 +1,7 @@
+#!/bin/sh
+APP_HOME=`pwd`
+PWD=$APP_HOME
+
 echo '开始编译'
 
 mvn clean install
@@ -5,24 +9,32 @@ mvn clean install
 echo '编译完成'
 
 echo '启动网关中'
-./pet-gateway/start.sh
+
+cd PWD/pet-gateway/
+sh start.sh
 
 echo '网关启动结束'
 
 echo '启动gen'
 
-./pet-modules/pet-gen/start.sh
+cd PWD/pet-modules/pet-gen
+
+sh start.sh
 
 echo '启动resource'
-./pet-modules/pet-resource/start.sh
-
+cd PWD/pet-modules/pet-resource/
+sh start.sh
 echo '启动system'
-./pet-modules/pet-system/start.sh
+
+cd PWD/pet-modules/pet-system/
+sh start.sh
 
 echo '启动xxl-admin'
-./pet-modules/pet-xxl-admin/start.sh
+cd PWD/pet-xxl-nacos/pet-xxl-admin/
+sh start.sh
 
 echo '启动xxl-executor'
-./pet-xxl-nacos/pet-xxl-executor/start.sh
+cd PWD/pet-xxl-nacos/pet-xxl-executor/
+sh start.sh
 
 
