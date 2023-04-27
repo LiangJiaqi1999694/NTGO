@@ -5,5 +5,7 @@ cd $APP_HOME/pet-ui
 npm install --registry=https://registry.npmmirror.com
 npm run build:prod
 
+rm -rf /mnt/nginx/html/pet-ui
 
+cp -r ./dist /mnt/nginx/html/pet-ui
 
