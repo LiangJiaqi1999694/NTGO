@@ -1,6 +1,5 @@
 #!/bin/sh
 APP_HOME=`pwd`
-PWD=$APP_HOME
 
 echo '开始编译'
 
