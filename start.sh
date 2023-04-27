@@ -10,31 +10,31 @@ echo '编译完成'
 
 echo '启动网关中'
 
-cd PWD/pet-gateway/
+cd $APP_HOME/pet-gateway/
 sh start.sh
 
 echo '网关启动结束'
 
 echo '启动gen'
 
-cd PWD/pet-modules/pet-gen
+cd $APP_HOME/pet-modules/pet-gen
 
 sh start.sh
 
 echo '启动resource'
-cd PWD/pet-modules/pet-resource/
+cd $APP_HOME/pet-modules/pet-resource/
 sh start.sh
 echo '启动system'
 
-cd PWD/pet-modules/pet-system/
+cd $APP_HOME/pet-modules/pet-system/
 sh start.sh
 
 echo '启动xxl-admin'
-cd PWD/pet-xxl-nacos/pet-xxl-admin/
+cd $APP_HOME/pet-xxl-nacos/pet-xxl-admin/
 sh start.sh
 
 echo '启动xxl-executor'
-cd PWD/pet-xxl-nacos/pet-xxl-executor/
+cd $APP_HOME/pet-xxl-nacos/pet-xxl-executor/
 sh start.sh
 
 
