@@ -1,6 +1,6 @@
 #!/bin/sh
 APP_HOME=`pwd`
-cd $APP_HOME/pet-ui
+cd $APP_HOME
 
 npm install --registry=https://registry.npmmirror.com
 npm run build:prod
