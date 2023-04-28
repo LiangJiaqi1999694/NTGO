@@ -1,7 +1,7 @@
 {
   "name": "pet",
   "version": "1.6.0",
-  "description": "宠物后台管理系统",
+  "description": "烛龙管理系统",
   "author": "Lion Li",
   "license": "MIT",
   "scripts": {
