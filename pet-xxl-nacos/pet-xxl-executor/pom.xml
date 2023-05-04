@@ -60,12 +60,6 @@
 
         <dependency>
             <groupId>com.pet</groupId>
-            <artifactId>pet-xxl-core</artifactId>
-            <version>1.6.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.pet</groupId>
             <artifactId>pet-common-mybatis</artifactId>
             <version>1.6.0</version>
         </dependency>

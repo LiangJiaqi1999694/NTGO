@@ -276,7 +276,7 @@ public class JobScheduleHelper {
             jobInfo.setTriggerNextTime(nextValidTime.getTime());
         } else {
             jobInfo.setTriggerStatus(0);
-            jobInfo.setTriggerLastTime(0);
+            jobInfo.setTriggerLastTime(System.currentTimeMillis());
             jobInfo.setTriggerNextTime(0);
         }
     }

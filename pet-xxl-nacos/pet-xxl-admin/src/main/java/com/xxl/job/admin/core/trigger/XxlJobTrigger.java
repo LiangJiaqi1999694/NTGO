@@ -57,13 +57,14 @@ public class XxlJobTrigger {
             logger.warn(">>>>>>>>>>>> trigger fail, executorHandler invalid，jobId={}", jobId);
             return;
         }
-
+        // 最后一次执行时间
+        jobInfo.setTriggerLastTime(System.currentTimeMillis());
+        XxlJobAdminConfig.getAdminConfig().getXxlJobInfoDao().update(jobInfo);
 
         //set jobhandler
         jobInfo.setJobhandler(algorithm.getJobhandler());
         //set executorBlockStrategy
         jobInfo.setExecutorBlockStrategy(algorithm.getBlockStrategyName());
-
         int finalFailRetryCount = failRetryCount >= 0 ? failRetryCount : jobInfo.getExecutorFailRetryCount();
 
         Integer registryId = algorithm.getRegistryId();

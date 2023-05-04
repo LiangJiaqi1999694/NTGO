@@ -82,6 +82,7 @@ public class AdminBizImpl implements AdminBiz {
         }else {
             log.setHandleTime(new Date(handleCallbackParam.getLogDateTim()));
         }
+
         xxlJobLogDao.updateHandleInfo(log);
 
         return ReturnT.SUCCESS;

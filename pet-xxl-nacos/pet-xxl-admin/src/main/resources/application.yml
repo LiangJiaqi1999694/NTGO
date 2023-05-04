@@ -48,7 +48,7 @@ spring:
     host: smtp.qq.com
     port: 465
     username: 503897166@qq.com
-    password: jgjgwbhfehkjbjgj
+    password: kxbtolebkfmqcadg
     properties:
       mail:
         smtp:
@@ -77,4 +77,5 @@ nacos:
   service:
     listener:
       cron: 0/5 * * * * ?
+
 

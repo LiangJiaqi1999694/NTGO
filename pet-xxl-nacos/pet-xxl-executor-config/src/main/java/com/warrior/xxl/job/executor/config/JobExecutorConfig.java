@@ -36,6 +36,8 @@ public class JobExecutorConfig implements InitializingBean {
      */
     private int logRetentionDays;
 
+    private String adminAddresses;
+
 
     /**
      * init 初始化
@@ -49,6 +51,7 @@ public class JobExecutorConfig implements InitializingBean {
         xxlJobSpringExecutor.setLogPath(logPath);
         xxlJobSpringExecutor.setLogRetentionDays(logRetentionDays);
         xxlJobSpringExecutor.setAppname(appName);
+        xxlJobSpringExecutor.setAdminAddresses(adminAddresses);
         return xxlJobSpringExecutor;
     }
 
@@ -72,6 +75,7 @@ public class JobExecutorConfig implements InitializingBean {
         this.appName = environment.getProperty("spring.application.name");
         this.logPath = StringUtils.isEmpty(logpath) ? "../xxl-job/jobhandler" : logpath;
         this.logRetentionDays = StringUtils.isEmpty(logretentiondays) ? -1 : Integer.parseInt(logretentiondays);
+        this.adminAddresses = environment.getProperty("xxl.job.admin.addresses");
     }
 
     public String getAppName() {

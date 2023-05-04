@@ -177,8 +177,9 @@
                     this.taskData={
                         taskArray:this.systemList,
                         taskCode:row.id,
-                        time:row.updateTime
+                        time:row.triggerLastTime
                     }
+                    console.log(this.taskData)
                 }else if(row.actionType=='3'){//下次执行时间
                     let param={
                         cron:row.jobCron

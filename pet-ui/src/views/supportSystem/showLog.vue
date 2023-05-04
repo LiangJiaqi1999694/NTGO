@@ -149,6 +149,8 @@
 <script>
     import { jobLogList,deleteLog,pageSonTasksList,redo,clearLog,logKill } from "@/api/supportSystem/log";
     import {selectbyid} from "@/api/pugin.js";
+    import moment from 'moment'
+
     export default {
         props: {
             DataArray: {
@@ -202,7 +204,8 @@
                 handler(newVal, oldVal) {
                     this.queryParams.taskCode=newVal.taskCode
                     this.taskArray=newVal.taskArray
-                    this.queryParams.time=[this.moment(new Date(newVal.time)).format('yyyy-MM-dd 00:00:00'),this.moment(new Date(newVal.time)).format('yyyy-MM-dd 23:59:59')]
+                  console.log(new Date(newVal.time))
+                    this.queryParams.time=[moment(new Date(newVal.time)).format('YYYY-MM-DD 00:00:00'),moment(new Date(newVal.time)).format('YYYY-MM-DD 23:59:59')]
                    this.searchData()
                 },
                 deep: true,
