@@ -17,7 +17,7 @@ security:
     enabled: true
     excludeUrls:
       - /system/notice
-  # 不校验白名单
+  # 接口不校验白名单
   ignore:
     whites:
       - /code
@@ -31,6 +31,10 @@ security:
       - /csrf
       - /swagger-resources
       - /v3/api-docs
+cert:
+  ignore:
+    whites:
+      - /code
 
 spring:
   cloud:

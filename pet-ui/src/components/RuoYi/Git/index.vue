@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: '宠物-Git',
+  name: '烛龙-Git',
   data() {
     return {
       url: ''

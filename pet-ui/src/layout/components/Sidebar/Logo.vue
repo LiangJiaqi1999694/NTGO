@@ -35,7 +35,7 @@ export default {
   },
   data() {
     return {
-      title: '宠物',
+      title: '烛龙综合管理平台',
       logo: logoImg
     }
   }

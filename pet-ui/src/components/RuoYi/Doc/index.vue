@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  name: '宠物-Wiki',
+  name: '烛龙-Wiki',
   data() {
     return {
-      url: 'https://gitee.com/JavaLionLi/宠物/wikis'
+      url: 'https://gitee.com/JavaLionLi/烛龙/wikis'
     }
   },
   methods: {

@@ -32,7 +32,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/JavaLionLi/宠物.git"
+    "url": "https://gitee.com/JavaLionLi/烛龙.git"
   },
   "dependencies": {
     "@riophae/vue-treeselect": "0.4.0",

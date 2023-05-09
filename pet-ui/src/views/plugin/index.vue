@@ -399,7 +399,7 @@ export default {
             type: "success"
           });
           this.selectallcategorysFun();
-          this.dialogAddVisible();
+          this.dialogAddVisible = false;
         } else {
           this.$message({
             message: res.msg,

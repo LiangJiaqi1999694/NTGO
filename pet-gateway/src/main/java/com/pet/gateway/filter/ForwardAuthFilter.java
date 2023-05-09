@@ -23,6 +23,7 @@ public class ForwardAuthFilter implements GlobalFilter, Ordered {
             .mutate()
             // 为请求追加 Same-Token 参数
             .header(SaSameUtil.SAME_TOKEN, SaSameUtil.getToken())
+            .header("SA-SAME-CERT")
             .build();
         ServerWebExchange newExchange = exchange.mutate().request(newRequest).build();
         return chain.filter(newExchange);
