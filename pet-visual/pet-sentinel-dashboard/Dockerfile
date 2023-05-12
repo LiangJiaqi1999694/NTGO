@@ -10,5 +10,5 @@ EXPOSE 8718
 
 ADD ./target/pet-sentinel-dashboard.jar ./app.jar
 
-ENTRYPOINT java -jar -Xms524m -Xmx560m -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=prod app.jar
+ENTRYPOINT java -jar -Xms524m -Xmx560m -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=$active app.jar
 

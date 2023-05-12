@@ -15,6 +15,7 @@
 		<module>pet-api-bom</module>
         <module>pet-api-resource</module>
         <module>pet-api-system</module>
+        <module>pet-api-auth</module>
     </modules>
 
 	<properties>

@@ -89,6 +89,15 @@
                 <nacos.config.group>DEFAULT_GROUP</nacos.config.group>
             </properties>
         </profile>
+        <profile>
+            <id>staging</id>
+            <properties>
+                <profiles.active>staging</profiles.active>
+                <nacos.server>172.30.105.20:8848</nacos.server>
+                <nacos.discovery.group>DEFAULT_GROUP</nacos.discovery.group>
+                <nacos.config.group>DEFAULT_GROUP</nacos.config.group>
+            </properties>
+        </profile>
     </profiles>
 
     <!-- 依赖声明 -->

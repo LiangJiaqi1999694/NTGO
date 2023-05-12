@@ -20,7 +20,7 @@ fi
 
 #cd /mnt/omms/${imagesname}
 ## 生成镜像
-docker build -t ${imagesname} .
+docker build --build-arg active=${1:-prod} -t ${imagesname} .
 
 ## 启动镜像
 docker run -d -p 8718:8718 -p 18718:18718 -v /mnt/ruoyi:/logs --name ${imagesname} ${imagesname} --restart=always

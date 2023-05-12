@@ -20,7 +20,7 @@ fi
 
 #cd /mnt/omms/${imagesname}
 ## 生成镜像
-docker build -t ${imagesname} .
+docker build --build-arg active=${1:-prod} -t ${imagesname} .
 
 ## 启动镜像
 docker run -d -p 9210:9210 -v /mnt/pet:/logs --name ${imagesname} ${imagesname}
