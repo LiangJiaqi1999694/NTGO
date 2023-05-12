@@ -14,4 +14,4 @@ ADD target/pet-gen.jar app.jar
 RUN echo "-Dspring.profiles.active=${active}"
 
 # 指定容器启动时，需要执行的命令(运行该jar程序)
-ENTRYPOINT ["sh", "-c", "java -jar -Xms524m -Xmx560m -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=${active} app.jar"]
+RUN ["sh", "-c", "java -jar -Xms524m -Xmx560m -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=${active} app.jar"]
