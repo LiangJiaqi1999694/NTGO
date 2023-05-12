@@ -4,6 +4,7 @@ FROM openjdk:8
 MAINTAINER zhuangyong 503897166@qq.com
 ENV TZ "Asia/Shanghai"
 ARG active
+
 ENV LANG C.UTF-8
 # 指定容器内进程对外开放的端口
 EXPOSE 9209
