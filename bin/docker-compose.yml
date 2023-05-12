@@ -17,6 +17,7 @@ services:
     image: mysql:5.7 #mysql版本
     container_name: mysql
     volumes:
+#       第一次会生成文件， 检查/var/lib/mysql 存在则不会创建docker-entrypoint-initdb.d下的初始化sql
       - /mnt/mysql:/var/lib/mysql
       - ./mysql/my.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
       - ./sql:/docker-entrypoint-initdb.d

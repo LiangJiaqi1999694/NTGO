@@ -11,5 +11,5 @@ EXPOSE 8091
 
 ADD ./target/pet-seata-serve.jar ./app.jar
 
-ENTRYPOINT java -jar -Xms524m -Xmx560m -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=$active app.jar
+ENTRYPOINT java -jar -Xms524m -Xmx560m -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=${active} app.jar
 

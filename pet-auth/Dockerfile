@@ -11,4 +11,4 @@ RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shang
 # 将maven打成的jar包复制到镜像目录中（相对路径---默认"."就是Dockerfile所在目录）
 ADD target/pet-auth.jar app.jar
 # 指定容器启动时，需要执行的命令(运行该jar程序)
-ENTRYPOINT java -jar -Xms524m -Xmx560m -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=$active app.jar
+ENTRYPOINT java -jar -Xms524m -Xmx560m -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=${active} app.jar
