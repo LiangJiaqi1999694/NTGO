@@ -281,24 +281,24 @@ springdoc:
     persistAuthorization: true
 
 # seata配置
-#seata:
-#  # 默认关闭，如需启用spring.datasource.dynami.seata需要同时开启
-#  enabled: true
-#  # Seata 应用编号，默认为 ${spring.application.name}
-#  application-id: ${spring.application.name}
-#  # Seata 事务组编号，用于 TC 集群名
-#  tx-service-group: ${spring.application.name}-group
-#  config:
-#    type: nacos
-#    nacos:
-#      server-addr: ${spring.cloud.nacos.server-addr}
-#      group: ${spring.cloud.nacos.config.group}
-#      namespace: ${spring.profiles.active}
-#      data-id: seata-server.properties
-#  registry:
-#    type: nacos
-#    nacos:
-#      application: pet-seata-server
-#      server-addr: ${spring.cloud.nacos.server-addr}
-#      group: ${spring.cloud.nacos.discovery.group}
-#      namespace: ${spring.profiles.active}
+seata:
+  # 默认关闭，如需启用spring.datasource.dynami.seata需要同时开启
+  enabled: true
+  # Seata 应用编号，默认为 ${spring.application.name}
+  application-id: ${spring.application.name}
+  # Seata 事务组编号，用于 TC 集群名
+  tx-service-group: ${spring.application.name}-group
+  config:
+    type: nacos
+    nacos:
+      server-addr: ${spring.cloud.nacos.server-addr}
+      group: ${spring.cloud.nacos.config.group}
+      namespace: ${spring.profiles.active}
+      data-id: seata-server.properties
+  registry:
+    type: nacos
+    nacos:
+      application: pet-seata-server
+      server-addr: ${spring.cloud.nacos.server-addr}
+      group: ${spring.cloud.nacos.discovery.group}
+      namespace: ${spring.profiles.active}
