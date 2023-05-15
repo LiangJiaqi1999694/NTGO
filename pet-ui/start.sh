@@ -3,7 +3,7 @@ APP_HOME=`pwd`
 cd $APP_HOME
 
 npm install --registry=https://registry.npmmirror.com
-npm run build:prod
+npm run build:"$1"
 
 rm -rf /mnt/nginx/html/pet-ui
 
