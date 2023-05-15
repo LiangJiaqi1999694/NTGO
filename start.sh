@@ -14,6 +14,12 @@ sh start.sh "$1"
 
 echo '网关启动结束'
 
+echo '启动auth'
+
+cd $APP_HOME/pet-auth
+
+sh start.sh "$1"
+
 echo '启动gen'
 
 cd $APP_HOME/pet-modules/pet-gen
