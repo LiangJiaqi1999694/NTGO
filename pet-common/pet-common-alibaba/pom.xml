@@ -86,7 +86,7 @@
             </dependency>
             <dependency>
                 <groupId>com.alibaba.csp</groupId>
-                <artifactId>sentinel-com.pet.common.core.annotation-aspectj</artifactId>
+                <artifactId>sentinel-annotation-aspectj</artifactId>
                 <version>${sentinel.version}</version>
             </dependency>
             <dependency>

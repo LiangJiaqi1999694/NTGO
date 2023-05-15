@@ -1,1 +1,0 @@
-docker run -it --name nginx -d -p 443:443 -p 80:80 -v /mnt/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /mnt/nginx/conf/conf.d:/etc/nginx/conf.d -v /mnt/nginx/log:/var/log/nginx -v /mnt/jenkins/www/:/mnt/www/ -v /mnt/nginx/ssl:/mnt/ssl nginx
