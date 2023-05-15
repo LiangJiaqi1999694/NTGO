@@ -3,7 +3,7 @@ APP_HOME=`pwd`
 
 echo '开始编译'
 
-mvn clean install
+mvn clean install -P "$1"
 
 echo '编译完成'
 
