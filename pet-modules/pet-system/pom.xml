@@ -60,21 +60,21 @@
             <artifactId>pet-common-mybatis</artifactId>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.pet</groupId>-->
-<!--            <artifactId>pet-common-sentinel</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.pet</groupId>
+            <artifactId>pet-common-sentinel</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>com.pet</groupId>
             <artifactId>pet-common-dubbo</artifactId>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.pet</groupId>-->
-<!--            <artifactId>pet-common-seata</artifactId>-->
-<!--            <version>1.6.0</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.pet</groupId>
+            <artifactId>pet-common-seata</artifactId>
+            <version>1.6.0</version>
+        </dependency>
 
         <!-- pet Api System -->
         <dependency>

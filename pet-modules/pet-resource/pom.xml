@@ -44,11 +44,11 @@
             <artifactId>pet-common-dubbo</artifactId>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>com.pet</groupId>-->
-<!--            <artifactId>pet-common-seata</artifactId>-->
-<!--            <version>1.6.0</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.pet</groupId>
+            <artifactId>pet-common-seata</artifactId>
+            <version>1.6.0</version>
+        </dependency>
 
         <dependency>
             <groupId>com.pet</groupId>
