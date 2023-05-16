@@ -5,7 +5,7 @@ MAINTAINER zy
 
 ENV TZ=PRC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
+ARG active
 EXPOSE 9201
 EXPOSE 8091
 
