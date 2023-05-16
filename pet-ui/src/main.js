@@ -35,6 +35,9 @@ import ImagePreview from "@/components/ImagePreview"
 import DictTag from '@/components/DictTag'
 // 头部标签组件
 import VueMeta from 'vue-meta'
+// 视频上传
+import VideoUpload from '@/components/VideoUpload'
+
 // 字典数据组件
 import DictData from '@/components/DictData'
 import vueCron from 'vue-cron'
@@ -56,6 +59,7 @@ Vue.component('Pagination', Pagination)
 Vue.component('RightToolbar', RightToolbar)
 Vue.component('Editor', Editor)
 Vue.component('FileUpload', FileUpload)
+Vue.component('VideoUpload', VideoUpload)
 Vue.component('ImageUpload', ImageUpload)
 Vue.component('ImagePreview', ImagePreview)
 Vue.use(vueCron)

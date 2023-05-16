@@ -88,6 +88,16 @@
       </el-col>
       <el-col :span="1.5">
         <el-button
+          type="primary"
+          plain
+          icon="el-icon-plus"
+          size="mini"
+          @click="handleVideo"
+          v-hasPermi="['system:oss:upload']"
+        >上传视频</el-button>
+      </el-col>
+      <el-col :span="1.5">
+        <el-button
           type="danger"
           plain
           icon="el-icon-delete"
@@ -182,6 +192,8 @@
         <el-form-item label="文件名">
           <fileUpload v-model="form.file" v-if="type === 0"/>
           <imageUpload v-model="form.file" v-if="type === 1"/>
+          <video-upload v-model="form.file" v-if="type === 2"></video-upload>
+
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
@@ -374,6 +386,13 @@ export default {
       this.open = true;
       this.title = "上传图片";
       this.type = 1;
+    },
+    handleVideo(){
+      this.reset();
+      this.open = true;
+      this.title = "上传视频";
+      this.type = 2;
+
     },
     /** 提交按钮 */
     submitForm() {
