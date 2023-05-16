@@ -117,7 +117,8 @@ public class SysProfileController extends BaseController {
             if (!StringUtils.equalsAnyIgnoreCase(extension, MimeTypeUtils.IMAGE_EXTENSION)) {
                 return R.fail("文件格式不正确，请上传" + Arrays.toString(MimeTypeUtils.IMAGE_EXTENSION) + "格式");
             }
-            SysFile sysFile = remoteFileService.upload(avatarfile.getName(), avatarfile.getOriginalFilename(), avatarfile.getContentType(), avatarfile.getBytes());
+            SysFile sysFile = remoteFileService.upload(avatarfile.getName(), avatarfile.getOriginalFilename(),
+                avatarfile.getContentType(), avatarfile.getBytes(),null);
             if (ObjectUtil.isNull(sysFile)) {
                 return R.fail("文件服务异常，请联系管理员");
             }

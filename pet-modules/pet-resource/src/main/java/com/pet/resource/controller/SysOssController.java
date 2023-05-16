@@ -70,11 +70,11 @@ public class SysOssController extends BaseController {
     @SaCheckPermission("system:oss:upload")
     @Log(title = "OSS对象存储", businessType = BusinessType.INSERT)
     @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public R<Map<String, String>> upload(@RequestPart("file") MultipartFile file) {
+    public R<Map<String, String>> upload(@RequestPart("file") MultipartFile file,@RequestParam(required = false) String bucketName) {
         if (ObjectUtil.isNull(file)) {
             throw new ServiceException("上传文件不能为空");
         }
-        SysOssVo oss = iSysOssService.upload(file);
+        SysOssVo oss = iSysOssService.upload(file,bucketName);
         Map<String, String> map = new HashMap<>(2);
         map.put("url", oss.getUrl());
         map.put("fileName", oss.getOriginalName());

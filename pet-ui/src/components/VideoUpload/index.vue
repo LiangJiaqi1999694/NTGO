@@ -5,10 +5,12 @@
       :limit="limit"
       ref="imageUpload"
       :action="uploadImgUrl"
-      v-model="video"
+      :value="video"
       :fileSize="fileSize"
       :fileType="fileType"
       :response-fn="handleResponse"
+      @delete="handleDel"
+      :height="360"
     />
   </div>
 
@@ -52,6 +54,7 @@ export default {
         Authorization: "Bearer " + getToken(),
       },
       video: "",
+      ossId: '',
       uploadImgUrl: process.env.VUE_APP_BASE_API + "/resource/oss/upload", // 上传的图片服务器地址
       number: 0,
       uploadList: [],
@@ -65,12 +68,22 @@ export default {
       console.log("response", response);
       if (response.code === 200) {
         this.video = response.data.url
+        this.ossId = response.data.ossId
       }else{
         this.$modal.msgError(response.msg);
 
       }
+    },
+    // 删除图片
+    handleDel(file) {
+      if(this.ossId){
+        delOss(this.ossId);
+        this.video = ""
+        this.ossId = ""
+        this.$message.success("删除成功!");
+      }
 
-    }
+    },
 
   },
 };

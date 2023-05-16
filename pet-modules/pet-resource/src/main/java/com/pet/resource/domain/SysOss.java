@@ -47,4 +47,8 @@ public class SysOss extends BaseEntity {
      */
     private String service;
 
+    /**
+     * 视频封面
+     */
+    private String poster;
 }

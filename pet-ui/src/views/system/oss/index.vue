@@ -138,15 +138,21 @@
       <el-table-column label="文件名" align="center" prop="fileName" />
       <el-table-column label="原名" align="center" prop="originalName" />
       <el-table-column label="文件后缀" align="center" prop="fileSuffix" />
-      <el-table-column label="文件展示" align="center" prop="url">
+      <el-table-column label="文件展示" align="center" prop="url" width="200">
         <template slot-scope="scope">
           <ImagePreview
             v-if="previewListResource && checkFileSuffix(scope.row.fileSuffix)"
             :width=100 :height=100
             :src="scope.row.url"
             :preview-src-list="[scope.row.url]"/>
+          <video
+            v-if="previewListResource && checkVideoSuffix(scope.row.fileSuffix)"
+            :width=200 :height=100 :autoplay="false" muted="muted" :controls="true" :http-cache="true" :show-loading="false" :show-fullscreen-btn="true"
+            :loop="true" :enable-progress-gesture="true" :page-gesture="true" :show-center-play-btn="true" object-fit="fill"
+            :src="scope.row.url" :poster="scope.row.url + '?spm=qipa250&x-oss-process=video/snapshot,t_2000,f_jpg,w_100,h_100,m_fast'"
+            />
           <span v-text="scope.row.url"
-                v-if="!checkFileSuffix(scope.row.fileSuffix) || !previewListResource"/>
+                v-if="!(checkFileSuffix(scope.row.fileSuffix) || checkVideoSuffix(scope.row.fileSuffix)) || !previewListResource"/>
         </template>
       </el-table-column>
       <el-table-column label="创建时间" align="center" prop="createTime" width="180"
@@ -288,6 +294,12 @@ export default {
     },
     checkFileSuffix(fileSuffix) {
       let arr = ["png", "jpg", "jpeg"];
+      return arr.some(type => {
+        return fileSuffix.indexOf(type) > -1;
+      });
+    },
+    checkVideoSuffix(fileSuffix){
+      let arr = ["mp4", "mp3", "avi",".wmv",".mpeg",".mpg",".mov"]
       return arr.some(type => {
         return fileSuffix.indexOf(type) > -1;
       });

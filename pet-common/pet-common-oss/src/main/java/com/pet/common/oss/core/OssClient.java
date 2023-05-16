@@ -2,6 +2,7 @@ package com.pet.common.oss.core;
 
 import cn.hutool.core.io.IoUtil;
 import cn.hutool.core.util.IdUtil;
+import cn.hutool.core.util.StrUtil;
 import com.amazonaws.ClientConfiguration;
 import com.amazonaws.HttpMethod;
 import com.amazonaws.Protocol;
@@ -93,11 +94,11 @@ public class OssClient {
         }
     }
 
-    public UploadResult upload(byte[] data, String path, String contentType) {
-        return upload(new ByteArrayInputStream(data), path, contentType);
+    public UploadResult upload(byte[] data, String path, String contentType,String bucketName) {
+        return upload(new ByteArrayInputStream(data), path, contentType,bucketName);
     }
 
-    public UploadResult upload(InputStream inputStream, String path, String contentType) {
+    public UploadResult upload(InputStream inputStream, String path, String contentType,String bucketName) {
         if (!(inputStream instanceof ByteArrayInputStream)) {
             inputStream = new ByteArrayInputStream(IoUtil.readBytes(inputStream));
         }
@@ -105,7 +106,7 @@ public class OssClient {
             ObjectMetadata metadata = new ObjectMetadata();
             metadata.setContentType(contentType);
             metadata.setContentLength(inputStream.available());
-            PutObjectRequest putObjectRequest = new PutObjectRequest(properties.getBucketName(), path, inputStream, metadata);
+            PutObjectRequest putObjectRequest = new PutObjectRequest(StrUtil.isNotBlank(bucketName)?bucketName:properties.getBucketName(), path, inputStream, metadata);
             // 设置上传对象的 Acl 为公共读
             putObjectRequest.setCannedAcl(getAccessPolicy().getAcl());
             client.putObject(putObjectRequest);
@@ -124,12 +125,12 @@ public class OssClient {
         }
     }
 
-    public UploadResult uploadSuffix(byte[] data, String suffix, String contentType) {
-        return upload(data, getPath(properties.getPrefix(), suffix), contentType);
+    public UploadResult uploadSuffix(byte[] data, String suffix, String contentType,String bucketName) {
+        return upload(data, getPath(properties.getPrefix(), suffix), contentType,bucketName);
     }
 
-    public UploadResult uploadSuffix(InputStream inputStream, String suffix, String contentType) {
-        return upload(inputStream, getPath(properties.getPrefix(), suffix), contentType);
+    public UploadResult uploadSuffix(InputStream inputStream, String suffix, String contentType,String bucketName) {
+        return upload(inputStream, getPath(properties.getPrefix(), suffix), contentType,bucketName);
     }
 
     /**

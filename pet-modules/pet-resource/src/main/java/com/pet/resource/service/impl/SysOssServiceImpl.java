@@ -30,7 +30,9 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletResponse;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.*;
@@ -119,16 +121,17 @@ public class SysOssServiceImpl implements ISysOssService {
     }
 
     @Override
-    public SysOssVo upload(MultipartFile file) {
+    public SysOssVo upload(MultipartFile file,String bucketName) {
         String originalfileName = file.getOriginalFilename();
         String suffix = StringUtils.substring(originalfileName, originalfileName.lastIndexOf("."), originalfileName.length());
         OssClient storage = OssFactory.instance();
         UploadResult uploadResult;
         try {
-            uploadResult = storage.uploadSuffix(file.getBytes(), suffix, file.getContentType());
+            uploadResult = storage.uploadSuffix(file.getBytes(), suffix, file.getContentType(),bucketName);
         } catch (IOException e) {
             throw new ServiceException(e.getMessage());
         }
+
         // 保存文件信息
         SysOss oss = new SysOss();
         oss.setUrl(uploadResult.getUrl());
