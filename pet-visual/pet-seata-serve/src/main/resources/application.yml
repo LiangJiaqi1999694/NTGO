@@ -32,8 +32,8 @@ seata:
       server-addr: @nacos.server@
       group: @nacos.discovery.group@
       namespace: ${spring.profiles.active}
-      username: nacos
-      password: nacos
+#      username: nacos
+#      password: nacos
       ##if use MSE Nacos with auth, mutex with username/password attribute
       #access-key: ""
       #secret-key: ""
@@ -47,11 +47,29 @@ seata:
       group: @nacos.discovery.group@
       namespace: ${spring.profiles.active}
 #      cluster: default
-      username: nacos
-      password: nacos
+#      username: nacos
+#      password: nacos
       ##if use MSE Nacos with auth, mutex with username/password attribute
       #access-key: ""
       #secret-key: ""
+  store:
+    # support: file 、 db 、 redis
+    mode: db
+    db:
+      datasource: druid
+      db-type: mysql
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://172.30.105.20:3306/pet-seata?useUnicode=true&rewriteBatchedStatements=true&serverTimezone=GMT
+      user: root
+      password: hash@1234
+      min-conn: 5
+      max-conn: 100
+      global-table: global_table
+      branch-table: branch_table
+      lock-table: lock_table
+      distributed-lock-table: distributed_lock
+      query-limit: 100
+      max-wait: 5000
   security:
     secretKey: SeataSecretKey0c382ef121d778043159209298fd40bf3850a017
     tokenValidityInMilliseconds: 1800000
