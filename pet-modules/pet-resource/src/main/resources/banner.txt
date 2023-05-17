@@ -1,7 +1,10 @@
 Spring Boot Version: ${spring-boot.version}
 Spring Application Name: ${spring.application.name}
 Spring Nacos: ${spring.cloud.nacos.server-addr}
-
+Spring seata.tx-service-group: ${seata.tx-service-group}
+Spring seata.tx-service-group: ${seata.config.nacos.group}
+Spring seata.tx-service-group: ${seata.config.nacos.namespace}
+Spring seata.tx-service-group: ${seata.config.nacos.data-id}
                ,---,                    ,--,
              ,--.' |                  ,--.'|
        ,----,|  |  :             ,--, |  | :     ,---.        ,---,
