@@ -16,7 +16,7 @@ public interface RemoteFileService {
      * @param file 文件信息
      * @return 结果
      */
-    SysFile upload(String name, String originalFilename, String contentType, byte[] file,String bucketName) throws ServiceException;
+    SysFile upload(String name, String originalFilename, String contentType, byte[] file) throws ServiceException;
 
     /**
      * 通过ossId查询对应的url
