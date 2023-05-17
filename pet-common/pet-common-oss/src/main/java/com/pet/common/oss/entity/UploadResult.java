@@ -21,4 +21,9 @@ public class UploadResult {
      * 文件名
      */
     private String filename;
+
+    /**
+     * bucketName
+     */
+    private String bucketName;
 }

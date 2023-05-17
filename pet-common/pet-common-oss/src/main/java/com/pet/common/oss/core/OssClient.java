@@ -94,43 +94,44 @@ public class OssClient {
         }
     }
 
-    public UploadResult upload(byte[] data, String path, String contentType,String bucketName) {
-        return upload(new ByteArrayInputStream(data), path, contentType,bucketName);
+    public UploadResult upload(byte[] data, String path, String contentType) {
+        return upload(new ByteArrayInputStream(data), path, contentType);
     }
 
-    public UploadResult upload(InputStream inputStream, String path, String contentType,String bucketName) {
+    public UploadResult upload(InputStream inputStream, String path, String contentType) {
         if (!(inputStream instanceof ByteArrayInputStream)) {
             inputStream = new ByteArrayInputStream(IoUtil.readBytes(inputStream));
         }
+
         try {
             ObjectMetadata metadata = new ObjectMetadata();
             metadata.setContentType(contentType);
             metadata.setContentLength(inputStream.available());
-            PutObjectRequest putObjectRequest = new PutObjectRequest(StrUtil.isNotBlank(bucketName)?bucketName:properties.getBucketName(), path, inputStream, metadata);
+            PutObjectRequest putObjectRequest = new PutObjectRequest(properties.getBucketName(), path, inputStream, metadata);
             // 设置上传对象的 Acl 为公共读
             putObjectRequest.setCannedAcl(getAccessPolicy().getAcl());
             client.putObject(putObjectRequest);
         } catch (Exception e) {
             throw new OssException("上传文件失败，请检查配置信息:[" + e.getMessage() + "]");
         }
-        return UploadResult.builder().url(getUrl() + "/" + path).filename(path).build();
+        return UploadResult.builder().url(getUrl() + "/" + path).filename(path).bucketName(properties.getBucketName()).build();
     }
 
-    public void delete(String path) {
+    public void delete(String bucketName, String path) {
         path = path.replace(getUrl() + "/", "");
         try {
-            client.deleteObject(properties.getBucketName(), path);
+            client.deleteObject(bucketName, path);
         } catch (Exception e) {
             throw new OssException("删除文件失败，请检查配置信息:[" + e.getMessage() + "]");
         }
     }
 
-    public UploadResult uploadSuffix(byte[] data, String suffix, String contentType,String bucketName) {
-        return upload(data, getPath(properties.getPrefix(), suffix), contentType,bucketName);
+    public UploadResult uploadSuffix(byte[] data, String suffix, String contentType) {
+        return upload(data, getPath(properties.getPrefix(), suffix), contentType);
     }
 
-    public UploadResult uploadSuffix(InputStream inputStream, String suffix, String contentType,String bucketName) {
-        return upload(inputStream, getPath(properties.getPrefix(), suffix), contentType,bucketName);
+    public UploadResult uploadSuffix(InputStream inputStream, String suffix, String contentType) {
+        return upload(inputStream, getPath(properties.getPrefix(), suffix), contentType);
     }
 
     /**

@@ -26,7 +26,7 @@ public interface ISysOssService {
 
     SysOssVo getById(Long ossId);
 
-    SysOssVo upload(MultipartFile file,String bucketName);
+    SysOssVo upload(MultipartFile file,String configKey);
 
     Boolean insertByBo(SysOssBo bo);
 

@@ -48,6 +48,11 @@ public class SysOss extends BaseEntity {
     private String service;
 
     /**
+     * bucketName
+     */
+    private String bucketName;
+
+    /**
      * 视频封面
      */
     private String poster;

@@ -4,6 +4,7 @@ import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.convert.Convert;
 import cn.hutool.core.io.IoUtil;
 import cn.hutool.core.util.ObjectUtil;
+import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -121,13 +122,19 @@ public class SysOssServiceImpl implements ISysOssService {
     }
 
     @Override
-    public SysOssVo upload(MultipartFile file,String bucketName) {
+    public SysOssVo upload(MultipartFile file,String configKey) {
         String originalfileName = file.getOriginalFilename();
         String suffix = StringUtils.substring(originalfileName, originalfileName.lastIndexOf("."), originalfileName.length());
-        OssClient storage = OssFactory.instance();
+        OssClient storage;
+        if(StrUtil.isNotBlank(configKey)){
+            storage = OssFactory.instance(configKey);
+        }else{
+            storage = OssFactory.instance();
+        }
+
         UploadResult uploadResult;
         try {
-            uploadResult = storage.uploadSuffix(file.getBytes(), suffix, file.getContentType(),bucketName);
+            uploadResult = storage.uploadSuffix(file.getBytes(), suffix, file.getContentType());
         } catch (IOException e) {
             throw new ServiceException(e.getMessage());
         }
@@ -135,6 +142,7 @@ public class SysOssServiceImpl implements ISysOssService {
         // 保存文件信息
         SysOss oss = new SysOss();
         oss.setUrl(uploadResult.getUrl());
+        oss.setBucketName(uploadResult.getBucketName());
         oss.setFileSuffix(suffix);
         oss.setFileName(uploadResult.getFilename());
         oss.setOriginalName(originalfileName);
@@ -163,7 +171,7 @@ public class SysOssServiceImpl implements ISysOssService {
         List<SysOss> list = baseMapper.selectBatchIds(ids);
         for (SysOss sysOss : list) {
             OssClient storage = OssFactory.instance(sysOss.getService());
-            storage.delete(sysOss.getUrl());
+            storage.delete(sysOss.getBucketName(),sysOss.getUrl());
         }
         return baseMapper.deleteBatchIds(ids) > 0;
     }
