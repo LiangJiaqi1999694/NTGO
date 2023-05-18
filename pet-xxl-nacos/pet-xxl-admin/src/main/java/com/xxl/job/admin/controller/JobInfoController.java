@@ -11,6 +11,7 @@ import com.xxl.job.admin.core.util.I18nUtil;
 import com.xxl.job.admin.dao.XxlJobGroupDao;
 import com.xxl.job.admin.service.LoginService;
 import com.xxl.job.admin.service.XxlJobService;
+import com.xxl.job.core.biz.model.ChildJobRedoVo;
 import com.xxl.job.core.biz.model.ReturnT;
 import com.xxl.job.core.biz.model.XxlJobInfo;
 import com.xxl.job.core.enums.ExecutorBlockStrategyEnum;
@@ -70,8 +71,25 @@ public class JobInfoController {
 		return xxlJobService.save(jobInfo);
 	}
 
+    /**
+     * showdoc
+     * @catalog 业务支撑平台/任务管理/
+     * @title 子任务重做
+     * @description  子任务重做
+     * @method POST|GET
+     * @url http://192.168.11.92:9090/xxl-job-admin/jobinfo/redo
+     * @param handleLogId	 必选 long 产品id
+     * @param paramId	 必选 long 插件参数id
+     * @param paramValue    必选  String 参数值
+     * @return {"code":200,"msg":"提交重做任务成功！","content":null}
+     * @remark JSONOBJECT {"handleLogId":2257172834969296896,"jobParams":[{"isredo":1,"isshow":1,"paramId":2175641487956918273,"paramType":1,"paramValue":"234"}]}
+     */
+    @RequestMapping("/redo")
+    public ReturnT<String> redo(@RequestBody ChildJobRedoVo jobRedoVo){
+        return xxlJobService.redo(jobRedoVo);
+    }
 
-	/**
+    /**
 	 * showdoc
 	 *
 	 * @catalog 业务支撑平台/任务管理/
@@ -114,6 +132,14 @@ public class JobInfoController {
 	public ReturnT<XxlJobInfo> selectbyId(@RequestParam(defaultValue = "-1",required = false)int id, @RequestParam(defaultValue = "-1",required = false)long algoid) {
 		return xxlJobService.selectbyId(id,algoid);
 	}
+
+    @RequestMapping("/batchstop")
+    public ReturnT<String> batchpause(@RequestBody int[] ids) {
+        if(ids!=null&&ids.length>0) {
+            return xxlJobService.batchstop(ids);
+        }
+        return ReturnT.FAIL;
+    }
 
 	@RequestMapping
 	public String index(HttpServletRequest request, Model model, @RequestParam(required = false, defaultValue = "-1") int jobGroup) {
@@ -183,37 +209,54 @@ public class JobInfoController {
 		start = start*length;
 		return xxlJobService.pageList(start, length, triggerStatus, jobDesc,jobType,categoryId);
 	}
-	
+
+    /**
+     *
+     * @catalog 业务支撑平台/任务管理/
+     * @title 批量启动任务
+     * @description 批量启动任务
+     * @return {"code":200,"msg":null,"content":"更新成功!"}
+     * @return_param code int 状态码200:成功500：异常
+     * @remark
+     */
+    @RequestMapping("/batchstart")
+    public ReturnT<String> batchstart(@RequestBody int[] ids) {
+        if(ids!=null&&ids.length>0) {
+            return xxlJobService.batchstart(ids);
+        }
+        return ReturnT.FAIL;
+    }
+
 	@RequestMapping("/add")
 	@ResponseBody
 	public ReturnT<String> add(XxlJobInfo jobInfo) {
 		return xxlJobService.add(jobInfo);
 	}
-	
+
 	@RequestMapping("/update")
 	@ResponseBody
 	public ReturnT<String> update(XxlJobInfo jobInfo) {
 		return xxlJobService.update(jobInfo);
 	}
-	
+
 	@RequestMapping("/remove")
 	@ResponseBody
 	public ReturnT<String> remove(int id) {
 		return xxlJobService.remove(id);
 	}
-	
+
 	@RequestMapping("/stop")
 	@ResponseBody
 	public ReturnT<String> pause(int id) {
 		return xxlJobService.stop(id);
 	}
-	
+
 	@RequestMapping("/start")
 	@ResponseBody
 	public ReturnT<String> start(int id) {
 		return xxlJobService.start(id);
 	}
-	
+
 	@RequestMapping("/trigger")
 	@ResponseBody
 	//@PermissionLimit(limit = false)
@@ -246,5 +289,5 @@ public class JobInfoController {
 		}
 		return new ReturnT<List<String>>(result);
 	}
-	
+
 }

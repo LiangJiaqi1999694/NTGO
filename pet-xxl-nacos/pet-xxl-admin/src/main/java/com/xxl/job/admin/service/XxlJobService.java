@@ -2,6 +2,7 @@ package com.xxl.job.admin.service;
 
 
 import com.github.pagehelper.PageInfo;
+import com.xxl.job.core.biz.model.ChildJobRedoVo;
 import com.xxl.job.core.biz.model.ReturnT;
 import com.xxl.job.core.biz.model.XxlJobInfo;
 
@@ -11,7 +12,7 @@ import java.util.Map;
 
 /**
  * core job action for xxl-job
- * 
+ *
  * @author xuxueli 2016-5-28 15:30:33
  */
 public interface XxlJobService {
@@ -98,4 +99,10 @@ public interface XxlJobService {
 	ReturnT<PageInfo> failTaskDetail(String executorAddress, int jobGroup, int pageSize, int pageNum);
 
 	Object queueTrigger();
+
+    ReturnT<String> redo(ChildJobRedoVo jobRedoVo);
+
+    ReturnT<String> batchstop(int[] ids);
+
+    ReturnT<String> batchstart(int[] ids);
 }

@@ -152,4 +152,17 @@ public class JobTriggerPoolHelper {
 
     }
 
+    /**
+     * @param jobId
+     * @param triggerType
+     * @param failRetryCount        >=0: use this param <0: use param from job info
+     *                              config
+     * @param executorShardingParam
+     * @param executorParam         null: use job param not null: cover job param
+     * @param redo
+     */
+    public static void redoTrigger(int jobId, TriggerTypeEnum triggerType, int failRetryCount,
+                                   String executorShardingParam, Long handleLogId,List<JobParam> jobParams,String addressList) {
+        helper.addTrigger(jobId, triggerType, failRetryCount, executorShardingParam, handleLogId,jobParams,addressList,true);
+    }
 }

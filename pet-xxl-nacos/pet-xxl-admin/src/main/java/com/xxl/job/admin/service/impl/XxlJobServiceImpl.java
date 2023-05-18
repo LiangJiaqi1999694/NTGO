@@ -6,10 +6,13 @@ import com.github.pagehelper.PageInfo;
 import com.xxl.job.admin.core.conf.XxlJobAdminConfig;
 import com.xxl.job.admin.core.cron.CronExpression;
 import com.xxl.job.admin.core.model.XxlJobGroup;
+import com.xxl.job.admin.core.model.XxlJobLog;
 import com.xxl.job.admin.core.model.XxlJobLogReport;
 import com.xxl.job.admin.core.model.XxlJobRegistry;
 import com.xxl.job.admin.core.route.ExecutorRouteStrategyEnum;
 import com.xxl.job.admin.core.thread.JobScheduleHelper;
+import com.xxl.job.admin.core.thread.JobTriggerPoolHelper;
+import com.xxl.job.admin.core.trigger.TriggerTypeEnum;
 import com.xxl.job.admin.core.util.I18nUtil;
 import com.xxl.job.admin.dao.*;
 import com.xxl.job.admin.dao.algomg.AlgoMgDao;
@@ -736,5 +739,76 @@ public class XxlJobServiceImpl implements XxlJobService {
 		}
 		return maps;
 	}
+
+    @Override
+    public ReturnT<String> redo(ChildJobRedoVo jobRedoVo) {
+        //1、日志记录是否还存在
+        if(ObjectUtils.isEmpty(jobRedoVo.getHandleLogId())) {
+            return ReturnT.fail("参数异常！");
+        }
+
+        //2、日志记录是否还存在
+        JobHandleLog jobHandleLog = jobHandleLogDao.selectById(jobRedoVo.getHandleLogId());
+        if(ObjectUtils.isEmpty(jobHandleLog)) {
+            return ReturnT.fail("参数信息不存在，重做失败！");
+        }
+
+        XxlJobLog xxlJobLog = xxlJobLogDao.load(jobHandleLog.getLogId());
+        if(ObjectUtils.isEmpty(xxlJobLog)) {
+            return ReturnT.fail("参数信息不存在，重做失败！");
+        }
+
+        JobTriggerPoolHelper.redoTrigger(xxlJobLog.getJobId(), TriggerTypeEnum.MANUAL, -1, null, jobRedoVo.getHandleLogId(),jobRedoVo.getJobParams(),xxlJobLog.getExecutorAddress());
+
+        return ReturnT.ok("提交重做任务成功！");
+    }
+
+    @Override
+    public ReturnT<String> batchstop(int[] ids) {
+        if (!ObjectUtils.isEmpty(ids) && ids.length > 0) {
+            for (int i = 0; i < ids.length; i++) {
+                XxlJobInfo xxlJobInfo = xxlJobInfoDao.loadById(ids[i]);
+                xxlJobInfo.setTriggerStatus(0);
+                xxlJobInfo.setTriggerLastTime(0);
+                xxlJobInfo.setTriggerNextTime(0);
+                xxlJobInfo.setUpdateTime(new Date());
+                xxlJobInfoDao.update(xxlJobInfo);
+            }
+        }
+        return ReturnT.SUCCESS;
+    }
+
+    @Override
+    public ReturnT<String> batchstart(int[] ids) {
+        StringBuilder errorInfo = new StringBuilder();
+        if (!ObjectUtils.isEmpty(ids) && ids.length > 0) {
+            for (int i = 0; i < ids.length; i++) {
+                XxlJobInfo xxlJobInfo = xxlJobInfoDao.loadById(ids[i]);
+                // next trigger time (5s后生效，避开预读周期)
+                long nextTriggerTime = 0;
+                try {
+                    Date nextValidTime = new CronExpression(xxlJobInfo.getJobCron()).getNextValidTimeAfter(
+                        new Date(System.currentTimeMillis() + JobScheduleHelper.PRE_READ_MS));
+                    if (nextValidTime == null) {
+                        errorInfo.append(ids[i] + ":start failed" + I18nUtil.getString("jobinfo_field_cron_never_fire")
+                            + System.getProperty("line.separator"));
+                    }
+                    nextTriggerTime = nextValidTime.getTime();
+                } catch (ParseException e) {
+                    logger.error(e.getMessage(), e);
+                    errorInfo.append(ids[i] + ":start failed" + I18nUtil.getString("jobinfo_field_cron_unvalid") + " | "
+                        + e.getMessage() + System.getProperty("line.separator"));
+                    continue;
+                }
+
+                xxlJobInfo.setTriggerStatus(1);
+                xxlJobInfo.setTriggerLastTime(0);
+                xxlJobInfo.setTriggerNextTime(nextTriggerTime);
+                xxlJobInfo.setUpdateTime(new Date());
+                xxlJobInfoDao.update(xxlJobInfo);
+            }
+        }
+        return new ReturnT<String>(ReturnT.SUCCESS_CODE, errorInfo.toString());
+    }
 
 }
