@@ -10,7 +10,7 @@
         </el-col>
       </el-row>
       <el-row :gutter="20" style="margin-top:30px;" v-if="active=='1'">
-        <el-form :model="formParams" ref="queryForm" label-width="120px" class="form-dialog">
+        <el-form :model="formParams" ref="queryForm" :rules="rules" label-width="120px" class="form-dialog">
           <el-row :gutter="20">
             <el-col :span="12">
               <el-form-item label="任务名称：" prop="jobDesc">
@@ -71,6 +71,13 @@
               </el-form-item>
             </el-col>
           </el-row>
+          <el-row :gutter="20">
+            <el-col :span="12">
+              <el-form-item label="子任务ID：" prop="childJobId">
+                <el-input v-model="formParams.childJobId" placeholder="请输入子任务任务ID,如存在多个则逗号隔开"/>
+              </el-form-item>
+            </el-col>
+          </el-row>
         </el-form>
       </el-row>
       <el-row :gutter="20" style="margin-top:30px;" v-if="active=='2'">
@@ -106,11 +113,28 @@
             return{
                 active:'1',
                 tableList:[],
-                formParams:{jobDesc:'',alarmEmail:'',executorRouteStrategy:'',jobCron:'',jobType:'',algoId:'',executorTimeout:'',executorFailRetryCount:''},
+                formParams:{jobDesc:'',alarmEmail:'',executorRouteStrategy:'',jobCron:'',jobType:'',algoId:'',executorTimeout:'',executorFailRetryCount:'',childJobId:''},
                 jobTypeArray:[],
                 routerArray:[],
                 pluginArray:[],
-                cronPopover:false
+                cronPopover:false,
+                rules: {
+                  jobDesc: [
+                    { required: true, message: '请输入任务描述', trigger: 'change' }
+                  ],
+                  algoId: [
+                    { required: true, message: '请输入插件', trigger: 'change' }
+                  ],
+                  jobType: [
+                    { required: true, message: '请输入插件分类', trigger: 'change' }
+                  ],
+                  jobCron: [
+                    { required: true, message: '请设置Cron', trigger: 'change' }
+                  ],
+                  executorRouteStrategy: [
+                    { required: true, message: '请设置路由策略', trigger: 'change' }
+                  ],
+                }
             }
         },
         watch:{
@@ -182,7 +206,7 @@
                     }else{
                       this.pluginArray = [];
                     }
-                    
+
                   } else {
                     this.$message({
                       message: res.msg,

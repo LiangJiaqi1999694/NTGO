@@ -23,6 +23,7 @@
                   <span>{{(queryParams.pageNum - 1) * queryParams.pageSize + scope.$index + 1}}</span>
                 </template>
               </el-table-column>
+              <el-table-column label="任务ID" align="left" prop="id" :show-overflow-tooltip="true"/>
               <el-table-column label="任务名称" align="left" prop="jobDesc" :show-overflow-tooltip="true"/>
               <el-table-column label="路由策略" align="left">
                 <template slot-scope="scope"><span>{{showRouterName(scope.row.executorRouteStrategy)}}</span></template>
