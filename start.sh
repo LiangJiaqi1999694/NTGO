@@ -7,6 +7,11 @@ mvn clean install -P "$1"
 
 echo '编译完成'
 
+echo '启动seata'
+cd $APP_HOME/pet-visual/pet-seata-serve/
+# shellcheck disable=SC2086
+sh start.sh $1
+
 echo '启动网关中'
 
 cd $APP_HOME/pet-gateway/
@@ -43,10 +48,6 @@ echo '启动xxl-executor'
 cd $APP_HOME/pet-xxl-nacos/pet-xxl-executor/
 sh start.sh "$1"
 
-echo '启动seata'
-cd $APP_HOME/pet-visual/pet-seata-serve/
-# shellcheck disable=SC2086
-sh start.sh $1
 
 
 

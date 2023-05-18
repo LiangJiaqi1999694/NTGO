@@ -31,10 +31,6 @@ spring:
       - optional:nacos:datasource.yml
       - optional:nacos:${spring.application.name}.yml
 
----
-seata:
-  service:
-    vgroup-mapping:
-      pet-resource-group: default
+
 
 

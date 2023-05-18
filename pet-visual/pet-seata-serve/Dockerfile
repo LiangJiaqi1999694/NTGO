@@ -6,7 +6,7 @@ MAINTAINER zy
 ENV TZ=PRC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 ARG active
-EXPOSE 9201
+EXPOSE 7091
 EXPOSE 8091
 
 ADD ./target/pet-seata-serve.jar ./app.jar
