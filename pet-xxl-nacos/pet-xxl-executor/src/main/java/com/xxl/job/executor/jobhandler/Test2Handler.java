@@ -24,8 +24,10 @@ public class Test2Handler extends BaseJobHandler<String>{
 
 	@Override
 	public List<String> getChildJobs(XxlJobInfo xxlJobInfo) {
+        String num = xxlJobInfo.getParamValue("num");
+
 		List<String> ls = new ArrayList<String>();
-		for(int i=0;i<2;i++) {
+		for(int i=0;i<Integer.valueOf(num);i++) {
 			ls.add("测试："+i);
 		}
 		return ls;
