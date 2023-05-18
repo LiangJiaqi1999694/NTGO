@@ -20,7 +20,7 @@ import java.io.IOException;
  *
  * @author xuxueli 2016-1-6 19:22:18
  */
-@Component
+//@Component
 public class WebExceptionResolver implements HandlerExceptionResolver {
 	private static transient Logger logger = LoggerFactory.getLogger(WebExceptionResolver.class);
 
@@ -60,5 +60,5 @@ public class WebExceptionResolver implements HandlerExceptionResolver {
 			return mv;
 		}
 	}
-	
+
 }

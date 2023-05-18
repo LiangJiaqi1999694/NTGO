@@ -19,10 +19,7 @@ import com.xxl.job.core.glue.GlueTypeEnum;
 import com.xxl.job.core.util.DateUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -84,7 +81,7 @@ public class JobInfoController {
      * @return {"code":200,"msg":"提交重做任务成功！","content":null}
      * @remark JSONOBJECT {"handleLogId":2257172834969296896,"jobParams":[{"isredo":1,"isshow":1,"paramId":2175641487956918273,"paramType":1,"paramValue":"234"}]}
      */
-    @RequestMapping("/redo")
+    @PostMapping("/redo")
     public ReturnT<String> redo(@RequestBody ChildJobRedoVo jobRedoVo){
         return xxlJobService.redo(jobRedoVo);
     }
