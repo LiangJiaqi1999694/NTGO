@@ -35,12 +35,6 @@ spring:
 seata:
   service:
     vgroup-mapping:
-      pet-auth-group: default
-      pet-system-group: default
       pet-resource-group: default
-      pet-gen-group: default
-      pet-job-group: default
-      pet-xxl-executor-group: default
-      pet-xxl-admin-group: default
 
 
