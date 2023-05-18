@@ -30,7 +30,7 @@ import java.util.*;
  * index controller
  * @author xuxueli 2015-12-19 16:13:16
  */
-@Controller
+@RestController
 @RequestMapping("/jobinfo")
 public class JobInfoController {
 
@@ -81,6 +81,7 @@ public class JobInfoController {
      * @return {"code":200,"msg":"提交重做任务成功！","content":null}
      * @remark JSONOBJECT {"handleLogId":2257172834969296896,"jobParams":[{"isredo":1,"isshow":1,"paramId":2175641487956918273,"paramType":1,"paramValue":"234"}]}
      */
+    @ResponseBody
     @PostMapping("/redo")
     public ReturnT<String> redo(@RequestBody ChildJobRedoVo jobRedoVo){
         return xxlJobService.redo(jobRedoVo);
@@ -131,6 +132,7 @@ public class JobInfoController {
 	}
 
     @RequestMapping("/batchstop")
+    @ResponseBody
     public ReturnT<String> batchpause(@RequestBody int[] ids) {
         if(ids!=null&&ids.length>0) {
             return xxlJobService.batchstop(ids);
@@ -217,6 +219,7 @@ public class JobInfoController {
      * @remark
      */
     @RequestMapping("/batchstart")
+    @ResponseBody
     public ReturnT<String> batchstart(@RequestBody int[] ids) {
         if(ids!=null&&ids.length>0) {
             return xxlJobService.batchstart(ids);

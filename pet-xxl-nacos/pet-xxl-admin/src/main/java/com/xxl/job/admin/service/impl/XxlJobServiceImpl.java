@@ -760,7 +760,7 @@ public class XxlJobServiceImpl implements XxlJobService {
 
         JobTriggerPoolHelper.redoTrigger(xxlJobLog.getJobId(), TriggerTypeEnum.MANUAL, -1, null, jobRedoVo.getHandleLogId(),jobRedoVo.getJobParams(),xxlJobLog.getExecutorAddress());
 
-        return ReturnT.ok("提交重做任务成功！");
+        return ReturnT.SUCCESS;
     }
 
     @Override
