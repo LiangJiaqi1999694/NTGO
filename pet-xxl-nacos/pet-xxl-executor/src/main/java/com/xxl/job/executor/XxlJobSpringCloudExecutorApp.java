@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @description
  * @date 2020/5/12
  */
-@SpringBootApplication(scanBasePackages = {"com.xxl.job.executor","com.warrior.xxl"})
+@SpringBootApplication(scanBasePackages = {"com.xxl.job","com.warrior.xxl"})
 @EnableDiscoveryClient
 public class XxlJobSpringCloudExecutorApp {
     public static void main(String[] args) {
