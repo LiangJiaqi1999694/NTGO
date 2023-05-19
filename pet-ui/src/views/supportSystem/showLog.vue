@@ -105,7 +105,7 @@
           </template>
         </el-table-column>
       </el-table>
-      <pagination v-show="total>0" :total="total" :page.sync="pageNum" :limit.sync="pageSize" @pagination="searchTable"/>
+      <pagination v-show="totals>0" :total="totals" :page.sync="pageNum" :limit.sync="pageSize" @pagination="searchTable"/>
       <div slot="footer" class="dialog-footer">
         <el-button type="primary" @click="sonTaskOpen=false">确定</el-button>
         <el-button @click="sonTaskOpen=false">取消</el-button>
@@ -174,6 +174,7 @@
                 },
                 pageNum:1,
                 pageSize:6,
+                totals:2,
                 total:2,
                 loading:false,
                 sonTaskOpen:false,
@@ -285,6 +286,7 @@
                 }
                 pageSonTasksList(param).then(res=>{
                     this.sonSystemList=res.data
+                  this.totals = res.recordsTotal
                 })
             },
             doTask(row){
