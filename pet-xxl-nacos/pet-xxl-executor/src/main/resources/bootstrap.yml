@@ -12,7 +12,4 @@ spring:
   main:
     allow-bean-definition-overriding: true
 
-xxl.job.executor.logpath: /logs/xxl-job-exector/
-xxl.job.executor.logretentiondays: 30
-xxl.job.accessToken:
 
