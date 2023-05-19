@@ -31,7 +31,7 @@ public class XxlJobCompleter {
         finishJob(xxlJobLog);
 
         // text最大64kb 避免长度过长
-        if (xxlJobLog.getHandleMsg().length() > 15000) {
+        if (xxlJobLog.getHandleMsg()!=null && xxlJobLog.getHandleMsg().length() > 15000) {
             xxlJobLog.setHandleMsg( xxlJobLog.getHandleMsg().substring(0, 15000) );
         }
 
