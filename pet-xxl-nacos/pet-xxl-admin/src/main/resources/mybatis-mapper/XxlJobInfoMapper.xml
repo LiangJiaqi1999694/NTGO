@@ -78,6 +78,7 @@
 		t.update_time,
 		t.author,
 		t.alarm_email,
+        t.child_jobid,
 		t.executor_route_strategy,
 		t.executor_block_strategy,
 		t.executor_timeout,
