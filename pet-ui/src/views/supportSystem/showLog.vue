@@ -286,7 +286,7 @@
                 }
                 pageSonTasksList(param).then(res=>{
                     this.sonSystemList=res.data
-                  this.totals = res.recordsTotal
+                    this.totals = res.recordsTotal
                 })
             },
             doTask(row){

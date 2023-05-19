@@ -153,7 +153,8 @@
                             algoId:'',
                             id: newVal.row.id,
                             executorTimeout:newVal.row.executorTimeout,
-                            executorFailRetryCount:newVal.row.executorFailRetryCount
+                            executorFailRetryCount:newVal.row.executorFailRetryCount,
+                            childJobId:newVal.row.childJobId
                         }
                         let params= {
                             categoryId: newVal.row.jobType,
@@ -169,7 +170,7 @@
                             }
                         })
                     }else{
-                        this.formParams = {jobDesc:'',alarmEmail:'',executorRouteStrategy:'',jobCron:'',jobType:'',algoId:'',executorTimeout:'',executorFailRetryCount:''}
+                        this.formParams = {jobDesc:'',alarmEmail:'',executorRouteStrategy:'',jobCron:'',jobType:'',algoId:'',executorTimeout:'',executorFailRetryCount:'',childJobId:''}
                     }
                 },
                 deep: true,
@@ -190,6 +191,7 @@
                   jobParams: this.tableList,
                   jobType: this.formParams.jobType,
                   productId: "",
+                  childJobId:this.formParams.childJobId
               }
               return param
             },
