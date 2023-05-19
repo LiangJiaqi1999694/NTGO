@@ -1,7 +1,9 @@
 package com.warrior.xxl.job.executor.util;
 
+import com.alibaba.fastjson.JSON;
 import com.warrior.xxl.job.executor.config.ApplicationContextHolder;
 import com.xxl.job.core.biz.model.HandleCallbackParam;
+import com.xxl.job.core.biz.model.JobRegister;
 import com.xxl.job.core.biz.model.ReturnT;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -59,9 +61,15 @@ public class RestTemplateClient {
      */
     public static ReturnT<String> jobRegister(String appName, String data) {
         String url = HTTP + ADMIN_SERVICE + JOB_REGISTER_API;
-        MultiValueMap<String, String> requestEntity = new LinkedMultiValueMap<>();
-        requestEntity.add("appName", appName);
-        requestEntity.add("data", data);
+
+        //设置body参数，并转成json字符串
+        JobRegister jobRegister = new JobRegister();
+        jobRegister.setData(data);
+        jobRegister.setAppName(appName);
+        HttpHeaders headers = new HttpHeaders(); // http请求头
+        headers.setContentType(MediaType.APPLICATION_JSON_UTF8); // 请求头设置属性
+        HttpEntity<JobRegister> requestEntity = new HttpEntity<>(jobRegister, headers);
+
         RestTemplate restTemplate = getRestTemplateNacosJob();
           ReturnT<String> returnT = restTemplate.postForObject(url, requestEntity, ReturnT.class);
         return returnT;

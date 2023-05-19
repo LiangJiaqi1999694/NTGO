@@ -3,12 +3,12 @@ package com.xxl.job.admin.controller;
 import com.alibaba.fastjson.JSON;
 import com.xxl.job.admin.controller.annotation.PermissionLimit;
 import com.xxl.job.admin.service.JobRegisterService;
+import com.xxl.job.core.biz.model.JobRegister;
 import com.xxl.job.core.biz.model.ReturnT;
+import com.xxl.job.core.util.GsonTool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ import java.util.List;
  * @description 任务注册controller
  * @date 2020/5/22
  */
-@Controller
+@RestController
 public class JobRegisterController {
 
     @Autowired
@@ -31,11 +31,10 @@ public class JobRegisterController {
      * @return
      */
     @PostMapping("/job/register")
-    @ResponseBody
     @PermissionLimit(limit=false)
-    public ReturnT<String> jobRegister(@RequestParam("appName") String appName, @RequestParam String data) {
-        List<String> jobHandlerValues = JSON.parseArray(data, String.class);
-        ReturnT<String> returnT = jobRegisterService.jobRegister(appName, jobHandlerValues);
+    public ReturnT<String> jobRegister(@RequestBody JobRegister jobRegister) {
+        List<String> jobHandlerValues = GsonTool.fromJsonList(jobRegister.getData(), String.class);
+        ReturnT<String> returnT = jobRegisterService.jobRegister(jobRegister.getAppName(), jobHandlerValues);
         return returnT;
     }
 }

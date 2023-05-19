@@ -86,7 +86,7 @@ public class EmbedServer {
                     logger.info(">>>>>>>>>>> xxl-job remoting server start success, nettype = {}, port = {}", EmbedServer.class, port);
 
                     // start registry
-                    startRegistry(appname, address);
+//                    startRegistry(appname, address);
 
                     // wait util stop
                     future.channel().closeFuture().sync();

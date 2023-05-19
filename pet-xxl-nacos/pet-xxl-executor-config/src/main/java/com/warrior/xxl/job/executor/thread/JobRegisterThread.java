@@ -43,7 +43,7 @@ public class JobRegisterThread {
                     //获取执行器appName
                     String appName = ApplicationContextHolder.getBean(JobExecutorConfig.class).getAppName();
                     String data = JSON.toJSONString(jobHandlerValues);
-                    String adminService = "xxl-job-admin";
+                    String adminService = "pet-job-admin";
                     ReturnT<String> returnT = RestTemplateClient.jobRegister(appName, data);
 
                     //调用注册接口成功
