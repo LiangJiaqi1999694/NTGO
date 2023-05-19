@@ -27,7 +27,7 @@ public class Test2Handler extends BaseJobHandler<String>{
         String num = xxlJobInfo.getParamValue("num");
 
 		List<String> ls = new ArrayList<String>();
-		for(int i=0;i<Integer.valueOf(num);i++) {
+		for(int i = 0; i<Integer.parseInt(num); i++) {
 			ls.add("测试："+i);
 		}
 		return ls;
