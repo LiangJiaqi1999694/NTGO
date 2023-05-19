@@ -28,14 +28,16 @@ public class XxlJobScheduler  {
         //TODO 通过nacos监听注册，不需要注册线程监听 重构 by majun at 2020-05-22
         //JobRegistryMonitorHelper.getInstance().start();
 
+        // admin trigger pool start
+        JobTriggerPoolHelper.toStart();
+
         // admin fail-monitor run
         JobFailMonitorHelper.getInstance().start();
 
+        JobCompleteHelper.getInstance().start();
+
         // admin lose-monitor run
         JobLosedMonitorHelper.getInstance().start();
-
-        // admin trigger pool start
-        JobTriggerPoolHelper.toStart();
 
         // admin log report start
         JobLogReportHelper.getInstance().start();
@@ -46,7 +48,7 @@ public class XxlJobScheduler  {
         logger.info(">>>>>>>>> init xxl-job admin success.");
     }
 
-    
+
     public void destroy() throws Exception {
 
         // stop-schedule
